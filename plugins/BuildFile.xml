@@ -2,6 +2,7 @@
 <use   name="FWCore/PluginManager"/>
 <use   name="FWCore/ParameterSet"/>
 <use   name="FWCore/Utilities"/>
+<use   name="CommonTools/UtilAlgos"/>
 <use   name="CondFormats/DataRecord"/>
 <use   name="CondFormats/L1TObjects"/>
 <use   name="Geometry/Records"/>
@@ -41,4 +42,7 @@
 <use   name="rootrflx"/>
 <use   name="DataFormats/L1TrackTrigger"/>
 <use   name="Geometry/HcalTowerAlgo"/>
-<flags EDM_PLUGIN="1"/>
+<library   file="*.cc" name="phase2L1TauAnalyzerPlugins">
+  <flags   EDM_PLUGIN="1"/>
+</library>
+
