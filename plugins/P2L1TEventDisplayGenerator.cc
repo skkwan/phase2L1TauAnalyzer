@@ -33,13 +33,14 @@ bool compareByPtLorentz (TLorentzVector i,TLorentzVector j) {
 
 
 P2L1TEventDisplayGenerator::P2L1TEventDisplayGenerator( const ParameterSet & cfg ) :
-  debug(cfg.getUntrackedParameter<bool>("debug", false)),
-  hcalSrc_(consumes<HcalTrigPrimDigiCollection>(cfg.getParameter<edm::InputTag>("hcalDigis"))),
-  vtxLabel_(consumes<reco::VertexCollection>(cfg.getParameter<edm::InputTag>("vertices"))),
-  ecalTPGBToken_(consumes<EcalEBTrigPrimDigiCollection>(cfg.getParameter<edm::InputTag>("ecalTPGsBarrel"))),
-  L1ClustersToken_( consumes< L1CaloClusterCollection >(cfg.getParameter<edm::InputTag>("L1Clusters"))),
-  genSrc_  ((cfg.getParameter<edm::InputTag>( "genParticles"))),
-  genMatchDeltaRcut(cfg.getUntrackedParameter<double>("genMatchDeltaRcut", 0.1))
+  debug(             cfg.getUntrackedParameter<bool>("debug", false)),
+  hcalSrc_(          consumes< HcalTrigPrimDigiCollection>(   cfg.getParameter<edm::InputTag>("hcalDigis"))),
+  vtxLabel_(         consumes< reco::VertexCollection>(       cfg.getParameter<edm::InputTag>("vertices"))),
+  ecalTPGBToken_(    consumes< EcalEBTrigPrimDigiCollection>( cfg.getParameter<edm::InputTag>("ecalTPGsBarrel"))),
+  L1ClustersToken_(  consumes< L1CaloClusterCollection >(     cfg.getParameter<edm::InputTag>("L1Clusters"))),
+  L1PFTauToken_(     consumes< L1PFTauCollection    >(        cfg.getParameter<edm::InputTag>("l1TauObjects"))),
+  genSrc_ (          cfg.getParameter<edm::InputTag>( "genParticles")),
+  genMatchDeltaRcut( cfg.getUntrackedParameter<double>("genMatchDeltaRcut", 0.1))
   //  tauSrc_(consumes<vector<pat::Tau> >(cfg.getParameter<edm::InputTag>("recoTau"))),
   //rctSource_(cfg.getParameter<edm::InputTag>("rctSource")),
   //packedPfCandsToken_(consumes<vector<pat::PackedCandidate> >(cfg.getParameter<edm::InputTag>("packedPfCands"))),
@@ -104,6 +105,7 @@ P2L1TEventDisplayGenerator::P2L1TEventDisplayGenerator( const ParameterSet & cfg
     efficiencyTree->Branch("l1EcalClusters", "vector<TLorentzVector>", &l1EcalClusters, 32000, 0); 
     efficiencyTree->Branch("l1EcalCrystals", "vector<TLorentzVector>", &l1EcalCrystals, 32000, 0); 
     efficiencyTree->Branch("l1CaloClusters", "vector<TLorentzVector>", &l1CaloClusters, 32000, 0); 
+    efficiencyTree->Branch("l1PFTaus",       "vector<TLorentzVector>", &l1PFTaus, 32000, 0); 
     efficiencyTree->Branch("genTaus", "vector<TLorentzVector>", &genHadronicTaus, 32000, 0); 
 
     efficiencyTree->Branch("run",    &run,     "run/I");
@@ -259,6 +261,9 @@ void P2L1TEventDisplayGenerator::analyze( const Event& evt, const EventSetup& es
 
   edm::Handle< std::vector<L1CaloCluster> > caloClusters;
   evt.getByToken( L1ClustersToken_, caloClusters);
+
+  edm::Handle< std::vector<L1PFTau> > L1PFTaus;
+  evt.getByToken( L1PFTauToken_, L1PFTaus);
 
   // Get the ECAL Crystals as ecalCrystal_t
   getEcalCrystals(ecaltpgCollection, ecalCrystals);
@@ -643,6 +648,22 @@ void P2L1TEventDisplayGenerator::analyze( const Event& evt, const EventSetup& es
       temp.SetPtEtaPhiE(et,eta,phi,et);
       allHcalTPGs->push_back(temp);
     }
+
+    for(size_t l1tau_index=0; l1tau_index< L1PFTaus->size(); ++l1tau_index)
+      {
+	//edm::Ptr<l1extra::L1EmParticle> ptr(l1EGCrystalHandle, crystal_index);
+	//std::cout<<"# "<<crystal_index<<": "<<pt<<std::endl;
+	L1PFTau l1Tau = L1PFTaus->at(l1tau_index);
+	TLorentzVector l1TauTemp;
+	float et, eta, phi;
+	et  = l1Tau.p4().Pt();
+	eta = l1Tau.p4().Eta();
+	phi = l1Tau.p4().Phi();
+	l1TauTemp.SetPtEtaPhiE(et,eta,phi,et);
+	l1PFTaus->push_back(l1TauTemp);
+	//std::cout<<"crystal pt:"<<et<<" eta: "<<eta<<" phi: "<<phi<<std::endl;
+      }
+    std::sort(l1PFTaus->begin(),l1PFTaus->end(),compareByPtLorentz);   
 
   efficiencyTree->Fill();
   }

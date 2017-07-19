@@ -27,7 +27,8 @@ Source_Files = cms.untracked.vstring(
     #'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SinglePion0_FlatPt-8to100/GEN-SIM-DIGI-RAW/PU140_90X_upgrade2023_realistic_v9-v1/70000/0001E4B8-CD28-E711-B90A-E0071B7AA780.root'
     #'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SinglePion0_FlatPt-8to100/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/70000/0024CEE8-5829-E711-A2CA-5065F382C231.root'
     #'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SinglePion_FlatPt-8to100/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/70000/00469E3E-7D26-E711-BBE0-5065F37D9132.root'
-    'file:/hdfs/store/mc/PhaseIISpring17D/GluGluHToZZTo4L_M125_14TeV_powheg2_JHUgenV702_pythia8/GEN-SIM-DIGI-RAW/PU200_100M_90X_upgrade2023_realistic_v9-v1/120000/8882318A-8E44-E711-AA96-0242AC130002.root'
+    #'file:/hdfs/store/mc/PhaseIISpring17D/GluGluHToZZTo4L_M125_14TeV_powheg2_JHUgenV702_pythia8/GEN-SIM-DIGI-RAW/PU200_100M_90X_upgrade2023_realistic_v9-v1/120000/8882318A-8E44-E711-AA96-0242AC130002.root'
+    'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/TauThreeProngsEnriched/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/120000/042B46D1-8E55-E711-A6C7-0CC47AA53D5A.root'
     )
 process.source = cms.Source("PoolSource", fileNames = Source_Files)
 
@@ -50,6 +51,22 @@ process.TTTracksWithTruth = cms.Path(process.L1TrackletTracksWithAssociators)
 process.load("L1Trigger.phase2Demonstrator.L1CaloClusterProducer_cff")
 process.L1CaloClusterProducer.debug = cms.untracked.bool(False)
 process.L1Clusters = cms.Path(process.L1CaloClusterProducer)
+
+############################################################
+# L1 pf object
+############################################################
+
+process.load("L1Trigger.phase2Demonstrator.L1PFProducer_cff")
+process.L1PFObjects = cms.Path(process.L1PFProducer)
+process.L1PFProducer.debug = cms.untracked.bool(True)
+
+############################################################
+# L1 Tau object
+############################################################
+process.load("L1Trigger.phase2Demonstrator.L1PFTauProducer_cff")
+process.L1PFTaus = cms.Path(process.L1PFTauProducer)
+process.L1PFTauProducer.debug = cms.untracked.bool(True)
+
 
 ############################################################
 # L1 Tau Analyzer
@@ -78,6 +95,7 @@ process.tauAnalyzer = cms.EDAnalyzer('P2L1TEventDisplayGenerator',
                                      ecalTPGsBarrel  = cms.InputTag("simEcalEBTriggerPrimitiveDigis","","HLT"),
                                      hcalDigis       = cms.InputTag("simHcalTriggerPrimitiveDigis","","HLT"),
                                      L1Clusters      = cms.InputTag("L1CaloClusterProducer","L1Phase2CaloClusters"),
+                                     l1TauObjects    = cms.InputTag("L1PFTauProducer","L1PFTaus"),
                                      vertices = cms.InputTag("vertices"),
                                      genParticles = cms.InputTag("genParticles"),
                                      L1CrystalClustersInputTag = cms.InputTag("L1EGammaCrystalsProducer","EGCrystalCluster"),
@@ -103,4 +121,4 @@ process.TFileService = cms.Service("TFileService",
 
 #process.e = cms.EndPath(process.out)
 
-process.schedule = cms.Schedule(process.L1Clusters,process.TTTracksWithTruth,process.panalyzer)
+process.schedule = cms.Schedule(process.L1Clusters,process.TTTracksWithTruth,process.L1PFObjects,process.L1PFTaus,process.panalyzer)

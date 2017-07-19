@@ -61,6 +61,8 @@
 #include "L1Trigger/phase2L1TauAnalyzer/plugins/helpers.h"
 #include "DataFormats/Math/interface/deltaR.h"
 
+#include "DataFormats/L1Trigger/interface/L1PFTau.h"
+
 //
 // class declaration
 //
@@ -94,6 +96,7 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
 
   edm::EDGetTokenT< L1CaloClusterCollection > L1ClustersToken_;
   edm::EDGetTokenT< L1PFObjectCollection > L1PFToken_;
+  edm::EDGetTokenT< L1PFTauCollection > L1PFTauToken_;
   edm::EDGetTokenT<std::vector<reco::GenParticle> > genToken_;
   edm::InputTag genSrc_;
 
@@ -108,7 +111,7 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
 
   double genPt, genEta, genPhi;
   int decayMode, run, lumi, event;
-  double l1TauPt, l1TauEta, l1TauPhi;
+  double l1TauPt, l1TauEta, l1TauPhi, l1TauDecayMode;
   double gen1ProngPt, gen1ProngEta, gen1ProngPhi;
   double gen3ProngPt, gen3ProngEta, gen3ProngPhi;
   double gen1ProngPi0Pt, gen1ProngPi0Eta, gen1ProngPi0Phi;
@@ -125,6 +128,7 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
   double genPiPlusPt, genPiPlusEta,  genPiPlusPhi;
   double objectPiPlusPt, objectPiPlusEta, objectPiPlusPhi;
   double objectPiPlusDeltaEta, objectPiPlusDeltaPhi;
+  int objectPiPlusIsChargedHadron;
 
   TH1F* nEvents;
   TH1F* track_pt;
@@ -166,7 +170,8 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
 phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   L1ClustersToken_( consumes< L1CaloClusterCollection >(cfg.getParameter<edm::InputTag>("L1Clusters"))),
   L1PFToken_(       consumes< L1PFObjectCollection >(cfg.getParameter<edm::InputTag>("l1PFObjects"))),
-  genSrc_ ((cfg.getParameter<edm::InputTag>( "genParticles")))
+  L1PFTauToken_(    consumes< L1PFTauCollection    >(cfg.getParameter<edm::InputTag>("l1TauObjects"))),
+  genSrc_ ((        cfg.getParameter<edm::InputTag>( "genParticles")))
 {
    //now do what ever initialization is needed
    usesResource("TFileService");
@@ -191,6 +196,7 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("l1TauPt",  &l1TauPt,   "l1TauPt/D");
   efficiencyTree->Branch("l1TauEta", &l1TauEta,   "l1TauEta/D");
   efficiencyTree->Branch("l1TauPhi", &l1TauPhi,   "l1TauPhi/D");
+  efficiencyTree->Branch("l1TauDecayMode", &l1TauDecayMode,   "l1TauDecayMode/D");
 
   pi0Tree = fs->make<TTree>("pi0Tree", "Crystal cluster individual crystal pt values");
   pi0Tree->Branch("run",    &run,     "run/I");
@@ -220,6 +226,8 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   piPlusTree->Branch("objectPt",  &objectPiPlusPt,        "objectPt/D");
   piPlusTree->Branch("objectEta", &objectPiPlusEta,       "objectEta/D");
   piPlusTree->Branch("objectPhi", &objectPiPlusPhi,       "objectPhi/D");
+
+  piPlusTree->Branch("objectPiPlusIsChargedHadron", &objectPiPlusIsChargedHadron,"objectPiPlusIsChargedHadron/I");
 
   piPlusTree->Branch("deltaEta",  &objectPi0DeltaEta,   "deltaEta/D");
   piPlusTree->Branch("deltaPhi",  &objectPi0DeltaPhi,   "deltaPhi/D");
@@ -367,6 +375,9 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
   edm::Handle< std::vector<L1PFObject> > l1PFChargedCandidates;
   iEvent.getByToken( L1PFToken_, l1PFChargedCandidates);
 
+  edm::Handle< std::vector<L1PFTau> > l1PFTaus;
+  iEvent.getByToken( L1PFTauToken_, l1PFTaus);
+
    // Get genParticles
    edm::Handle<GenParticleCollectionType> genParticleHandle;
    if(!iEvent.getByToken(genToken_,genParticleHandle))
@@ -432,6 +443,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	 objectPiPlusPt  = l1PFChargedCandidates->at(iCand).p4().Pt();
 	 maxPt = l1PFChargedCandidates->at(iCand).p4().Pt();
 	 std::cout<<l1PFChargedCandidates->at(iCand)<<std::endl;	   
+	 objectPiPlusIsChargedHadron = l1PFChargedCandidates->at(iCand).isChargedHadron();
        }
      }
        /*for(unsigned int i = 0; i < l1Clusters->size(); i++){
@@ -445,6 +457,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	 }*/
      piPlusTree->Fill();
    }
+
 
 
    std::vector<genVisTau> GenOneProngTaus;
@@ -476,6 +489,25 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
      if(decayMode > 10 && decayMode < 20 ){
        GenOneProngPi0Taus.push_back(Temp);
      }
+
+     l1TauPt = 0;
+     l1TauEta = -99;
+     l1TauPhi = -99;
+     l1TauDecayMode = -99;
+     for(unsigned int i = 0; i < l1PFTaus->size(); i++){
+       if( reco::deltaR(l1PFTaus->at(i).p4().Eta(), 
+			l1PFTaus->at(i).p4().Phi(), 
+			genEta, genPhi) < 0.1 &&
+	   l1PFTaus->at(i).p4().Pt()>l1TauPt){
+
+	 l1TauEta = l1PFTaus->at(i).p4().Eta();
+	 l1TauPhi = l1PFTaus->at(i).p4().Phi();
+	 l1TauPt = l1PFTaus->at(i).p4().Pt();
+	 l1TauDecayMode = l1PFTaus->at(i).tauType();
+       }
+
+     }
+     efficiencyTree->Fill();
    }
 
   
