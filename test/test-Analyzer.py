@@ -26,7 +26,8 @@ Source_Files = cms.untracked.vstring(
     #'file:singleE-gen-sim-raw.root'
     #'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SingleE_FlatPt-8to100/GEN-SIM-DIGI-RAW/PU200_90X_upgrade2023_realistic_v9-v1/120000/002A4121-132C-E711-87AD-008CFAFBF618.root'
     #'file:/hdfs/store/mc/PhaseIISpring17D/GluGluHToZZTo4L_M125_14TeV_powheg2_JHUgenV702_pythia8/GEN-SIM-DIGI-RAW/PU200_100M_90X_upgrade2023_realistic_v9-v1/120000/8882318A-8E44-E711-AA96-0242AC130002.root'
-    'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/TauThreeProngsEnriched/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/120000/042B46D1-8E55-E711-A6C7-0CC47AA53D5A.root'
+    #'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/TauThreeProngsEnriched/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/120000/042B46D1-8E55-E711-A6C7-0CC47AA53D5A.root'
+    'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SingleTauOneProngFlatPt10To100/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/120000/02E3D76F-8A55-E711-B9F0-0025901FB188.root'
     )
 process.source = cms.Source("PoolSource", fileNames = Source_Files)
 
@@ -55,15 +56,16 @@ process.L1Clusters = cms.Path(process.L1CaloClusterProducer)
 ############################################################
 
 process.load("L1Trigger.phase2Demonstrator.L1PFProducer_cff")
+process.L1PFProducer.debug = cms.untracked.bool(False)
 process.L1PFObjects = cms.Path(process.L1PFProducer)
-process.L1PFProducer.debug = cms.untracked.bool(True)
 
 ############################################################
 # L1 Tau object
 ############################################################
 process.load("L1Trigger.phase2Demonstrator.L1PFTauProducer_cff")
+process.L1PFTauProducer.debug = cms.untracked.bool(False)
 process.L1PFTaus = cms.Path(process.L1PFTauProducer)
-process.L1PFTauProducer.debug = cms.untracked.bool(True)
+
 
 # L1 Tau Analyzer
 process.load("L1Trigger.phase2L1TauAnalyzer.phase2L1TauAnalyzer_cfi")
@@ -80,7 +82,7 @@ process.analyzer = cms.Path(process.L1TauAnalyzer)
 #process.FEVToutput_step = cms.EndPath(process.out)
 
 process.TFileService = cms.Service("TFileService", 
-   fileName = cms.string("analyzer-3Prong.root"), 
+   fileName = cms.string("analyzer-1Prong.root"), 
    closeFileFast = cms.untracked.bool(True)
 )
 

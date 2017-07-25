@@ -504,6 +504,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	 l1TauPhi = l1PFTaus->at(i).p4().Phi();
 	 l1TauPt = l1PFTaus->at(i).p4().Pt();
 	 l1TauDecayMode = l1PFTaus->at(i).tauType();
+	 std::cout<<"Match found l1Pt: "<<l1TauPt<<" Eta: "<<l1TauEta<<" Phi: "<<l1TauPhi<<std::endl;
        }
 
      }
