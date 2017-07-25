@@ -368,9 +368,13 @@ void
 phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
    using namespace edm;
-
-  edm::Handle< std::vector<L1CaloCluster> > l1Clusters;
-  iEvent.getByToken( L1ClustersToken_, l1Clusters);
+   
+   run   = iEvent.id().run();
+   lumi  = iEvent.id().luminosityBlock();
+   event = iEvent.id().event();
+   
+   edm::Handle< std::vector<L1CaloCluster> > l1Clusters;
+   iEvent.getByToken( L1ClustersToken_, l1Clusters);
 
   edm::Handle< std::vector<L1PFObject> > l1PFChargedCandidates;
   iEvent.getByToken( L1PFToken_, l1PFChargedCandidates);
