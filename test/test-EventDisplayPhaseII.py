@@ -17,7 +17,7 @@ process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:upgradePLS3', '')
 
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(10) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(50) )
 
 Source_Files = cms.untracked.vstring(
     #'file:event206074.root'
@@ -28,7 +28,9 @@ Source_Files = cms.untracked.vstring(
     #'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SinglePion0_FlatPt-8to100/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/70000/0024CEE8-5829-E711-A2CA-5065F382C231.root'
     #'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SinglePion_FlatPt-8to100/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/70000/00469E3E-7D26-E711-BBE0-5065F37D9132.root'
     #'file:/hdfs/store/mc/PhaseIISpring17D/GluGluHToZZTo4L_M125_14TeV_powheg2_JHUgenV702_pythia8/GEN-SIM-DIGI-RAW/PU200_100M_90X_upgrade2023_realistic_v9-v1/120000/8882318A-8E44-E711-AA96-0242AC130002.root'
-    'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/TauThreeProngsEnriched/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/120000/042B46D1-8E55-E711-A6C7-0CC47AA53D5A.root'
+    #'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/TauThreeProngsEnriched/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/120000/042B46D1-8E55-E711-A6C7-0CC47AA53D5A.root'
+    'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SingleTauOneProngFlatPt10To100/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/120000/02E3D76F-8A55-E711-B9F0-0025901FB188.root',
+    'root://cms-xrd-global.cern.ch//store/mc/PhaseIISpring17D/SingleTauOneProngFlatPt10To100/GEN-SIM-DIGI-RAW/NoPU_90X_upgrade2023_realistic_v9-v1/120000/044D566A-C157-E711-BEDE-0CC47A0AD6AA.root'
     )
 process.source = cms.Source("PoolSource", fileNames = Source_Files)
 
@@ -108,7 +110,7 @@ process.tauAnalyzer = cms.EDAnalyzer('P2L1TEventDisplayGenerator',
 process.panalyzer = cms.Path(process.tauAnalyzer)
 
 process.TFileService = cms.Service("TFileService", 
-   fileName = cms.string("eventDisplay-HZZ.root"), 
+   fileName = cms.string("eventDisplay-1Prong.root"), 
    closeFileFast = cms.untracked.bool(True)
 )
 

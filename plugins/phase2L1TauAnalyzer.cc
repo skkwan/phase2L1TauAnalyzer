@@ -112,6 +112,7 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
   double genPt, genEta, genPhi;
   int decayMode, run, lumi, event;
   double l1TauPt, l1TauEta, l1TauPhi, l1TauDecayMode;
+  double l1TauChargedIso,l1TauNeutralIso,l1TauRawIso;
   double gen1ProngPt, gen1ProngEta, gen1ProngPhi;
   double gen3ProngPt, gen3ProngEta, gen3ProngPhi;
   double gen1ProngPi0Pt, gen1ProngPi0Eta, gen1ProngPi0Phi;
@@ -196,6 +197,11 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("l1TauPt",  &l1TauPt,   "l1TauPt/D");
   efficiencyTree->Branch("l1TauEta", &l1TauEta,   "l1TauEta/D");
   efficiencyTree->Branch("l1TauPhi", &l1TauPhi,   "l1TauPhi/D");
+
+  efficiencyTree->Branch("l1RawIso",     &l1TauRawIso,     "l1RawIso/D");
+  efficiencyTree->Branch("l1ChargedIso", &l1TauChargedIso, "l1ChargedIso/D");
+  efficiencyTree->Branch("l1NeutralIso", &l1TauNeutralIso, "l1NeutralIso/D");
+
   efficiencyTree->Branch("l1TauDecayMode", &l1TauDecayMode,   "l1TauDecayMode/D");
 
   pi0Tree = fs->make<TTree>("pi0Tree", "Crystal cluster individual crystal pt values");
@@ -498,6 +504,9 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
      l1TauEta = -99;
      l1TauPhi = -99;
      l1TauDecayMode = -99;
+     l1TauRawIso = 100;
+     l1TauNeutralIso = 100;
+     l1TauChargedIso = 100;
      for(unsigned int i = 0; i < l1PFTaus->size(); i++){
        if( reco::deltaR(l1PFTaus->at(i).p4().Eta(), 
 			l1PFTaus->at(i).p4().Phi(), 
@@ -507,6 +516,9 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	 l1TauEta = l1PFTaus->at(i).p4().Eta();
 	 l1TauPhi = l1PFTaus->at(i).p4().Phi();
 	 l1TauPt = l1PFTaus->at(i).p4().Pt();
+	 l1TauChargedIso = l1PFTaus->at(i).chargedIso();
+	 l1TauNeutralIso = l1PFTaus->at(i).neutralIso();
+	 l1TauRawIso = l1PFTaus->at(i).rawIso();
 	 l1TauDecayMode = l1PFTaus->at(i).tauType();
 	 std::cout<<"Match found l1Pt: "<<l1TauPt<<" Eta: "<<l1TauEta<<" Phi: "<<l1TauPhi<<std::endl;
        }
