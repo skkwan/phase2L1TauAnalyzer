@@ -33,6 +33,9 @@
 #include "FWCore/ServiceRegistry/interface/Service.h"
 
 // GCT and RCT data formats
+#include "DataFormats/L1Trigger/interface/L1PFTau.h"
+#include "DataFormats/Phase2L1CaloTrig/interface/L1CaloCluster.h"
+#include "DataFormats/L1Trigger/interface/L1PFObject.h"
 #include "DataFormats/L1CaloTrigger/interface/L1CaloCollections.h"
 #include "DataFormats/L1GlobalCaloTrigger/interface/L1GctCollections.h"
 #include "DataFormats/TauReco/interface/PFTau.h"
@@ -97,6 +100,7 @@
 #include "DataFormats/EcalRecHit/interface/EcalRecHitCollections.h"
 
 using std::vector;
+using namespace l1t;
 // class declaration
 //
 
@@ -212,7 +216,7 @@ class P2L1TEventDisplayGenerator : public edm::one::EDAnalyzer<edm::one::SharedR
   edm::EDGetTokenT<reco::VertexCollection> vtxLabel_;
   edm::EDGetTokenT<EcalEBTrigPrimDigiCollection> ecalTPGBToken_;
   edm::EDGetTokenT< L1CaloClusterCollection > L1ClustersToken_;
-  edm::EDGetTokenT< L1PFTauCollection > L1PFTauToken_;
+  edm::EDGetTokenT< l1t::L1PFTauCollection > L1PFTauToken_;
   edm::EDGetTokenT<std::vector<reco::GenParticle> > genToken_;
   edm::InputTag genSrc_;
   double genMatchDeltaRcut;

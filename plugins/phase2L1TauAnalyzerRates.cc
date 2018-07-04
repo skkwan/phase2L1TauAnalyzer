@@ -1,9 +1,9 @@
 // -*- C++ -*-
 //
-// Package:    L1Trigger/phase2L1TauAnalyzer
-// Class:      phase2L1TauAnalyzer
+// Package:    L1Trigger/phase2L1TauAnalyzerRates
+// Class:      phase2L1TauAnalyzerRates
 // 
-/**\class phase2L1TauAnalyzer phase2L1TauAnalyzer.cc L1Trigger/phase2L1TauAnalyzer/plugins/phase2L1TauAnalyzer.cc
+/**\class phase2L1TauAnalyzerRates phase2L1TauAnalyzerRates.cc L1Trigger/phase2L1TauAnalyzerRates/plugins/phase2L1TauAnalyzerRates.cc
 
  Description: [one line class summary]
 
@@ -55,10 +55,6 @@
 #include "DataFormats/HepMCCandidate/interface/GenParticle.h"
 #include "DataFormats/HepMCCandidate/interface/GenParticleFwd.h"
 
-#include "L1Trigger/phase2Demonstrator/interface/triggerGeometryTools.hh"
-#include "DataFormats/L1CaloTrigger/interface/L1CaloCollections.h"
-
-//Vertex and gen particle
 #include "DataFormats/EcalDigi/interface/EcalDigiCollections.h"
 #include "Geometry/CaloEventSetup/interface/CaloTopologyRecord.h"
 #include "Geometry/Records/interface/CaloGeometryRecord.h"
@@ -69,18 +65,18 @@
 #include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
 
 
+#include "L1Trigger/phase2Demonstrator/interface/triggerGeometryTools.hh"
+#include "DataFormats/L1CaloTrigger/interface/L1CaloCollections.h"
+
 #include "L1Trigger/phase2L1TauAnalyzer/plugins/helpers.h"
 #include "DataFormats/Math/interface/deltaR.h"
 
 #include "DataFormats/L1Trigger/interface/L1PFTau.h"
 
-#include "DataFormats/Candidate/interface/Candidate.h"
-
 #include "DataFormats/Phase2L1CaloTrig/interface/L1CaloCluster.h"
 #include "DataFormats/L1Trigger/interface/L1PFObject.h"
 
 #include "DataFormats/PatCandidates/interface/Tau.h"
-#include "DataFormats/PatCandidates/interface/PackedCandidate.h"
 
 //
 // class declaration
@@ -94,10 +90,10 @@
 
 using namespace l1t;
 
-class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResources>  {
+class phase2L1TauAnalyzerRates : public edm::one::EDAnalyzer<edm::one::SharedResources>  {
    public:
-      explicit phase2L1TauAnalyzer(const edm::ParameterSet&);
-      ~phase2L1TauAnalyzer();
+      explicit phase2L1TauAnalyzerRates(const edm::ParameterSet&);
+      ~phase2L1TauAnalyzerRates();
 
       static void fillDescriptions(edm::ConfigurationDescriptions& descriptions);
 
@@ -115,19 +111,17 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
     int decayMode;
   };
 
-  const CaloSubdetectorGeometry * ebGeometry;
-  edm::ESHandle<CaloGeometry> caloGeometry_;
-
   edm::EDGetTokenT< L1CaloClusterCollection > L1ClustersToken_;
   edm::EDGetTokenT< L1PFObjectCollection > L1PFToken_;
   edm::EDGetTokenT< L1PFTauCollection > L1PFTauToken_;
   edm::EDGetTokenT<std::vector<reco::GenParticle> > genToken_;
-  edm::EDGetTokenT< vector<pat::Tau>  > MiniTausToken_;
   edm::EDGetTokenT< std::vector< TTTrack< Ref_Phase2TrackerDigi_ > > > ttTrackToken_;
-  edm::EDGetTokenT<std::vector<pat::PackedCandidate> > PackedCands_;
   edm::EDGetTokenT<EcalEBTrigPrimDigiCollection> ecalTPGBToken_;
   edm::InputTag genSrc_;
   edm::InputTag L1TrackInputTag;
+
+  const CaloSubdetectorGeometry * ebGeometry;
+  edm::ESHandle<CaloGeometry> caloGeometry_;
 
   TTree* pi0Tree;
   TTree* piPlusTree;
@@ -146,14 +140,6 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
   double gen3ProngPt, gen3ProngEta, gen3ProngPhi;
   double gen1ProngPi0Pt, gen1ProngPi0Eta, gen1ProngPi0Phi;
   double genPiZeroPt, genPiZeroEta, genPiZeroPhi;
-
-  double track1_pt, track1_eta, track1_phi;
-  double track2_pt, track2_eta, track2_phi;
-  double track3_pt, track3_eta, track3_phi;
-  double track2_dR, track2_dz;
-  double track3_dR, track3_dz;
-
-  double other_track_pt, other_track_eta, other_track_phi, other_track_dR, other_track_dz;
 
   double recoPt, recoEta, recoPhi; 
   float recoChargedIso, recoNeutralIso, recoRawIso; 
@@ -181,17 +167,25 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
   TH1F* l1Tau_pt_eta2p4;     
   TH1F* l1Tau_pt_eta2p1;
 
+  TH1F* l1TauIso_pt;     
+  TH1F* l1TauIso_pt_eta2p4;     
+  TH1F* l1TauIso_pt_eta2p1;
+
   TH1F* l1SingleProngTau_pt;     
   TH1F* l1SingleProngTau_pt_eta2p4;     
   TH1F* l1SingleProngTau_pt_eta2p1;
+
+  TH1F* l1SingleProngTauIso_pt;     
+  TH1F* l1SingleProngTauIso_pt_eta2p4;     
+  TH1F* l1SingleProngTauIso_pt_eta2p1;
 
   TH1F* l1SingleProngPi0Tau_pt;     
   TH1F* l1SingleProngPi0Tau_pt_eta2p4;     
   TH1F* l1SingleProngPi0Tau_pt_eta2p1;
 
-  TH1F* l1SingleProngTauIso_pt;     
-  TH1F* l1SingleProngTauIso_pt_eta2p4;     
-  TH1F* l1SingleProngTauIso_pt_eta2p1;
+  TH1F* l1SingleProngPi0TauIso_pt;     
+  TH1F* l1SingleProngPi0TauIso_pt_eta2p4;     
+  TH1F* l1SingleProngPi0TauIso_pt_eta2p1;
 
   TH1F* l1ThreeProngTau_pt;     
   TH1F* l1ThreeProngTau_pt_eta2p4;     
@@ -201,8 +195,20 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
   TH1F* l1ThreeProngTauIso_pt_eta2p4;     
   TH1F* l1ThreeProngTauIso_pt_eta2p1;
 
-  TH2F* l1OtherTracks;
+  TH1F* l1DiTau_pt;     
+  TH1F* l1DiTau_pt_eta2p4;     
+  TH1F* l1DiTau_pt_eta2p1;
+
+  TH1F* l1DiTauIso_pt;     
+  TH1F* l1DiTauIso_pt_eta2p4;     
+  TH1F* l1DiTauIso_pt_eta2p1;
+
   TH2F* l1EcalCrystals;
+  TH2F* l1EcalCrystals_2;
+  TH2F* l1EcalCrystals_5;
+  TH2F* l1EcalCrystals_10;
+  TH2F* l1EcalCrystals_15;
+  TH2F* l1EcalCrystals_20;
 };
 
 //
@@ -216,12 +222,10 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
 //
 // constructors and destructor
 //
-phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
+phase2L1TauAnalyzerRates::phase2L1TauAnalyzerRates(const edm::ParameterSet& cfg):
   L1ClustersToken_( consumes< L1CaloClusterCollection >(cfg.getParameter<edm::InputTag>("L1Clusters"))),
   L1PFToken_(       consumes< L1PFObjectCollection >(cfg.getParameter<edm::InputTag>("l1PFObjects"))),
   L1PFTauToken_(    consumes< L1PFTauCollection    >(cfg.getParameter<edm::InputTag>("l1TauObjects"))),
-  MiniTausToken_(   consumes< vector<pat::Tau>     >(cfg.getParameter<edm::InputTag>("miniTaus"))),
-  PackedCands_(     consumes< std::vector<pat::PackedCandidate> >(cfg.getParameter<edm::InputTag>("packedCandidates"))),
   ecalTPGBToken_(   consumes<EcalEBTrigPrimDigiCollection>(cfg.getParameter<edm::InputTag>("ecalTPGsBarrel"))),
   genSrc_ ((        cfg.getParameter<edm::InputTag>( "genParticles")))
 {
@@ -377,31 +381,6 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   threeProngTree->Branch("genPhi",  &gen3ProngPhi,   "genPhi/D");
   threeProngTree->Branch("genDM",   &gen3ProngDecayMode,   "genDM/I");
 
-
-  threeProngTree->Branch("track1_pt",  &track1_pt,   "track1_pt/D");
-  threeProngTree->Branch("track2_pt",  &track2_pt,   "track2_pt/D");
-  threeProngTree->Branch("track3_pt",  &track3_pt,   "track3_pt/D");
-  threeProngTree->Branch("other_track_pt",  &other_track_pt,   "other_track_pt/D");
-
-  threeProngTree->Branch("track1_eta",  &track1_eta,   "track1_eta/D");
-  threeProngTree->Branch("track2_eta",  &track2_eta,   "track2_eta/D");
-  threeProngTree->Branch("track3_eta",  &track3_eta,   "track3_eta/D");  
-  threeProngTree->Branch("other_track_eta",  &other_track_eta,   "other_track_eta/D");  
-  
-  threeProngTree->Branch("track1_phi",  &track1_phi,   "track1_phi/D");  
-  threeProngTree->Branch("track2_phi",  &track2_phi,   "track2_phi/D");  
-  threeProngTree->Branch("track3_phi",  &track3_phi,   "track3_phi/D");  
-  threeProngTree->Branch("other_track_phi",  &other_track_phi,   "other_track_phi/D");  
-
-  threeProngTree->Branch("track2_dR",  &track2_dR,   "track2_dR/D");  
-  threeProngTree->Branch("track3_dR",  &track3_dR,   "track3_dR/D");  
-  threeProngTree->Branch("other_track_dR",  &other_track_dR,   "other_track_dR/D");  
-
-  threeProngTree->Branch("track2_dz",  &track2_dz,   "track2_dz/D");  
-  threeProngTree->Branch("track3_dz",  &track3_dz,   "track3_dz/D");  
-  threeProngTree->Branch("other_track_dz",  &other_track_dz,   "other_track_dz/D");  
-
-
   /*
   threeProngTree->Branch("objectPt",  &threeProngTau.objectPt,   "objectPt/D");
   threeProngTree->Branch("objectEta", &threeProngTau.objectEta,   "objectEta/D");
@@ -415,42 +394,62 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   threeProngTree->Branch("decayMode",  &threeProngTau.tauDecayMode,   "decayMode/I");
   */
 
-  nEvents              = fs->make<TH1F>( "nEvents"  , "nEvents", 2,  0., 1. );
-  track_pt             = fs->make<TH1F>( "track_pt"  , "p_{t}", 200,  0., 200. );
-  track_pt_eta2p4      = fs->make<TH1F>( "track_pt_eta2p4"  , "p_{t}", 200,  0., 200. );
-  track_pt_eta2p1      = fs->make<TH1F>( "track_pt_eta2p1"  , "p_{t}", 200,  0., 200. );
+  nEvents              = fs->make<TH1F>( "nEvents"  , "nEvents", 2,  0., 2. );
+  track_pt             = fs->make<TH1F>( "track_pt"  , "p_{t}", 300,  0., 300. );
+  track_pt_eta2p4      = fs->make<TH1F>( "track_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  track_pt_eta2p1      = fs->make<TH1F>( "track_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
 
-  l1Tau_pt             = fs->make<TH1F>( "l1Tau_ptl"  , "p_{t}", 200,  0., 200. );
-  l1Tau_pt_eta2p4      = fs->make<TH1F>( "l1Tau_pt_eta2p4"  , "p_{t}", 200,  0., 200. );
-  l1Tau_pt_eta2p1      = fs->make<TH1F>( "l1Tau_pt_eta2p1"  , "p_{t}", 200,  0., 200. );
+  l1Tau_pt             = fs->make<TH1F>( "l1Tau_pt"  , "p_{t}", 300,  0., 300. );
+  l1Tau_pt_eta2p4      = fs->make<TH1F>( "l1Tau_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1Tau_pt_eta2p1      = fs->make<TH1F>( "l1Tau_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
 
-  l1SingleProngTau_pt            = fs->make<TH1F>( "l1SingleProngTau"  , "p_{t}", 200,  0., 200. );
-  l1SingleProngTau_pt_eta2p4     = fs->make<TH1F>( "l1SingleProngTau_eta2p4"  , "p_{t}", 200,  0., 200. );
-  l1SingleProngTau_pt_eta2p1     = fs->make<TH1F>( "l1SingleProngTau_eta2p1"  , "p_{t}", 200,  0., 200. );
+  l1TauIso_pt            = fs->make<TH1F>( "l1TauIso_pt"  , "p_{t}", 300,  0., 300. );
+  l1TauIso_pt_eta2p4     = fs->make<TH1F>( "l1TauIso_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1TauIso_pt_eta2p1     = fs->make<TH1F>( "l1TauIso_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
 
-  l1SingleProngPi0Tau_pt            = fs->make<TH1F>( "l1SingleProngTau"  , "p_{t}", 200,  0., 200. );
-  l1SingleProngPi0Tau_pt_eta2p4     = fs->make<TH1F>( "l1SingleProngTau_eta2p4"  , "p_{t}", 200,  0., 200. );
-  l1SingleProngPi0Tau_pt_eta2p1     = fs->make<TH1F>( "l1SingleProngTau_eta2p1"  , "p_{t}", 200,  0., 200. );
+  l1DiTau_pt             = fs->make<TH1F>( "l1DiTau_pt"  , "p_{t}", 300,  0., 300. );
+  l1DiTau_pt_eta2p4      = fs->make<TH1F>( "l1DiTau_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1DiTau_pt_eta2p1      = fs->make<TH1F>( "l1DiTau_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
 
-  l1SingleProngTauIso_pt         = fs->make<TH1F>( "l1SingleProngTauIso"  , "p_{t}", 200,  0., 200. );
-  l1SingleProngTauIso_pt_eta2p4  = fs->make<TH1F>( "l1SingleProngTauIso_eta2p4"  , "p_{t}", 200,  0., 200. );
-  l1SingleProngTauIso_pt_eta2p1  = fs->make<TH1F>( "l1SingleProngTauIso_eta2p1"  , "p_{t}", 200,  0., 200. );
+  l1DiTauIso_pt          = fs->make<TH1F>( "l1DiTauIso_pt"  , "p_{t}", 300,  0., 300. );
+  l1DiTauIso_pt_eta2p4   = fs->make<TH1F>( "l1DiTauIso_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1DiTauIso_pt_eta2p1   = fs->make<TH1F>( "l1DiTauIso_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
 
-  l1ThreeProngTau_pt             = fs->make<TH1F>( "l1ThreeProngTau_pt"  , "p_{t}", 200,  0., 200. );
-  l1ThreeProngTau_pt_eta2p4      = fs->make<TH1F>( "l1ThreeProngTau_pt_eta2p4"  , "p_{t}", 200,  0., 200. );
-  l1ThreeProngTau_pt_eta2p1      = fs->make<TH1F>( "l1ThreeProngTau_pt_eta2p1"  , "p_{t}", 200,  0., 200. );
+  l1SingleProngTau_pt            = fs->make<TH1F>( "l1SingleProngTau"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngTau_pt_eta2p4     = fs->make<TH1F>( "l1SingleProngTau_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngTau_pt_eta2p1     = fs->make<TH1F>( "l1SingleProngTau_eta2p1"  , "p_{t}", 300,  0., 300. );
 
-  l1ThreeProngTauIso_pt          = fs->make<TH1F>( "l1ThreeProngTauIso_pt"  , "p_{t}", 200,  0., 200. );
-  l1ThreeProngTauIso_pt_eta2p4   = fs->make<TH1F>( "l1ThreeProngTauIso_pt_eta2p4"  , "p_{t}", 200,  0., 200. );
-  l1ThreeProngTauIso_pt_eta2p1   = fs->make<TH1F>( "l1ThreeProngTauIso_pt_eta2p1"  , "p_{t}", 200,  0., 200. );
+  l1SingleProngTauIso_pt         = fs->make<TH1F>( "l1SingleProngTauIso"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngTauIso_pt_eta2p4  = fs->make<TH1F>( "l1SingleProngTauIso_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngTauIso_pt_eta2p1  = fs->make<TH1F>( "l1SingleProngTauIso_eta2p1"  , "p_{t}", 300,  0., 300. );
 
-  l1OtherTracks    = fs->make<TH2F>( "l1OtherTracks"  , "p_{t}", 40, 0., 0.3, 40, 0., 100. );
+  l1SingleProngPi0Tau_pt            = fs->make<TH1F>( "l1SingleProngPi0Tau"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngPi0Tau_pt_eta2p4     = fs->make<TH1F>( "l1SingleProngPi0Tau_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngPi0Tau_pt_eta2p1     = fs->make<TH1F>( "l1SingleProngPi0Tau_eta2p1"  , "p_{t}", 300,  0., 300. );
+
+  l1SingleProngPi0TauIso_pt         = fs->make<TH1F>( "l1SingleProngPi0TauIso"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngPi0TauIso_pt_eta2p4  = fs->make<TH1F>( "l1SingleProngPi0TauIso_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngPi0TauIso_pt_eta2p1  = fs->make<TH1F>( "l1SingleProngPi0TauIso_eta2p1"  , "p_{t}", 300,  0., 300. );
+
+  l1ThreeProngTau_pt             = fs->make<TH1F>( "l1ThreeProngTau_pt"  , "p_{t}", 300,  0., 300. );
+  l1ThreeProngTau_pt_eta2p4      = fs->make<TH1F>( "l1ThreeProngTau_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1ThreeProngTau_pt_eta2p1      = fs->make<TH1F>( "l1ThreeProngTau_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
+
+  l1ThreeProngTauIso_pt          = fs->make<TH1F>( "l1ThreeProngTauIso_pt"  , "p_{t}", 300,  0., 300. );
+  l1ThreeProngTauIso_pt_eta2p4   = fs->make<TH1F>( "l1ThreeProngTauIso_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1ThreeProngTauIso_pt_eta2p1   = fs->make<TH1F>( "l1ThreeProngTauIso_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
+
   l1EcalCrystals   = fs->make<TH2F>( "ecal_crystals"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
+  l1EcalCrystals_2   = fs->make<TH2F>( "ecal_crystals_2"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
+  l1EcalCrystals_5   = fs->make<TH2F>( "ecal_crystals_5"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
+  l1EcalCrystals_10  = fs->make<TH2F>( "ecal_crystals_10"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
+  l1EcalCrystals_15  = fs->make<TH2F>( "ecal_crystals_15"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
+  l1EcalCrystals_20  = fs->make<TH2F>( "ecal_crystals_20"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
 
 }
 
 
-phase2L1TauAnalyzer::~phase2L1TauAnalyzer()
+phase2L1TauAnalyzerRates::~phase2L1TauAnalyzerRates()
 {
  
    // do anything here that needs to be done at desctruction time
@@ -466,30 +465,25 @@ phase2L1TauAnalyzer::~phase2L1TauAnalyzer()
 
 // ------------ method called for each event  ------------
 void
-phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
+phase2L1TauAnalyzerRates::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
-  using namespace edm;
-  
-  run   = iEvent.id().run();
-  lumi  = iEvent.id().luminosityBlock();
-  event = iEvent.id().event();
-  
-  edm::Handle< std::vector<L1CaloCluster> > l1Clusters;
-  iEvent.getByToken( L1ClustersToken_, l1Clusters);
-  
+   using namespace edm;
+   
+   nEvents->Fill(1);
+
+   run   = iEvent.id().run();
+   lumi  = iEvent.id().luminosityBlock();
+   event = iEvent.id().event();
+   
+   edm::Handle< std::vector<L1CaloCluster> > l1Clusters;
+   iEvent.getByToken( L1ClustersToken_, l1Clusters);
+
   edm::Handle< std::vector<L1PFObject> > l1PFChargedCandidates;
   iEvent.getByToken( L1PFToken_, l1PFChargedCandidates);
-  
-  edm::Handle< std::vector<L1PFTau> > l1PFTaus;
+
+   edm::Handle< std::vector<L1PFTau> > l1PFTaus;
   iEvent.getByToken( L1PFTauToken_, l1PFTaus);
 
-  Handle<std::vector<pat::PackedCandidate> > packedcands;
-  iEvent.getByToken(PackedCands_, packedcands);
-  
-  edm::Handle< std::vector<pat::Tau> > miniTaus;
-  if(!iEvent.getByToken( MiniTausToken_, miniTaus))
-    std::cout<<"No miniAOD particles found"<<std::endl;
-  
   //control plot for ecal crystals
   edm::Handle<EcalEBTrigPrimDigiCollection> ecaltpgCollection;
   iEvent.getByToken( ecalTPGBToken_, ecaltpgCollection);
@@ -515,8 +509,20 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	  float eta = cell->getPosition().eta();
 	  float phi = cell->getPosition().phi();
 	  l1EcalCrystals->Fill(eta,phi,et);
+	  if(et>2)
+	    l1EcalCrystals_2->Fill(eta,phi,et);
+	  if(et>5)
+	    l1EcalCrystals_5->Fill(eta,phi,et);
+	  if(et>10)
+	    l1EcalCrystals_10->Fill(eta,phi,et);
+	  if(et>15)
+	    l1EcalCrystals_15->Fill(eta,phi,et);
+	  if(et>20)
+	    l1EcalCrystals_20->Fill(eta,phi,et);
+
 	}
     }
+
 
   // L1 tracks  
   std::vector<TTTrack< Ref_Phase2TrackerDigi_ > > l1Tracks;
@@ -539,7 +545,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
     }
 
   std::sort(l1Tracks.begin(), l1Tracks.end(), [](TTTrack< Ref_Phase2TrackerDigi_ > i,TTTrack< Ref_Phase2TrackerDigi_ > j){return(i.getMomentum().perp() > j.getMomentum().perp());});   
-
+  
   if(l1Tracks.size()>0)
     track_pt->Fill(l1Tracks.at(0).getMomentum().perp());
 
@@ -563,13 +569,26 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
   for(unsigned int i = 0; i < l1PFTaus->size(); i++){
     l1PFTaus_sorted.push_back(l1PFTaus->at(i));
   }
-  
+
   std::sort(l1PFTaus_sorted.begin(), l1PFTaus_sorted.end(), [](L1PFTau i,L1PFTau j){return(i.p4().pt() > j.p4().pt());});   
+
+  std::vector<L1PFTau> l1PFTaus_sorted_iso;
+
+  for(unsigned int i = 0; i < l1PFTaus->size(); i++){
+    if(l1PFTaus->at(i).chargedIso()<100)
+      if(l1PFTaus->at(i).chargedIso()/l1PFTaus->at(i).pt()<0.2)
+	l1PFTaus_sorted_iso.push_back(l1PFTaus->at(i));
+  }
+  
+  std::sort(l1PFTaus_sorted_iso.begin(), l1PFTaus_sorted_iso.end(), [](L1PFTau i,L1PFTau j){return(i.p4().pt() > j.p4().pt());});   
 
 
   //filling general rate tree
   if(l1PFTaus_sorted.size()>0)
     l1Tau_pt->Fill(l1PFTaus_sorted.at(0).pt());
+
+  if(l1PFTaus_sorted.size()>1)
+    l1DiTau_pt->Fill(l1PFTaus_sorted.at(1).pt());
   
   bool f_2p1=false;
   bool f_2p4=false;
@@ -588,63 +607,63 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 
   for(unsigned int i = 0; i < l1PFTaus_sorted.size(); i++){
     
-    if(abs(l1PFTaus->at(i).eta())<2.1 && !f_2p1){
-      l1Tau_pt_eta2p1->Fill(l1PFTaus->at(i).pt());
+    if(abs(l1PFTaus_sorted.at(i).eta())<2.1 && !f_2p1){
+      l1Tau_pt_eta2p1->Fill(l1PFTaus_sorted.at(i).pt());
       f_2p1=true;
     }
 
-    if(abs(l1PFTaus->at(i).eta())<2.4 && !f_2p4){
-      l1Tau_pt_eta2p4->Fill(l1PFTaus->at(i).pt());
+    if(abs(l1PFTaus_sorted.at(i).eta())<2.4 && !f_2p4){
+      l1Tau_pt_eta2p4->Fill(l1PFTaus_sorted.at(i).pt());
       f_2p4=true;
     }
 
-    if(l1PFTaus->at(i).tauType()==0){
+    if(l1PFTaus_sorted.at(i).tauType()==0){
       
       if(!f0){
-	l1SingleProngTau_pt->Fill(l1PFTaus->at(i).pt());
+	l1SingleProngTau_pt->Fill(l1PFTaus_sorted.at(i).pt());
 	f0 = true;
       }
 
-      if(abs(l1PFTaus->at(i).eta())<2.1 && !f0_2p1){
-        l1SingleProngTau_pt_eta2p1->Fill(l1PFTaus->at(i).pt());
+      if(abs(l1PFTaus_sorted.at(i).eta())<2.1 && !f0_2p1){
+        l1SingleProngTau_pt_eta2p1->Fill(l1PFTaus_sorted.at(i).pt());
 	f0_2p1=true;
       }
-      if(abs(l1PFTaus->at(i).eta())<2.4 && !f0_2p4){
-	l1SingleProngTau_pt_eta2p4->Fill(l1PFTaus->at(i).pt());
+      if(abs(l1PFTaus_sorted.at(i).eta())<2.4 && !f0_2p4){
+	l1SingleProngTau_pt_eta2p4->Fill(l1PFTaus_sorted.at(i).pt());
 	f0_2p4=true;
       }
       
     }//close 1prong
 
-    if(l1PFTaus->at(i).tauType()==1){
+    if(l1PFTaus_sorted.at(i).tauType()==1){
       
       if(!f1){
-	l1SingleProngPi0Tau_pt->Fill(l1PFTaus->at(i).pt());
+	l1SingleProngPi0Tau_pt->Fill(l1PFTaus_sorted.at(i).pt());
 	f1=true;
       }
 
-      if(abs(l1PFTaus->at(i).eta())<2.1 && !f1_2p1){
-        l1SingleProngPi0Tau_pt_eta2p1->Fill(l1PFTaus->at(i).pt());
+      if(abs(l1PFTaus_sorted.at(i).eta())<2.1 && !f1_2p1){
+        l1SingleProngPi0Tau_pt_eta2p1->Fill(l1PFTaus_sorted.at(i).pt());
 	f1_2p1=true;
       }
-      if(abs(l1PFTaus->at(i).eta())<2.4 && !f1_2p4){
-	l1SingleProngPi0Tau_pt_eta2p4->Fill(l1PFTaus->at(i).pt());
+      if(abs(l1PFTaus_sorted.at(i).eta())<2.4 && !f1_2p4){
+	l1SingleProngPi0Tau_pt_eta2p4->Fill(l1PFTaus_sorted.at(i).pt());
 	f1_2p4=true;
       }
       
     }//close 1prongPi0
 
-    if(l1PFTaus->at(i).tauType()==10){
+    if(l1PFTaus_sorted.at(i).tauType()==10){
       if(!f10){
-	l1ThreeProngTau_pt->Fill(l1PFTaus->at(i).pt());
+	l1ThreeProngTau_pt->Fill(l1PFTaus_sorted.at(i).pt());
 	f10=true;
       }
-      if(abs(l1PFTaus->at(i).eta())<2.1 && !f10_2p1){
-        l1ThreeProngTau_pt_eta2p1->Fill(l1PFTaus->at(i).pt());
+      if(abs(l1PFTaus_sorted.at(i).eta())<2.1 && !f10_2p1){
+        l1ThreeProngTau_pt_eta2p1->Fill(l1PFTaus_sorted.at(i).pt());
 	f10_2p1=true;
       }
-      if(abs(l1PFTaus->at(i).eta())<2.4 && !f10_2p4){
-	l1ThreeProngTau_pt_eta2p4->Fill(l1PFTaus->at(i).pt());
+      if(abs(l1PFTaus_sorted.at(i).eta())<2.4 && !f10_2p4){
+	l1ThreeProngTau_pt_eta2p4->Fill(l1PFTaus_sorted.at(i).pt());
 	f10_2p4=true;
       }
       
@@ -652,6 +671,97 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 
 
   }
+
+
+  //filling iso rate tree
+  if(l1PFTaus_sorted_iso.size()>0)
+    l1TauIso_pt->Fill(l1PFTaus_sorted_iso.at(0).pt());
+
+  if(l1PFTaus_sorted_iso.size()>1)
+    l1DiTauIso_pt->Fill(l1PFTaus_sorted_iso.at(1).pt());
+  
+  f_2p1=false;
+  f_2p4=false;
+
+  f0=false;
+  f0_2p1=false;
+  f0_2p4=false;
+
+  f1=false;
+  f1_2p1=false;
+  f1_2p4=false;
+
+  f10 = false;
+  f10_2p1=false;
+  f10_2p4=false;
+
+  for(unsigned int i = 0; i < l1PFTaus_sorted_iso.size(); i++){
+    
+    if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.1 && !f_2p1){
+      l1TauIso_pt_eta2p1->Fill(l1PFTaus_sorted_iso.at(i).pt());
+      f_2p1=true;
+    }
+
+    if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.4 && !f_2p4){
+      l1TauIso_pt_eta2p4->Fill(l1PFTaus_sorted_iso.at(i).pt());
+      f_2p4=true;
+    }
+
+    if(l1PFTaus_sorted_iso.at(i).tauType()==0){
+      
+      if(!f0){
+	l1SingleProngTauIso_pt->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f0 = true;
+      }
+
+      if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.1 && !f0_2p1){
+        l1SingleProngTauIso_pt_eta2p1->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f0_2p1=true;
+      }
+      if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.4 && !f0_2p4){
+	l1SingleProngTauIso_pt_eta2p4->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f0_2p4=true;
+      }
+      
+    }//close 1prong
+
+    if(l1PFTaus_sorted_iso.at(i).tauType()==1){
+      
+      if(!f1){
+	l1SingleProngPi0TauIso_pt->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f1=true;
+      }
+
+      if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.1 && !f1_2p1){
+        l1SingleProngPi0TauIso_pt_eta2p1->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f1_2p1=true;
+      }
+      if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.4 && !f1_2p4){
+	l1SingleProngPi0TauIso_pt_eta2p4->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f1_2p4=true;
+      }
+      
+    }//close 1prongPi0
+
+    if(l1PFTaus_sorted_iso.at(i).tauType()==10){
+      if(!f10){
+	l1ThreeProngTauIso_pt->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f10=true;
+      }
+      if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.1 && !f10_2p1){
+        l1ThreeProngTauIso_pt_eta2p1->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f10_2p1=true;
+      }
+      if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.4 && !f10_2p4){
+	l1ThreeProngTauIso_pt_eta2p4->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f10_2p4=true;
+      }
+      
+    }//close 3prong
+
+
+  }
+
 
 
    // Get genParticles
@@ -801,163 +911,28 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	 std::cout<<"Match found l1Pt: "<<l1TauPt<<" Eta: "<<l1TauEta<<" Phi: "<<l1TauPhi<<std::endl;
        }
      }
-     for(unsigned int i = 0; i < miniTaus->size(); i++){
-       if( reco::deltaR(miniTaus->at(i).p4().Eta(), 
-			miniTaus->at(i).p4().Phi(), 
-			genEta, genPhi) < 0.5)
-	 if(miniTaus->at(i).tauID("decayModeFinding")>0){
-	   recoEta        = miniTaus->at(i).p4().Eta();
-	   recoPhi        = miniTaus->at(i).p4().Phi();
-	   recoPt         = miniTaus->at(i).p4().Pt();
-	   recoChargedIso = miniTaus->at(i).tauID("chargedIsoPtSum");
-	   recoNeutralIso = miniTaus->at(i).tauID("neutralIsoPtSum");
-	   recoRawIso     = miniTaus->at(i).tauID("byCombinedIsolationDeltaBetaCorrRaw3Hits");
-	   recoDecayMode  = miniTaus->at(i).decayMode();
-	   std::cout<<"== Match found recoPt: "<<recoPt<<" Eta: "<<recoEta<<" Phi: "<< recoPhi <<std::endl;
-	 }
-     }
      efficiencyTree->Fill();
    }
 
-   
-   for(auto genTau: GenThreeProngTaus){
-     genPt  = genTau.p4.pt();
-     genEta = genTau.p4.eta();
-     genPhi = genTau.p4.phi();
-     
-     for(unsigned int i = 0; i < miniTaus->size(); i++){
-       if( reco::deltaR(miniTaus->at(i).p4().Eta(), 
-			miniTaus->at(i).p4().Phi(), 
-			genEta, genPhi) < 0.5)
-	 if(miniTaus->at(i).tauID("decayModeFinding")>0 && miniTaus->at(i).decayMode()==10){
-	   recoEta        = miniTaus->at(i).p4().Eta();
-	   recoPhi        = miniTaus->at(i).p4().Phi();
-	   recoPt         = miniTaus->at(i).p4().Pt();
-	   recoDecayMode  = miniTaus->at(i).decayMode();
-	   //std::cout<<"accessing the signal tracks size"<<std::endl;
-	   //std::cout<<"size: "<<miniTaus->at(i).signalChargedHadrCands().size()<<std::endl;
-	   const reco::CandidatePtrVector chargedHadrons = miniTaus->at(i).signalChargedHadrCands();
-	   //std::cout<<"size CH: "<< (*chargedHadrons)->size()<<std::endl;
-	   //for (size_t j = 0; i < .size(); ++i) {
-	   //if(miniTaus->at(i).signalChargedHadrCands().size()>2){
-	   int j = 0;
-
-	   pat::PackedCandidate const* pfCand_1;
-	   pat::PackedCandidate const* pfCand_2;
-	   pat::PackedCandidate const* pfCand_3;
-
-	   math::PtEtaPhiMLorentzVector tempP4_track1;
-	   math::PtEtaPhiMLorentzVector tempP4_track2;
-	   math::PtEtaPhiMLorentzVector tempP4_track3;
-	   
-	   for(reco::CandidatePtrVector::const_iterator iter = chargedHadrons.begin(); iter != chargedHadrons.end(); iter++){
-	     //pat::PackedCandidate const* packedCand = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-	   
-	     if(j==0){
-	        pfCand_1 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-		std::cout<<"track 1 pt: "<<(pfCand_1)->pt()<<" eta: "<<(pfCand_1)->eta()<<" phi: "<<(pfCand_1)->phi()<<std::endl;
-		tempP4_track1.SetPt((pfCand_1)->pt()); 
-		tempP4_track1.SetEta((pfCand_1)->eta()); 
-		tempP4_track1.SetPhi((pfCand_1)->phi());
-	     }
-
-	     if(j==1){
-	        pfCand_2 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-		//std::cout<<"track 2 pt: "<<track2_pt<<" eta: "<<track2_eta<<" phi: "<<track2_phi<<std::endl;
-		std::cout<<"track 2 pt: "<<(pfCand_2)->pt()<<" eta: "<< (pfCand_2)->eta() <<" phi: "<< (pfCand_2)->phi() <<std::endl;
-		tempP4_track2.SetPt((pfCand_2)->pt()); 
-		tempP4_track2.SetEta((pfCand_2)->eta()); 
-		tempP4_track2.SetPhi((pfCand_2)->phi());
-		//tempP4_track2.SetPtEtaPhiM((pfCand_2)->pt(), (pfCand_2)->eta(), (pfCand_2)->phi(), 1.335);
-
-	     }
-
-	     if(j==2){
-	        pfCand_3 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-		std::cout<<"track 3 pt: "<<(pfCand_3)->pt()<<" eta: "<< (pfCand_3)->eta() <<" phi: "<< (pfCand_3)->phi() <<std::endl;
-		tempP4_track3.SetPt((pfCand_3)->pt()); 
-		tempP4_track3.SetEta((pfCand_3)->eta()); 
-		tempP4_track3.SetPhi((pfCand_3)->phi());
-
-		//tempP4_track3.SetPtEtaPhiM((pfCand_3)->pt(), (pfCand_3)->eta(), (pfCand_3)->phi(), 1.335);
-
-	     }
-	     j++;
-	   }
-	   
-	   track1_pt      = (pfCand_1)->pt();
-	   track1_eta     = (pfCand_1)->eta();
-	   track1_phi     = (pfCand_1)->phi();
-	   
-	   track2_pt      = (pfCand_2)->pt();
-	   track2_eta     = (pfCand_2)->eta();
-	   track2_phi     = (pfCand_2)->phi();
-	   
-	   track3_pt      = (pfCand_3)->pt();
-	   track3_eta     = (pfCand_3)->eta();
-	   track3_phi     = (pfCand_3)->phi();
-	   
-	   
-	   track2_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track2);
-	   track2_dz      = abs((pfCand_1)->pz() - (pfCand_2)->pz());
-	   
-	   track3_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track3);
-	   track3_dz      = abs((pfCand_1)->pz() - (pfCand_3)->pz());
-
-	   float highestPt_other_track = 0;
-	   for(unsigned int i=0;i<packedcands->size();i++){
-	     bool isASignalCand = false;
-	     const pat::PackedCandidate & c = (*packedcands)[i];
-
-	     //check if it is nearby
-	     if( reco::deltaR(track1_eta, track1_phi, c.eta(), c.phi()) < 0.3){
-	       for(reco::CandidatePtrVector::const_iterator iter = chargedHadrons.begin(); iter != chargedHadrons.end(); iter++){
-		 pat::PackedCandidate const* signalcand = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-		 //std::cout<<"c.sourceCandidatePtr(0).key() "<<c.sourceCandidatePtr(0).key()<<" signalcand->sourceCandidatePtr(0).key() "<<signalcand->sourceCandidatePtr(0).key()<<std::endl;
-		 if(c.pt() == signalcand->pt()){
-		   //std::cout<<"MATCHED c.sourceCandidatePtr(0).key() "<<c.sourceCandidatePtr(0).key()<<" signalcand->sourceCandidatePtr(0).key() "<<signalcand->sourceCandidatePtr(0).key()<<std::endl;
-		   isASignalCand = true;
-		 }
-	       }
-
-	       if(!isASignalCand)
-		 l1OtherTracks->Fill(c.pt(),ROOT::Math::VectorUtil::DeltaR(tempP4_track1,c.p4()));
-
-	       if(!isASignalCand && c.pt() > highestPt_other_track){
-		 other_track_pt = c.pt();
-		 other_track_eta = c.eta();
-		 other_track_phi = c.phi();
-		 other_track_dR  = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,c.p4());
-		 other_track_dz  = abs((pfCand_1)->pz() - c.pz());
-	       }
-	     }
-	   }
-	   std::cout<<"Filling the tree"<<std::endl;
-	   threeProngTree->Fill();
-	 }
-     }
-     
-   }
-   
    std::cout<<"Finished Analyzing the Taus"<<std::endl;
 }
 
 
 // ------------ method called once each job just before starting event loop  ------------
 void 
-phase2L1TauAnalyzer::beginJob()
+phase2L1TauAnalyzerRates::beginJob()
 {
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
 void 
-phase2L1TauAnalyzer::endJob() 
+phase2L1TauAnalyzerRates::endJob() 
 {
 }
 
 // ------------ method fills 'descriptions' with the allowed parameters for the module  ------------
 void
-phase2L1TauAnalyzer::fillDescriptions(edm::ConfigurationDescriptions& descriptions) {
+phase2L1TauAnalyzerRates::fillDescriptions(edm::ConfigurationDescriptions& descriptions) {
   //The following says we do not know what parameters are allowed so do no validation
   // Please change this to state exactly what you do use, even if it is no parameters
   edm::ParameterSetDescription desc;
@@ -966,4 +941,4 @@ phase2L1TauAnalyzer::fillDescriptions(edm::ConfigurationDescriptions& descriptio
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(phase2L1TauAnalyzer);
+DEFINE_FWK_MODULE(phase2L1TauAnalyzerRates);
