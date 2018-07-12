@@ -171,6 +171,10 @@ class phase2L1TauAnalyzerRates : public edm::one::EDAnalyzer<edm::one::SharedRes
   TH1F* l1TauIso_pt_eta2p4;     
   TH1F* l1TauIso_pt_eta2p1;
 
+  TH1F* l1TauIsoTight_pt;     
+  TH1F* l1TauIsoTight_pt_eta2p4;     
+  TH1F* l1TauIsoTight_pt_eta2p1;
+
   TH1F* l1SingleProngTau_pt;     
   TH1F* l1SingleProngTau_pt_eta2p4;     
   TH1F* l1SingleProngTau_pt_eta2p1;
@@ -178,6 +182,10 @@ class phase2L1TauAnalyzerRates : public edm::one::EDAnalyzer<edm::one::SharedRes
   TH1F* l1SingleProngTauIso_pt;     
   TH1F* l1SingleProngTauIso_pt_eta2p4;     
   TH1F* l1SingleProngTauIso_pt_eta2p1;
+
+  TH1F* l1SingleProngTauIsoTight_pt;     
+  TH1F* l1SingleProngTauIsoTight_pt_eta2p4;     
+  TH1F* l1SingleProngTauIsoTight_pt_eta2p1;
 
   TH1F* l1SingleProngPi0Tau_pt;     
   TH1F* l1SingleProngPi0Tau_pt_eta2p4;     
@@ -187,6 +195,10 @@ class phase2L1TauAnalyzerRates : public edm::one::EDAnalyzer<edm::one::SharedRes
   TH1F* l1SingleProngPi0TauIso_pt_eta2p4;     
   TH1F* l1SingleProngPi0TauIso_pt_eta2p1;
 
+  TH1F* l1SingleProngPi0TauIsoTight_pt;     
+  TH1F* l1SingleProngPi0TauIsoTight_pt_eta2p4;     
+  TH1F* l1SingleProngPi0TauIsoTight_pt_eta2p1;
+
   TH1F* l1ThreeProngTau_pt;     
   TH1F* l1ThreeProngTau_pt_eta2p4;     
   TH1F* l1ThreeProngTau_pt_eta2p1;
@@ -195,6 +207,10 @@ class phase2L1TauAnalyzerRates : public edm::one::EDAnalyzer<edm::one::SharedRes
   TH1F* l1ThreeProngTauIso_pt_eta2p4;     
   TH1F* l1ThreeProngTauIso_pt_eta2p1;
 
+  TH1F* l1ThreeProngTauIsoTight_pt;     
+  TH1F* l1ThreeProngTauIsoTight_pt_eta2p4;     
+  TH1F* l1ThreeProngTauIsoTight_pt_eta2p1;
+
   TH1F* l1DiTau_pt;     
   TH1F* l1DiTau_pt_eta2p4;     
   TH1F* l1DiTau_pt_eta2p1;
@@ -202,6 +218,10 @@ class phase2L1TauAnalyzerRates : public edm::one::EDAnalyzer<edm::one::SharedRes
   TH1F* l1DiTauIso_pt;     
   TH1F* l1DiTauIso_pt_eta2p4;     
   TH1F* l1DiTauIso_pt_eta2p1;
+
+  TH1F* l1DiTauIsoTight_pt;     
+  TH1F* l1DiTauIsoTight_pt_eta2p4;     
+  TH1F* l1DiTauIsoTight_pt_eta2p1;
 
   TH2F* l1EcalCrystals;
   TH2F* l1EcalCrystals_2;
@@ -407,6 +427,10 @@ phase2L1TauAnalyzerRates::phase2L1TauAnalyzerRates(const edm::ParameterSet& cfg)
   l1TauIso_pt_eta2p4     = fs->make<TH1F>( "l1TauIso_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
   l1TauIso_pt_eta2p1     = fs->make<TH1F>( "l1TauIso_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
 
+  l1TauIsoTight_pt            = fs->make<TH1F>( "l1TauIsoTight_pt"  , "p_{t}", 300,  0., 300. );
+  l1TauIsoTight_pt_eta2p4     = fs->make<TH1F>( "l1TauIsoTight_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1TauIsoTight_pt_eta2p1     = fs->make<TH1F>( "l1TauIsoTight_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
+
   l1DiTau_pt             = fs->make<TH1F>( "l1DiTau_pt"  , "p_{t}", 300,  0., 300. );
   l1DiTau_pt_eta2p4      = fs->make<TH1F>( "l1DiTau_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
   l1DiTau_pt_eta2p1      = fs->make<TH1F>( "l1DiTau_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
@@ -414,6 +438,10 @@ phase2L1TauAnalyzerRates::phase2L1TauAnalyzerRates(const edm::ParameterSet& cfg)
   l1DiTauIso_pt          = fs->make<TH1F>( "l1DiTauIso_pt"  , "p_{t}", 300,  0., 300. );
   l1DiTauIso_pt_eta2p4   = fs->make<TH1F>( "l1DiTauIso_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
   l1DiTauIso_pt_eta2p1   = fs->make<TH1F>( "l1DiTauIso_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
+
+  l1DiTauIsoTight_pt          = fs->make<TH1F>( "l1DiTauIsoTight_pt"  , "p_{t}", 300,  0., 300. );
+  l1DiTauIsoTight_pt_eta2p4   = fs->make<TH1F>( "l1DiTauIsoTight_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1DiTauIsoTight_pt_eta2p1   = fs->make<TH1F>( "l1DiTauIsoTight_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
 
   l1SingleProngTau_pt            = fs->make<TH1F>( "l1SingleProngTau"  , "p_{t}", 300,  0., 300. );
   l1SingleProngTau_pt_eta2p4     = fs->make<TH1F>( "l1SingleProngTau_eta2p4"  , "p_{t}", 300,  0., 300. );
@@ -423,6 +451,10 @@ phase2L1TauAnalyzerRates::phase2L1TauAnalyzerRates(const edm::ParameterSet& cfg)
   l1SingleProngTauIso_pt_eta2p4  = fs->make<TH1F>( "l1SingleProngTauIso_eta2p4"  , "p_{t}", 300,  0., 300. );
   l1SingleProngTauIso_pt_eta2p1  = fs->make<TH1F>( "l1SingleProngTauIso_eta2p1"  , "p_{t}", 300,  0., 300. );
 
+  l1SingleProngTauIsoTight_pt         = fs->make<TH1F>( "l1SingleProngTauIsoTight"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngTauIsoTight_pt_eta2p4  = fs->make<TH1F>( "l1SingleProngTauIsoTight_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngTauIsoTight_pt_eta2p1  = fs->make<TH1F>( "l1SingleProngTauIsoTight_eta2p1"  , "p_{t}", 300,  0., 300. );
+
   l1SingleProngPi0Tau_pt            = fs->make<TH1F>( "l1SingleProngPi0Tau"  , "p_{t}", 300,  0., 300. );
   l1SingleProngPi0Tau_pt_eta2p4     = fs->make<TH1F>( "l1SingleProngPi0Tau_eta2p4"  , "p_{t}", 300,  0., 300. );
   l1SingleProngPi0Tau_pt_eta2p1     = fs->make<TH1F>( "l1SingleProngPi0Tau_eta2p1"  , "p_{t}", 300,  0., 300. );
@@ -431,6 +463,10 @@ phase2L1TauAnalyzerRates::phase2L1TauAnalyzerRates(const edm::ParameterSet& cfg)
   l1SingleProngPi0TauIso_pt_eta2p4  = fs->make<TH1F>( "l1SingleProngPi0TauIso_eta2p4"  , "p_{t}", 300,  0., 300. );
   l1SingleProngPi0TauIso_pt_eta2p1  = fs->make<TH1F>( "l1SingleProngPi0TauIso_eta2p1"  , "p_{t}", 300,  0., 300. );
 
+  l1SingleProngPi0TauIsoTight_pt         = fs->make<TH1F>( "l1SingleProngPi0TauIsoTight"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngPi0TauIsoTight_pt_eta2p4  = fs->make<TH1F>( "l1SingleProngPi0TauIsoTight_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1SingleProngPi0TauIsoTight_pt_eta2p1  = fs->make<TH1F>( "l1SingleProngPi0TauIsoTight_eta2p1"  , "p_{t}", 300,  0., 300. );
+
   l1ThreeProngTau_pt             = fs->make<TH1F>( "l1ThreeProngTau_pt"  , "p_{t}", 300,  0., 300. );
   l1ThreeProngTau_pt_eta2p4      = fs->make<TH1F>( "l1ThreeProngTau_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
   l1ThreeProngTau_pt_eta2p1      = fs->make<TH1F>( "l1ThreeProngTau_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
@@ -438,6 +474,10 @@ phase2L1TauAnalyzerRates::phase2L1TauAnalyzerRates(const edm::ParameterSet& cfg)
   l1ThreeProngTauIso_pt          = fs->make<TH1F>( "l1ThreeProngTauIso_pt"  , "p_{t}", 300,  0., 300. );
   l1ThreeProngTauIso_pt_eta2p4   = fs->make<TH1F>( "l1ThreeProngTauIso_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
   l1ThreeProngTauIso_pt_eta2p1   = fs->make<TH1F>( "l1ThreeProngTauIso_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
+
+  l1ThreeProngTauIsoTight_pt          = fs->make<TH1F>( "l1ThreeProngTauIsoTight_pt"  , "p_{t}", 300,  0., 300. );
+  l1ThreeProngTauIsoTight_pt_eta2p4   = fs->make<TH1F>( "l1ThreeProngTauIsoTight_pt_eta2p4"  , "p_{t}", 300,  0., 300. );
+  l1ThreeProngTauIsoTight_pt_eta2p1   = fs->make<TH1F>( "l1ThreeProngTauIsoTight_pt_eta2p1"  , "p_{t}", 300,  0., 300. );
 
   l1EcalCrystals   = fs->make<TH2F>( "ecal_crystals"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
   l1EcalCrystals_2   = fs->make<TH2F>( "ecal_crystals_2"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
@@ -576,11 +616,22 @@ phase2L1TauAnalyzerRates::analyze(const edm::Event& iEvent, const edm::EventSetu
 
   for(unsigned int i = 0; i < l1PFTaus->size(); i++){
     if(l1PFTaus->at(i).chargedIso()<100)
-      if(l1PFTaus->at(i).chargedIso()/l1PFTaus->at(i).pt()<0.2)
+      if(l1PFTaus->at(i).chargedIso()/l1PFTaus->at(i).pt()<0.4)
 	l1PFTaus_sorted_iso.push_back(l1PFTaus->at(i));
   }
   
   std::sort(l1PFTaus_sorted_iso.begin(), l1PFTaus_sorted_iso.end(), [](L1PFTau i,L1PFTau j){return(i.p4().pt() > j.p4().pt());});   
+
+
+  std::vector<L1PFTau> l1PFTaus_sorted_iso_2;
+
+  for(unsigned int i = 0; i < l1PFTaus->size(); i++){
+    if(l1PFTaus->at(i).chargedIso()<100)
+      if(l1PFTaus->at(i).chargedIso()/l1PFTaus->at(i).pt()<0.2)
+	l1PFTaus_sorted_iso_2.push_back(l1PFTaus->at(i));
+  }
+  
+  std::sort(l1PFTaus_sorted_iso_2.begin(), l1PFTaus_sorted_iso_2.end(), [](L1PFTau i,L1PFTau j){return(i.p4().pt() > j.p4().pt());});   
 
 
   //filling general rate tree
@@ -754,6 +805,97 @@ phase2L1TauAnalyzerRates::analyze(const edm::Event& iEvent, const edm::EventSetu
       }
       if(abs(l1PFTaus_sorted_iso.at(i).eta())<2.4 && !f10_2p4){
 	l1ThreeProngTauIso_pt_eta2p4->Fill(l1PFTaus_sorted_iso.at(i).pt());
+	f10_2p4=true;
+      }
+      
+    }//close 3prong
+
+
+  }
+
+
+
+  //filling iso rate tree
+  if(l1PFTaus_sorted_iso_2.size()>0)
+    l1TauIso_pt->Fill(l1PFTaus_sorted_iso_2.at(0).pt());
+
+  if(l1PFTaus_sorted_iso_2.size()>1)
+    l1DiTauIso_pt->Fill(l1PFTaus_sorted_iso_2.at(1).pt());
+  
+  f_2p1=false;
+  f_2p4=false;
+
+  f0=false;
+  f0_2p1=false;
+  f0_2p4=false;
+
+  f1=false;
+  f1_2p1=false;
+  f1_2p4=false;
+
+  f10 = false;
+  f10_2p1=false;
+  f10_2p4=false;
+
+  for(unsigned int i = 0; i < l1PFTaus_sorted_iso_2.size(); i++){
+    
+    if(abs(l1PFTaus_sorted_iso_2.at(i).eta())<2.1 && !f_2p1){
+      l1TauIsoTight_pt_eta2p1->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+      f_2p1=true;
+    }
+
+    if(abs(l1PFTaus_sorted_iso_2.at(i).eta())<2.4 && !f_2p4){
+      l1TauIsoTight_pt_eta2p4->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+      f_2p4=true;
+    }
+
+    if(l1PFTaus_sorted_iso_2.at(i).tauType()==0){
+      
+      if(!f0){
+	l1SingleProngTauIsoTight_pt->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+	f0 = true;
+      }
+
+      if(abs(l1PFTaus_sorted_iso_2.at(i).eta())<2.1 && !f0_2p1){
+        l1SingleProngTauIsoTight_pt_eta2p1->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+	f0_2p1=true;
+      }
+      if(abs(l1PFTaus_sorted_iso_2.at(i).eta())<2.4 && !f0_2p4){
+	l1SingleProngTauIsoTight_pt_eta2p4->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+	f0_2p4=true;
+      }
+      
+    }//close 1prong
+
+    if(l1PFTaus_sorted_iso_2.at(i).tauType()==1){
+      
+      if(!f1){
+	l1SingleProngPi0TauIsoTight_pt->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+	f1=true;
+      }
+
+      if(abs(l1PFTaus_sorted_iso_2.at(i).eta())<2.1 && !f1_2p1){
+        l1SingleProngPi0TauIsoTight_pt_eta2p1->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+	f1_2p1=true;
+      }
+      if(abs(l1PFTaus_sorted_iso_2.at(i).eta())<2.4 && !f1_2p4){
+	l1SingleProngPi0TauIsoTight_pt_eta2p4->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+	f1_2p4=true;
+      }
+      
+    }//close 1prongPi0
+
+    if(l1PFTaus_sorted_iso_2.at(i).tauType()==10){
+      if(!f10){
+	l1ThreeProngTauIsoTight_pt->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+	f10=true;
+      }
+      if(abs(l1PFTaus_sorted_iso_2.at(i).eta())<2.1 && !f10_2p1){
+        l1ThreeProngTauIsoTight_pt_eta2p1->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
+	f10_2p1=true;
+      }
+      if(abs(l1PFTaus_sorted_iso_2.at(i).eta())<2.4 && !f10_2p4){
+	l1ThreeProngTauIsoTight_pt_eta2p4->Fill(l1PFTaus_sorted_iso_2.at(i).pt());
 	f10_2p4=true;
       }
       

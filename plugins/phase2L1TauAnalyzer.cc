@@ -745,6 +745,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
    //std::cout<<"starting gen taus"<<std::endl;
 
    for(auto genTau: genTaus){
+
      reco::Candidate::LorentzVector visGenTau= getVisMomentum(&genTau, &genParticles);
      genVisTau Temp;
      genPt = visGenTau.pt();
@@ -753,8 +754,9 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
      decayMode = GetDecayMode(&genTau);
      Temp.p4 = visGenTau;
      Temp.decayMode = decayMode;
-     std::cout<<"Tau Decay Mode "<<decayMode<<std::endl;
-     std::cout<<"tau vis pt: "<<genPt<<" genEta: "<<genEta<<" genPhi: "<<genPhi<<std::endl;
+
+     //std::cout<<"Tau Decay Mode "<<decayMode<<std::endl;
+     //std::cout<<"tau vis pt: "<<genPt<<" genEta: "<<genEta<<" genPhi: "<<genPhi<<std::endl;
 
      if(decayMode >21 ){
        std::cout<<"found 3 prong tau: "<<decayMode<<std::endl;
@@ -768,7 +770,32 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
      if(decayMode > 10 && decayMode < 20 ){
        GenOneProngPi0Taus.push_back(Temp);
      }
+   }
 
+   for(unsigned int i = 0; i < miniTaus->size(); i++){
+     recoEta        = -99;
+     recoPhi        = -99;
+     recoPt         = -99;
+     recoChargedIso = -99;
+     recoNeutralIso = -99;
+     recoRawIso     = -99;
+     recoDecayMode  = -99;
+     
+     if(miniTaus->at(i).tauID("decayModeFinding")>0){
+       recoEta        = miniTaus->at(i).p4().Eta();
+       recoPhi        = miniTaus->at(i).p4().Phi();
+       recoPt         = miniTaus->at(i).p4().Pt();
+       recoChargedIso = miniTaus->at(i).tauID("chargedIsoPtSum");
+       recoNeutralIso = miniTaus->at(i).tauID("neutralIsoPtSum");
+       recoRawIso     = miniTaus->at(i).tauID("byCombinedIsolationDeltaBetaCorrRaw3Hits");
+       recoDecayMode  = miniTaus->at(i).decayMode();
+       std::cout<<"=== Found recoTau: "<<recoPt<<" Eta: "<<recoEta<<" Phi: "<< recoPhi <<std::endl;
+     }
+     else{
+       continue;
+     }
+   
+     
      l1TauPt = 0;
      l1TauEta = -99;
      l1TauPhi = -99;
@@ -777,18 +804,10 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
      l1TauNeutralIso = 100;
      l1TauChargedIso = 100;
 
-     recoEta        = -99;
-     recoPhi        = -99;
-     recoPt         = -99;
-     recoChargedIso = -99;
-     recoNeutralIso = -99;
-     recoRawIso     = -99;
-     recoDecayMode  = -99;
-
      for(unsigned int i = 0; i < l1PFTaus->size(); i++){
        if( reco::deltaR(l1PFTaus->at(i).p4().Eta(), 
 			l1PFTaus->at(i).p4().Phi(), 
-			genEta, genPhi) < 0.5 &&
+			recoEta, recoPhi) < 0.5 &&
 	   l1PFTaus->at(i).p4().Pt()>l1TauPt){
 
 	 l1TauEta = l1PFTaus->at(i).p4().Eta();
@@ -798,25 +817,32 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	 l1TauNeutralIso = l1PFTaus->at(i).neutralIso();
 	 l1TauRawIso = l1PFTaus->at(i).rawIso();
 	 l1TauDecayMode = l1PFTaus->at(i).tauType();
-	 std::cout<<"Match found l1Pt: "<<l1TauPt<<" Eta: "<<l1TauEta<<" Phi: "<<l1TauPhi<<std::endl;
+	 std::cout<<"    Match found l1Pt: "<<l1TauPt<<" Eta: "<<l1TauEta<<" Phi: "<<l1TauPhi<<std::endl;
        }
      }
-     for(unsigned int i = 0; i < miniTaus->size(); i++){
-       if( reco::deltaR(miniTaus->at(i).p4().Eta(), 
-			miniTaus->at(i).p4().Phi(), 
-			genEta, genPhi) < 0.5)
-	 if(miniTaus->at(i).tauID("decayModeFinding")>0){
-	   recoEta        = miniTaus->at(i).p4().Eta();
-	   recoPhi        = miniTaus->at(i).p4().Phi();
-	   recoPt         = miniTaus->at(i).p4().Pt();
-	   recoChargedIso = miniTaus->at(i).tauID("chargedIsoPtSum");
-	   recoNeutralIso = miniTaus->at(i).tauID("neutralIsoPtSum");
-	   recoRawIso     = miniTaus->at(i).tauID("byCombinedIsolationDeltaBetaCorrRaw3Hits");
-	   recoDecayMode  = miniTaus->at(i).decayMode();
-	   std::cout<<"== Match found recoPt: "<<recoPt<<" Eta: "<<recoEta<<" Phi: "<< recoPhi <<std::endl;
-	 }
+
+     genPt = 0;
+     genEta = -100;
+     genPhi = -100;
+     
+     for(auto genTau: genTaus){
+       
+       reco::Candidate::LorentzVector visGenTau= getVisMomentum(&genTau, &genParticles);
+       genVisTau Temp;
+
+       if( reco::deltaR(recoEta, 
+			recoPhi, 
+			visGenTau.eta(), visGenTau.phi()) < 0.5){
+	 genPt = visGenTau.pt();
+	 genEta = visGenTau.eta();
+	 genPhi = visGenTau.phi();
+	 decayMode = GetDecayMode(&genTau);
+	 std::cout<<"    tau vis pt: "<<genPt<<" genEta: "<<genEta<<" genPhi: "<<genPhi<<std::endl;
+       }
+       
      }
-     efficiencyTree->Fill();
+     if(genPt>0)
+       efficiencyTree->Fill();
    }
 
    
