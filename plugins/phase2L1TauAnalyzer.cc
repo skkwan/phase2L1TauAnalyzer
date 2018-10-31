@@ -55,7 +55,7 @@
 #include "DataFormats/HepMCCandidate/interface/GenParticle.h"
 #include "DataFormats/HepMCCandidate/interface/GenParticleFwd.h"
 
-#include "L1Trigger/phase2Demonstrator/interface/triggerGeometryTools.hh"
+//#include "L1Trigger/phase2Demonstrator/interface/triggerGeometryTools.hh"
 #include "DataFormats/L1CaloTrigger/interface/L1CaloCollections.h"
 
 //Vertex and gen particle
@@ -76,8 +76,7 @@
 
 #include "DataFormats/Candidate/interface/Candidate.h"
 
-#include "DataFormats/Phase2L1CaloTrig/interface/L1CaloCluster.h"
-#include "DataFormats/L1Trigger/interface/L1PFObject.h"
+//#include "DataFormats/L1Trigger/interface/L1PFObject.h"
 
 #include "DataFormats/PatCandidates/interface/Tau.h"
 #include "DataFormats/PatCandidates/interface/PackedCandidate.h"
@@ -118,8 +117,8 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
   const CaloSubdetectorGeometry * ebGeometry;
   edm::ESHandle<CaloGeometry> caloGeometry_;
 
-  edm::EDGetTokenT< L1CaloClusterCollection > L1ClustersToken_;
-  edm::EDGetTokenT< L1PFObjectCollection > L1PFToken_;
+  //edm::EDGetTokenT< L1CaloClusterCollection > L1ClustersToken_;
+  //  edm::EDGetTokenT< L1PFObjectCollection > L1PFToken_;
   edm::EDGetTokenT< L1PFTauCollection > L1PFTauToken_;
   edm::EDGetTokenT<std::vector<reco::GenParticle> > genToken_;
   edm::EDGetTokenT< vector<pat::Tau>  > MiniTausToken_;
@@ -157,6 +156,8 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
 
   double recoPt, recoEta, recoPhi; 
   float recoChargedIso, recoNeutralIso, recoRawIso; 
+  int l1IsoVLoose, l1IsoLoose, l1IsoMedium, l1IsoTight;
+  int l1RelIsoVLoose, l1RelIsoLoose, l1RelIsoMedium, l1RelIsoTight;
   int recoDecayMode; 
 
   int gen1ProngDecayMode;
@@ -201,8 +202,8 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
   TH1F* l1ThreeProngTauIso_pt_eta2p4;     
   TH1F* l1ThreeProngTauIso_pt_eta2p1;
 
-  TH2F* l1OtherTracks;
-  TH2F* l1EcalCrystals;
+  //TH2F* l1OtherTracks;
+  //TH2F* l1EcalCrystals;
 };
 
 //
@@ -217,8 +218,8 @@ class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResource
 // constructors and destructor
 //
 phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
-  L1ClustersToken_( consumes< L1CaloClusterCollection >(cfg.getParameter<edm::InputTag>("L1Clusters"))),
-  L1PFToken_(       consumes< L1PFObjectCollection >(cfg.getParameter<edm::InputTag>("l1PFObjects"))),
+  //L1ClustersToken_( consumes< L1CaloClusterCollection >(cfg.getParameter<edm::InputTag>("L1Clusters"))),
+  //  L1PFToken_(       consumes< L1PFObjectCollection >(cfg.getParameter<edm::InputTag>("l1PFObjects"))),
   L1PFTauToken_(    consumes< L1PFTauCollection    >(cfg.getParameter<edm::InputTag>("l1TauObjects"))),
   MiniTausToken_(   consumes< vector<pat::Tau>     >(cfg.getParameter<edm::InputTag>("miniTaus"))),
   PackedCands_(     consumes< std::vector<pat::PackedCandidate> >(cfg.getParameter<edm::InputTag>("packedCandidates"))),
@@ -264,6 +265,16 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("l1RawIso",     &l1TauRawIso,     "l1RawIso/D");
   efficiencyTree->Branch("l1ChargedIso", &l1TauChargedIso, "l1ChargedIso/D");
   efficiencyTree->Branch("l1NeutralIso", &l1TauNeutralIso, "l1NeutralIso/D");
+
+  efficiencyTree->Branch("l1IsoVLoose", &l1IsoVLoose, "l1IsoVLoose/I");
+  efficiencyTree->Branch("l1IsoLoose",  &l1IsoLoose,  "l1IsoLoose/I");
+  efficiencyTree->Branch("l1IsoMedium", &l1IsoMedium, "l1IsoMedium/I");
+  efficiencyTree->Branch("l1IsoTight",  &l1IsoTight,  "l1IsoTight/I");
+
+  efficiencyTree->Branch("l1RelIsoVLoose", &l1RelIsoVLoose, "l1RelIsoVLoose/I");
+  efficiencyTree->Branch("l1RelIsoLoose",  &l1RelIsoLoose,  "l1RelIsoLoose/I");
+  efficiencyTree->Branch("l1RelIsoMedium", &l1RelIsoMedium, "l1RelIsoMedium/I");
+  efficiencyTree->Branch("l1RelIsoTight",  &l1RelIsoTight,  "l1RelIsoTight/I");
 
   efficiencyTree->Branch("l1TauDecayMode", &l1TauDecayMode,   "l1TauDecayMode/D");
 
@@ -444,8 +455,8 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   l1ThreeProngTauIso_pt_eta2p4   = fs->make<TH1F>( "l1ThreeProngTauIso_pt_eta2p4"  , "p_{t}", 200,  0., 200. );
   l1ThreeProngTauIso_pt_eta2p1   = fs->make<TH1F>( "l1ThreeProngTauIso_pt_eta2p1"  , "p_{t}", 200,  0., 200. );
 
-  l1OtherTracks    = fs->make<TH2F>( "l1OtherTracks"  , "p_{t}", 40, 0., 0.3, 40, 0., 100. );
-  l1EcalCrystals   = fs->make<TH2F>( "ecal_crystals"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
+  //l1OtherTracks    = fs->make<TH2F>( "l1OtherTracks"  , "p_{t}", 40, 0., 0.3, 40, 0., 100. );
+  //l1EcalCrystals   = fs->make<TH2F>( "ecal_crystals"  , "p_{t}", 100, -4., 4, 100, -4., 4. );
 
 }
 
@@ -474,11 +485,11 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
   lumi  = iEvent.id().luminosityBlock();
   event = iEvent.id().event();
   
-  edm::Handle< std::vector<L1CaloCluster> > l1Clusters;
-  iEvent.getByToken( L1ClustersToken_, l1Clusters);
+  //edm::Handle< std::vector<L1CaloCluster> > l1Clusters;
+  //iEvent.getByToken( L1ClustersToken_, l1Clusters);
   
-  edm::Handle< std::vector<L1PFObject> > l1PFChargedCandidates;
-  iEvent.getByToken( L1PFToken_, l1PFChargedCandidates);
+  //  edm::Handle< std::vector<L1PFObject> > l1PFChargedCandidates;
+  //  iEvent.getByToken( L1PFToken_, l1PFChargedCandidates);
   
   edm::Handle< std::vector<L1PFTau> > l1PFTaus;
   iEvent.getByToken( L1PFTauToken_, l1PFTaus);
@@ -498,7 +509,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
   iSetup.get<CaloGeometryRecord>().get(caloGeometryHandle);
   const CaloGeometry* caloGeometry_ = caloGeometryHandle.product();  
   ebGeometry = caloGeometry_->getSubdetectorGeometry(DetId::Ecal, EcalBarrel);
-
+  /*
   for(auto& tpg : *ecaltpgCollection.product())
     {
 
@@ -514,10 +525,10 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	  //float energy = et / sin(position.theta());
 	  float eta = cell->getPosition().eta();
 	  float phi = cell->getPosition().phi();
-	  l1EcalCrystals->Fill(eta,phi,et);
+	  //l1EcalCrystals->Fill(eta,phi,et);
 	}
     }
-
+*/
   // L1 tracks  
   std::vector<TTTrack< Ref_Phase2TrackerDigi_ > > l1Tracks;
   edm::Handle< std::vector< TTTrack< Ref_Phase2TrackerDigi_ > > > l1trackHandle;
@@ -684,59 +695,6 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
      }
    }
 
-
-
-   for(auto genPiZero: genPiZeros){
-
-     genPi0Pt = genPiZero.pt();
-     genPi0Eta = genPiZero.eta();
-     genPi0Phi = genPiZero.phi();
-     
-     for(unsigned int i = 0; i < l1Clusters->size(); i++){
-       if( reco::deltaR(l1Clusters->at(i).p4().Eta(), l1Clusters->at(i).p4().Phi(),genPiZero.p4().eta(),genPiZero.p4().phi()) < 0.1){
-	 if(l1Clusters->at(i).isPi0()){
-	   objectPi0Eta += (objectPi0Eta*objectPi0Pt + l1Clusters->at(i).p4().Eta()*l1Clusters->at(i).p4().Pt() )/(objectPi0Pt + l1Clusters->at(i).p4().Pt());
-	   objectPi0Phi += (objectPi0Phi*objectPi0Pt + l1Clusters->at(i).p4().Phi()*l1Clusters->at(i).p4().Pt() )/(objectPi0Pt + l1Clusters->at(i).p4().Pt());
-	   objectPi0Pt += l1Clusters->at(i).p4().Pt();
-	   //std::cout<<l1Clusters->at(i)<<std::endl;
-	 }
-       }
-     }
-     pi0Tree->Fill();
-   }
-
-   for(auto genPiPlus: genPiPluss){
-
-     genPiPlusPt = genPiPlus.pt();
-     genPiPlusEta = genPiPlus.eta();
-     genPiPlusPhi = genPiPlus.phi();
-     float maxPt = 0;
-
-     for(unsigned int iCand = 0; iCand < l1PFChargedCandidates->size(); iCand++){
-       if( reco::deltaR(l1PFChargedCandidates->at(iCand).p4().Eta(), l1PFChargedCandidates->at(iCand).p4().Phi(),genPiPlus.p4().eta(),genPiPlus.p4().phi()) < 0.02 && l1PFChargedCandidates->at(iCand).p4().Pt() > maxPt){
-	 objectPiPlusEta = l1PFChargedCandidates->at(iCand).p4().Eta();
-	 objectPiPlusPhi = l1PFChargedCandidates->at(iCand).p4().Phi();
-	 objectPiPlusPt  = l1PFChargedCandidates->at(iCand).p4().Pt();
-	 maxPt = l1PFChargedCandidates->at(iCand).p4().Pt();
-	 //std::cout<<l1PFChargedCandidates->at(iCand)<<std::endl;	   
-	 objectPiPlusIsChargedHadron = l1PFChargedCandidates->at(iCand).isChargedHadron();
-       }
-     }
-       /*for(unsigned int i = 0; i < l1Clusters->size(); i++){
-       if( reco::deltaR(l1Clusters->at(i).p4().Eta(), l1Clusters->at(i).p4().Phi(),genPiPlus.p4().eta(),genPiPlus.p4().phi()) < 0.15){
-	 if(!l1Clusters->at(i).isPi0()){
-	   objectPiPlusEta += (objectPiPlusEta*objectPiPlusPt + l1Clusters->at(i).p4().Eta()*l1Clusters->at(i).p4().Pt() )/(objectPiPlusPt + l1Clusters->at(i).p4().Pt());
-	   objectPiPlusPhi += (objectPiPlusPhi*objectPiPlusPt + l1Clusters->at(i).p4().Phi()*l1Clusters->at(i).p4().Pt() )/(objectPiPlusPt + l1Clusters->at(i).p4().Pt());
-	   objectPiPlusPt += l1Clusters->at(i).p4().Pt();
-	   //std::cout<<l1Clusters->at(i)<<std::endl;
-	 }
-	 }*/
-     //std::cout<<"filling piplus tree"<<std::endl;
-     piPlusTree->Fill();
-   }
-
-
-
    std::vector<genVisTau> GenOneProngTaus;
    std::vector<genVisTau> GenOneProngPi0Taus;
    std::vector<genVisTau> GenThreeProngTaus;
@@ -803,6 +761,15 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
      l1TauRawIso = 100;
      l1TauNeutralIso = 100;
      l1TauChargedIso = 100;
+     l1IsoVLoose = -10;
+     l1IsoLoose = -10;
+     l1IsoMedium = -10;
+     l1IsoTight = -10;
+
+     l1RelIsoVLoose = -10;
+     l1RelIsoLoose = -10;
+     l1RelIsoMedium = -10;
+     l1RelIsoTight = -10;
 
      for(unsigned int i = 0; i < l1PFTaus->size(); i++){
        if( reco::deltaR(l1PFTaus->at(i).p4().Eta(), 
@@ -817,7 +784,18 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	 l1TauNeutralIso = l1PFTaus->at(i).neutralIso();
 	 l1TauRawIso = l1PFTaus->at(i).rawIso();
 	 l1TauDecayMode = l1PFTaus->at(i).tauType();
-	 std::cout<<"    Match found l1Pt: "<<l1TauPt<<" Eta: "<<l1TauEta<<" Phi: "<<l1TauPhi<<std::endl;
+	 l1IsoVLoose =  l1PFTaus->at(i).passVLooseIso();
+	 l1IsoLoose  =  l1PFTaus->at(i).passLooseIso();
+	 l1IsoMedium =  l1PFTaus->at(i).passMediumIso();
+	 l1IsoTight  =  l1PFTaus->at(i).passTightIso();
+
+	 l1RelIsoVLoose =  l1PFTaus->at(i).passVLooseRelIso();
+	 l1RelIsoLoose  =  l1PFTaus->at(i).passLooseRelIso();
+	 l1RelIsoMedium =  l1PFTaus->at(i).passMediumRelIso();
+	 l1RelIsoTight  =  l1PFTaus->at(i).passTightRelIso();
+
+
+	 std::cout<<"    Match found l1Pt: "<<l1TauPt<<" Eta: "<<l1TauEta<<" Phi: "<<l1TauPhi<< " Pass tight iso: " << l1PFTaus->at(i).passTightIso() << " Pass VLoose Iso: " << l1PFTaus->at(i).passVLooseIso() <<std::endl;
        }
      }
 
@@ -868,9 +846,9 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	   //if(miniTaus->at(i).signalChargedHadrCands().size()>2){
 	   int j = 0;
 
-	   pat::PackedCandidate const* pfCand_1;
-	   pat::PackedCandidate const* pfCand_2;
-	   pat::PackedCandidate const* pfCand_3;
+	   pat::PackedCandidate const* pfCand_1 = 0;
+	   pat::PackedCandidate const* pfCand_2 = 0;
+	   pat::PackedCandidate const* pfCand_3 = 0;
 
 	   math::PtEtaPhiMLorentzVector tempP4_track1;
 	   math::PtEtaPhiMLorentzVector tempP4_track2;
@@ -885,6 +863,10 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 		tempP4_track1.SetPt((pfCand_1)->pt()); 
 		tempP4_track1.SetEta((pfCand_1)->eta()); 
 		tempP4_track1.SetPhi((pfCand_1)->phi());
+
+		track1_pt      = (pfCand_1)->pt();
+		track1_eta     = (pfCand_1)->eta();
+		track1_phi     = (pfCand_1)->phi();
 	     }
 
 	     if(j==1){
@@ -896,6 +878,13 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 		tempP4_track2.SetPhi((pfCand_2)->phi());
 		//tempP4_track2.SetPtEtaPhiM((pfCand_2)->pt(), (pfCand_2)->eta(), (pfCand_2)->phi(), 1.335);
 
+		track2_pt      = (pfCand_2)->pt();
+		track2_eta     = (pfCand_2)->eta();
+		track2_phi     = (pfCand_2)->phi();
+
+		track2_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track2);
+		track2_dz      = abs((pfCand_1)->pz() - (pfCand_2)->pz());
+
 	     }
 
 	     if(j==2){
@@ -906,29 +895,17 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 		tempP4_track3.SetPhi((pfCand_3)->phi());
 
 		//tempP4_track3.SetPtEtaPhiM((pfCand_3)->pt(), (pfCand_3)->eta(), (pfCand_3)->phi(), 1.335);
+		track3_pt      = (pfCand_3)->pt();
+		track3_eta     = (pfCand_3)->eta();
+		track3_phi     = (pfCand_3)->phi();
 
+		track3_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track3);
+		track3_dz      = abs((pfCand_1)->pz() - (pfCand_3)->pz());
+		
 	     }
 	     j++;
 	   }
 	   
-	   track1_pt      = (pfCand_1)->pt();
-	   track1_eta     = (pfCand_1)->eta();
-	   track1_phi     = (pfCand_1)->phi();
-	   
-	   track2_pt      = (pfCand_2)->pt();
-	   track2_eta     = (pfCand_2)->eta();
-	   track2_phi     = (pfCand_2)->phi();
-	   
-	   track3_pt      = (pfCand_3)->pt();
-	   track3_eta     = (pfCand_3)->eta();
-	   track3_phi     = (pfCand_3)->phi();
-	   
-	   
-	   track2_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track2);
-	   track2_dz      = abs((pfCand_1)->pz() - (pfCand_2)->pz());
-	   
-	   track3_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track3);
-	   track3_dz      = abs((pfCand_1)->pz() - (pfCand_3)->pz());
 
 	   float highestPt_other_track = 0;
 	   for(unsigned int i=0;i<packedcands->size();i++){
@@ -946,8 +923,8 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 		 }
 	       }
 
-	       if(!isASignalCand)
-		 l1OtherTracks->Fill(c.pt(),ROOT::Math::VectorUtil::DeltaR(tempP4_track1,c.p4()));
+	       //if(!isASignalCand)
+	       //l1OtherTracks->Fill(c.pt(),ROOT::Math::VectorUtil::DeltaR(tempP4_track1,c.p4()));
 
 	       if(!isASignalCand && c.pt() > highestPt_other_track){
 		 other_track_pt = c.pt();

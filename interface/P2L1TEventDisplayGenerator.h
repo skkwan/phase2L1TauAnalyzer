@@ -34,8 +34,6 @@
 
 // GCT and RCT data formats
 #include "DataFormats/L1Trigger/interface/L1PFTau.h"
-#include "DataFormats/Phase2L1CaloTrig/interface/L1CaloCluster.h"
-#include "DataFormats/L1Trigger/interface/L1PFObject.h"
 #include "DataFormats/L1CaloTrigger/interface/L1CaloCollections.h"
 #include "DataFormats/L1GlobalCaloTrigger/interface/L1GctCollections.h"
 #include "DataFormats/TauReco/interface/PFTau.h"
@@ -148,9 +146,6 @@ class P2L1TEventDisplayGenerator : public edm::one::EDAnalyzer<edm::one::SharedR
   std::vector<TLorentzVector> *allHcalTPGs            = new std::vector<TLorentzVector>; 
   std::vector<TLorentzVector> *l1Tracks               = new std::vector<TLorentzVector>; 
   std::vector<TLorentzVector> *l1EcalClusters         = new std::vector<TLorentzVector>; 
-  std::vector<TLorentzVector> *l1CaloClustersPiZero   = new std::vector<TLorentzVector>; 
-  std::vector<TLorentzVector> *l1CaloClustersPiPM     = new std::vector<TLorentzVector>; 
-  std::vector<TLorentzVector> *l1CaloClusters         = new std::vector<TLorentzVector>; 
   std::vector<TLorentzVector> *l1PFTaus               = new std::vector<TLorentzVector>; 
   std::vector<TLorentzVector> *l1EcalCrystals         = new std::vector<TLorentzVector>; 
   std::vector<TLorentzVector> *genHadronicTaus        = new std::vector<TLorentzVector>; 
@@ -215,7 +210,6 @@ class P2L1TEventDisplayGenerator : public edm::one::EDAnalyzer<edm::one::SharedR
   edm::EDGetTokenT<HcalTrigPrimDigiCollection> hcalSrc_;
   edm::EDGetTokenT<reco::VertexCollection> vtxLabel_;
   edm::EDGetTokenT<EcalEBTrigPrimDigiCollection> ecalTPGBToken_;
-  edm::EDGetTokenT< L1CaloClusterCollection > L1ClustersToken_;
   edm::EDGetTokenT< l1t::L1PFTauCollection > L1PFTauToken_;
   edm::EDGetTokenT<std::vector<reco::GenParticle> > genToken_;
   edm::InputTag genSrc_;
@@ -347,10 +341,7 @@ class P2L1TEventDisplayGenerator : public edm::one::EDAnalyzer<edm::one::SharedR
     l1Tracks->clear(); 
     l1EcalClusters->clear(); 
     l1EcalCrystals->clear(); 
-    l1CaloClusters->clear(); 
     l1PFTaus->clear();
-    l1CaloClustersPiZero->clear(); 
-    l1CaloClustersPiPM->clear(); 
     genHadronicTaus->clear(); 
     allHcalTPGs->clear();
   }

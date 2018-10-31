@@ -37,7 +37,6 @@ P2L1TEventDisplayGenerator::P2L1TEventDisplayGenerator( const ParameterSet & cfg
   hcalSrc_(          consumes< HcalTrigPrimDigiCollection>(   cfg.getParameter<edm::InputTag>("hcalDigis"))),
   vtxLabel_(         consumes< reco::VertexCollection>(       cfg.getParameter<edm::InputTag>("vertices"))),
   ecalTPGBToken_(    consumes< EcalEBTrigPrimDigiCollection>( cfg.getParameter<edm::InputTag>("ecalTPGsBarrel"))),
-  L1ClustersToken_(  consumes< L1CaloClusterCollection >(     cfg.getParameter<edm::InputTag>("L1Clusters"))),
   L1PFTauToken_(     consumes< L1PFTauCollection    >(        cfg.getParameter<edm::InputTag>("l1TauObjects"))),
   genSrc_ (          cfg.getParameter<edm::InputTag>( "genParticles")),
   genMatchDeltaRcut( cfg.getUntrackedParameter<double>("genMatchDeltaRcut", 0.1))
@@ -104,7 +103,6 @@ P2L1TEventDisplayGenerator::P2L1TEventDisplayGenerator( const ParameterSet & cfg
     efficiencyTree->Branch("l1Tracks", "vector<TLorentzVector>", &l1Tracks, 32000, 0); 
     efficiencyTree->Branch("l1EcalClusters", "vector<TLorentzVector>", &l1EcalClusters, 32000, 0); 
     efficiencyTree->Branch("l1EcalCrystals", "vector<TLorentzVector>", &l1EcalCrystals, 32000, 0); 
-    efficiencyTree->Branch("l1CaloClusters", "vector<TLorentzVector>", &l1CaloClusters, 32000, 0); 
     efficiencyTree->Branch("l1PFTaus",       "vector<TLorentzVector>", &l1PFTaus, 32000, 0); 
     efficiencyTree->Branch("genTaus", "vector<TLorentzVector>", &genHadronicTaus, 32000, 0); 
 
@@ -158,8 +156,6 @@ P2L1TEventDisplayGenerator::P2L1TEventDisplayGenerator( const ParameterSet & cfg
     efficiencyTreePiZero->Branch("l1Tracks", "vector<TLorentzVector>", &l1Tracks, 32000, 0); 
     efficiencyTreePiZero->Branch("l1EcalClusters", "vector<TLorentzVector>", &l1EcalClusters, 32000, 0); 
     efficiencyTreePiZero->Branch("l1EcalCrystals", "vector<TLorentzVector>", &l1EcalCrystals, 32000, 0); 
-    efficiencyTreePiZero->Branch("l1CaloClusters", "vector<TLorentzVector>", &l1CaloClusters, 32000, 0); 
-    efficiencyTreePiZero->Branch("l1CaloClustersPiZero", "vector<TLorentzVector>", &l1CaloClustersPiZero, 32000, 0); 
     efficiencyTreePiZero->Branch("genTaus", "vector<TLorentzVector>", &genHadronicTaus, 32000, 0); 
 
     efficiencyTreePiZero->Branch("run",    &run,     "run/I");
@@ -206,9 +202,6 @@ P2L1TEventDisplayGenerator::P2L1TEventDisplayGenerator( const ParameterSet & cfg
     efficiencyTreePiPM->Branch("l1Tracks", "vector<TLorentzVector>", &l1Tracks, 32000, 0); 
     efficiencyTreePiPM->Branch("l1EcalClusters", "vector<TLorentzVector>", &l1EcalClusters, 32000, 0); 
     efficiencyTreePiPM->Branch("l1EcalCrystals", "vector<TLorentzVector>", &l1EcalCrystals, 32000, 0); 
-    efficiencyTreePiPM->Branch("l1CaloClusters", "vector<TLorentzVector>", &l1CaloClusters, 32000, 0); 
-    efficiencyTreePiPM->Branch("l1CaloClustersPiZero", "vector<TLorentzVector>", &l1CaloClustersPiZero, 32000, 0); 
-    efficiencyTreePiPM->Branch("l1CaloClustersPiPM", "vector<TLorentzVector>", &l1CaloClustersPiPM, 32000, 0); 
     efficiencyTreePiPM->Branch("genTaus", "vector<TLorentzVector>", &genHadronicTaus, 32000, 0); 
 
     efficiencyTreePiPM->Branch("run",    &run,     "run/I");
@@ -259,9 +252,6 @@ void P2L1TEventDisplayGenerator::analyze( const Event& evt, const EventSetup& es
   evt.getByToken( ecalTPGBToken_, ecaltpgCollection);
   vector<TLorentzVector> ecalCrystals;
 
-  edm::Handle< std::vector<L1CaloCluster> > caloClusters;
-  evt.getByToken( L1ClustersToken_, caloClusters);
-
   edm::Handle< std::vector<L1PFTau> > L1PFTaus;
   evt.getByToken( L1PFTauToken_, L1PFTaus);
 
@@ -282,9 +272,6 @@ void P2L1TEventDisplayGenerator::analyze( const Event& evt, const EventSetup& es
   l1Tracks->clear(); 
   l1EcalClusters->clear(); 
   l1EcalCrystals->clear(); 
-  l1CaloClusters->clear(); 
-  l1CaloClustersPiZero->clear(); 
-  l1CaloClustersPiPM->clear(); 
   genHadronicTaus->clear(); 
   allHcalTPGs->clear();
 
@@ -371,30 +358,6 @@ void P2L1TEventDisplayGenerator::analyze( const Event& evt, const EventSetup& es
 	//std::cout<<"crystal pt:"<<et<<" eta: "<<eta<<" phi: "<<phi<<std::endl;
       }
     std::sort(l1EcalCrystals->begin(),l1EcalCrystals->end(),compareByPtLorentz);   
-
-    for(size_t cluster_index=0; cluster_index< caloClusters->size(); ++cluster_index)
-      {
-	//edm::Ptr<l1extra::L1EmParticle> ptr(l1EGClusterHandle, cluster_index);
-	//std::cout<<"# "<<cluster_index<<": "<<pt<<std::endl;
-	L1CaloCluster caloCluster = caloClusters->at(cluster_index);
-	TLorentzVector l1ClusterTemp;
-	float et, eta, phi;
-	et  = caloCluster.p4().Pt();
-	eta = caloCluster.p4().Eta();
-	phi = caloCluster.p4().Phi();
-	l1ClusterTemp.SetPtEtaPhiE(et,eta,phi,et);
-	if(debug&&caloCluster.p4().Pt()>10){
-	  std::cout<<"cluster pt: "<<caloCluster.p4().Pt()<<" eta: "<<caloCluster.p4().Eta()<<" phi: "<<caloCluster.p4().Phi()<<std::endl;
-	}
-
-	if(caloClusters->at(cluster_index).isPi0())
-	  l1CaloClustersPiZero->push_back(l1ClusterTemp);
-	else
-	  l1CaloClusters->push_back(l1ClusterTemp);
-      }
-    std::sort(l1CaloClusters->begin(),l1CaloClusters->end(),compareByPtLorentz);   
-    std::sort(l1CaloClustersPiZero->begin(),l1CaloClustersPiZero->end(),compareByPtLorentz);   
-
 
   ESHandle<L1CaloHcalScale> hcalScale;
   es.get<L1CaloHcalScaleRcd>().get(hcalScale);
@@ -501,28 +464,6 @@ void P2L1TEventDisplayGenerator::analyze( const Event& evt, const EventSetup& es
       }
     }
 */
-    for(size_t cluster_index=0; cluster_index< caloClusters->size(); ++cluster_index)
-      {
-	//edm::Ptr<l1extra::L1EmParticle> ptr(l1EGClusterHandle, cluster_index);
-	//std::cout<<"# "<<cluster_index<<": "<<pt<<std::endl;
-	L1CaloCluster caloCluster = caloClusters->at(cluster_index);
-	TLorentzVector l1ClusterTemp;
-	float et, eta, phi;
-	et  = caloCluster.p4().Pt();
-	eta = caloCluster.p4().Eta();
-	phi = caloCluster.p4().Phi();
-	l1ClusterTemp.SetPtEtaPhiE(et,eta,phi,et);
-	if(debug&&caloCluster.p4().Pt()>10){
-	  std::cout<<"cluster pt: "<<caloCluster.p4().Pt()<<" eta: "<<caloCluster.p4().Eta()<<" phi: "<<caloCluster.p4().Phi()<<std::endl;
-	}
-
-	if(caloClusters->at(cluster_index).isPi0())
-	  l1CaloClustersPiZero->push_back(l1ClusterTemp);
-	else
-	  l1CaloClusters->push_back(l1ClusterTemp);
-      }
-    std::sort(l1CaloClusters->begin(),l1CaloClusters->end(),compareByPtLorentz);   
-    std::sort(l1CaloClustersPiZero->begin(),l1CaloClustersPiZero->end(),compareByPtLorentz);   
 
 
   ESHandle<L1CaloHcalScale> hcalScale;
@@ -624,7 +565,7 @@ void P2L1TEventDisplayGenerator::analyze( const Event& evt, const EventSetup& es
 
   if(!evt.getByToken(hcalSrc_, hcalTPGs))
     std::cout<<"ERROR GETTING THE HCAL TPGS"<<std::endl;
-  else
+  else{
     for (size_t i = 0; i < hcalTPGs->size(); ++i) {
       HcalTriggerPrimitiveDigi tpg = (*hcalTPGs)[i];
       int cal_ieta = tpg.id().ieta();
@@ -648,7 +589,7 @@ void P2L1TEventDisplayGenerator::analyze( const Event& evt, const EventSetup& es
       temp.SetPtEtaPhiE(et,eta,phi,et);
       allHcalTPGs->push_back(temp);
     }
-
+  }
     for(size_t l1tau_index=0; l1tau_index< L1PFTaus->size(); ++l1tau_index)
       {
 	//edm::Ptr<l1extra::L1EmParticle> ptr(l1EGCrystalHandle, crystal_index);

@@ -1,0 +1,2142 @@
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485395.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-0/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485397.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-1/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485399.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-2/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485401.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-3/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485403.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-4/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485405.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-5/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485407.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-6/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485409.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-7/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485411.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-8/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485421.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-9/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485439.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-10/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485471.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-11/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485506.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-12/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485554.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-13/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485589.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-14/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485613.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-15/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485630.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-16/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485648.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-17/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485673.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-18/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485696.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-19/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485713.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-20/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485721.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-21/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485732.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-22/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485734.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-23/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485736.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-24/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485738.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-25/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485740.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-26/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485742.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-27/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485744.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-28/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485746.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-29/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485748.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-30/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485750.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-31/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485752.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-32/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485754.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-33/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485756.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-34/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485758.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-35/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485760.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-36/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485762.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-37/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485764.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-38/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485766.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-39/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485768.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-40/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485770.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-41/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485772.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-42/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485774.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-43/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485776.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-44/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485778.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-45/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485780.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-46/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485782.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-47/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485784.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-48/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485786.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-49/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485788.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-50/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485790.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-51/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485792.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-52/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485794.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-53/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485796.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-54/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485798.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-55/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485800.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-56/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485802.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-57/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485804.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-58/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485806.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-59/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485808.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-60/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485810.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-61/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485812.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-62/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485814.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-63/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485816.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-64/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485818.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-65/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485820.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-66/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485822.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-67/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485824.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-68/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485826.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-69/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485828.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-70/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485830.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-71/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485832.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-72/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358453 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485834.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-73/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+tar: lib/slc6_amd64_gcc630: file changed as we read it
+
+Failed to pack working area into /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-74/submit/user_code.tgz - The command was: packUserCode /afs/hep.wisc.edu/cms/ojalvo/triggerPhaseII/2018_devel_phase2-v2.16.24/temp/CMSSW_10_1_7 /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-74/submit/user_code.tgz 
+
+Farmout couldn't pack user code area.  Sorry.
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485836.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-75/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485838.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-76/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485840.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-77/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485842.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-78/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485844.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-79/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485846.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-80/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485848.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-81/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485850.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-82/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485852.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-83/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18359413 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485854.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-84/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358815 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485856.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-85/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358834 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485858.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-86/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358834 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485860.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-87/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358834 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485862.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-88/submit
+No farmout_dashboard.sh or cmsdashboard_reporter.tgz found, so no reporting to the CMS dashboard.
+Copying 18358834 bytes file:///nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/submit/user_code.tgz => gsiftp://cms-lvs-gridftp.hep.wisc.edu//hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/submit/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/submit...
+.
+Submitting job(s).
+1 job(s) submitted to cluster 9485864.
+
+-----------------------------------------------------------------------
+File for submitting this DAG to HTCondor           : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/dags/dag.condor.sub
+Log of DAGMan debugging messages                 : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/dags/dag.dagman.out
+Log of HTCondor library output                     : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/dags/dag.lib.out
+Log of HTCondor library error messages             : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/dags/dag.lib.err
+Log of the life of condor_dagman itself          : /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/dags/dag.dagman.log
+
+-----------------------------------------------------------------------
+You can monitor your workflow's progess by watching /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/dags/dag.dagman.out
+A summary of the status of all of the jobs in your workflow will be
+written to the following file every 60 seconds:
+  /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/dags/dag.status
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2018_Oct-30-ZTT-200PU are created in /nfs_scratch/ojalvo/2018_Oct-30-ZTT-200PU-SUBPhase-89/submit
