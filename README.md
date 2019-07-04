@@ -16,7 +16,8 @@ git cms-merge-topic -u cms-l1t-offline:l1t-phase2-v2.17.26.1
 git cms-addpkg L1Trigger/L1TCommon
 
 cd L1Trigger
-git@github.com:isobelojalvo/phase2L1TauAnalyzer.git
+# to just clone the repo... though it is better if you fork it and clone from your own area!
+git clone git@github.com:isobelojalvo/phase2L1TauAnalyzer.git
 
 cd ../
 
