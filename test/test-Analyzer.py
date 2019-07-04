@@ -29,22 +29,11 @@ process.maxEvents = cms.untracked.PSet(
 # Input source
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
-        #'file:pickevents-1prongPi0-5-fail-mini.root'),
-        'file:pickevents-3prong-fail-mini.root'),
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/MINIAODSIM/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/C033607A-8E2C-E811-B4EF-0CC47A78A478.root'),
+        '/store/mc/PhaseIIMTDTDRAutumn18MiniAOD/DYToLL_M-50_14TeV_TuneCP5_pythia8/MINIAODSIM/NoPU_103X_upgrade2023_realistic_v2-v2/90000/F063E7F2-A71C-E14C-BF02-665560C6B3CC.root'
+    ),
     secondaryFileNames = cms.untracked.vstring(
-        #'file:pickevents-1prongPi0-5-fail-raw.root'
-        'file:pickevents-3prong-fail-raw.root'
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/02306B8E-6D2C-E811-9625-0025905B858C.root',
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/163A5C8E-6D2C-E811-B990-0025905B85B2.root',
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/1A7E6D8F-6D2C-E811-8DFB-0025905B85BE.root',
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/5864268A-6D2C-E811-90F5-0025905A60EE.root',
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/627E087F-6D2C-E811-8F81-0CC47A4C8E34.root',
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/64AE2B7F-6D2C-E811-800E-0CC47A4D76A0.root',
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/820C0278-6D2C-E811-B95B-0CC47A4C8F0C.root',
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/BE6A3C80-6D2C-E811-9143-0CC47A4D7668.root',
-        #'root://cmsxrootd.fnal.gov///store/relval/CMSSW_9_3_7/RelValZTT_14TeV/GEN-SIM-DIGI-RAW/93X_upgrade2023_realistic_v5_2023D17noPU-v2/10000/DA7C408A-6D2C-E811-9BFF-0025905B858A.root'
-        ),
+        '/store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/30B662A6-E4FD-644A-B124-29107C17ECA1.root'
+    ),
     inputCommands = cms.untracked.vstring("keep *", 
         "drop l1tHGCalTowerMapBXVector_hgcalTriggerPrimitiveDigiProducer_towerMap_HLT",
         "drop l1tEMTFHit2016Extras_simEmtfDigis_CSC_HLT",
@@ -54,6 +43,9 @@ process.source = cms.Source("PoolSource",
         "drop l1tEMTFTrack2016s_simEmtfDigis__HLT")
      #skipEvents = cms.untracked.uint32(80)
 )
+
+process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:1855","1:2459","1:2453","1:2461","1:1852","1:1861","1:2456","1:1851","1:1853","1:2452","1:2457","1:1850","1:1854","1:1858","1:2451","1:2455","1:1857","1:2449","1:1856","1:2462","1:1849","1:1859","1:1860","1:2450","1:2454","1:2458","1:2460")
+
 
 process.options = cms.untracked.PSet(
 
@@ -128,9 +120,9 @@ process.l1pf = cms.Path(process.pfTracksFromL1Tracks+process.l1ParticleFlow)
 ############################################################
 
 process.load("L1Trigger.Phase2L1Taus.L1PFTauProducer_cff")
-process.L1PFTauProducer.L1PFObjects = cms.InputTag("l1pfProducer","PF")
-process.L1PFTauProducer.L1Neutrals = cms.InputTag("l1pfProducer")
-process.L1PFTauProducer.L1Clusters = cms.InputTag("l1pfProducer","PF")
+#process.L1PFTauProducer.L1PFObjects = cms.InputTag("l1pfProducer","PF")
+#process.L1PFTauProducer.L1Neutrals = cms.InputTag("l1pfProducer")
+#process.L1PFTauProducer.L1Clusters = cms.InputTag("l1pfProducer","PF")
 process.L1PFTauProducer.min_pi0pt = cms.double(3)
 process.L1PFTaus = cms.Path(process.L1PFTauProducer)
 
