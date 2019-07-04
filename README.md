@@ -22,4 +22,8 @@ git clone git@github.com:isobelojalvo/phase2L1TauAnalyzer.git
 cd ../
 
 scram b -j 8
+
+cd L1Trigger/phase2L1TauAnalyzer/test
+
+cmsRun test-Analyzer.py
 ```
