@@ -776,7 +776,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
      else{
        continue;
      }
-   
+        
      
      l1Pt = 0;
      l1Eta = -10;
@@ -806,7 +806,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
        {
 	 zVTX = L1VertexHandle->at(0).getZvertex();
        }
-     
+
      for(unsigned int i = 0; i < l1PFTaus->size(); i++){
        /*       std::cout << "l1PFTaus->at(i).p4().Eta() = " << l1PFTaus->at(i).p4().Eta() << "   "
 		 << "l1PFTaus->at(i).p4().Phi() = " << l1PFTaus->at(i).p4().Phi() << "   " 
@@ -814,17 +814,16 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	         << "recoPhi = " << recoPhi << "   "
 	         << "l1PFTaus->at(i).p4().pt() = " << l1PFTaus->at(i).p4().pt() << "   " 
 	         << "l1TauPt  " << l1TauPt << std::endl;*/
+       
        if(( reco::deltaR(l1PFTaus->at(i).eta(), l1PFTaus->at(i).phi(), 
 			 recoEta, recoPhi) < 0.5 )
 	  && (l1PFTaus->at(i).pt() > l1Pt))
 	 {
-	   
 	   l1Eta = l1PFTaus->at(i).eta();
 	   l1Phi = l1PFTaus->at(i).phi();
 	   l1Pt  = l1PFTaus->at(i).pt();
 
 	   l1TauZ = l1PFTaus->at(i).p4().z();   // adding in z position of tau
-	   std::cout << "l1TauZ is " << l1TauZ << std::endl;
 
 	   l1StripPt  = l1PFTaus->at(i).strip_p4().pt();
 	   l1StripEta = l1PFTaus->at(i).strip_p4().eta();
@@ -833,12 +832,12 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 				     l1PFTaus->at(i).phi(),
 				     l1PFTaus->at(i).strip_p4().eta(),
 				     l1PFTaus->at(i).strip_p4().phi());
-
 	   if (L1VertexHandle->size() > 0)
-	     {
-	       l1PVDZ = l1TauZ - zVTX;
-	       std::cout << "l1TauPVDZ: " << l1PVDZ << std::endl;
-	     }
+             {
+               l1PVDZ = l1TauZ - zVTX;
+	       std::cout << "l1TauPVDZ (without reco/l1 matching): " << l1PVDZ << std::endl;
+             }
+
 
 	   l1TauChargedIso = l1PFTaus->at(i).chargedIso();
 	   l1TauNeutralIso = l1PFTaus->at(i).neutralIso();
@@ -862,8 +861,10 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	     " Pass VLoose Iso: " << l1PFTaus->at(i).passVLooseIso() <<
 	     std::endl;
 	 }
-     }
-
+       
+     } // end of loop over L1 taus
+   
+     
      genPt = 0;
      genEta = -100;
      genPhi = -100;
@@ -872,7 +873,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
        
        reco::Candidate::LorentzVector visGenTau= getVisMomentum(&genTau, &genParticles);
        genVisTau Temp;
-
+       
        if( reco::deltaR(recoEta, 
 			recoPhi, 
 			visGenTau.eta(), visGenTau.phi()) < 0.5){
@@ -882,12 +883,11 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	 decayMode = GetDecayMode(&genTau);
 	 std::cout<<"    tau vis pt: "<<genPt<<" genEta: "<<genEta<<" genPhi: "<<genPhi<<std::endl;
        }
-       
      }
-     if(genPt>0)
-       efficiencyTree->Fill();
-   }
+       
+     efficiencyTree->Fill();
 
+   } // end of loop over reco (miniTaus)
    
    for(auto genTau: GenThreeProngTaus){
      genPt  = genTau.p4.pt();
