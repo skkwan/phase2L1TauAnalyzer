@@ -39,16 +39,20 @@ process.source = cms.Source("PoolSource",
 #       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/354CC7AD-BD24-7249-A26A-93F07D8194FD.root',
 #       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/FF015593-7F87-9142-8363-BCEAAA2B0620.root',
 #       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/E862C343-6377-B74E-B70A-1B7E7EABCB7C.root',
-#       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/E2914C42-0997-7546-93AF-157315C33BFD.root',
+       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/E2914C42-0997-7546-93AF-157315C33BFD.root',
        'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/30B662A6-E4FD-644A-B124-29107C17ECA1.root',
-#       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/E5DA8801-DFA7-9946-8B72-E3F884890188.root',
-#       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/8E9FB60D-C574-8645-916D-F8211D38968D.root',
+       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/E5DA8801-DFA7-9946-8B72-E3F884890188.root',
+       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_TuneCP5_pythia8/FEVT/NoPU_103X_upgrade2023_realistic_v2-v2/90000/8E9FB60D-C574-8645-916D-F8211D38968D.root',
 )
 # Neutrino sample
 #'root://cms-xrd-global.cern.ch//store/mc/PhaseIIMTDTDRAutumn18DR/NeutrinoGun_E_10GeV/FEVT/PU200_103X_upgrade2023_realistic_v2-v1/280000/CF7695FC-46FE-F649-9A7E-47ABE65D3861.root'),
 )
 
-process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:1855","1:2459","1:2453","1:2461","1:1852","1:1861","1:2456","1:1851","1:1853","1:2452","1:2457","1:1850","1:1854","1:1858","1:2451","1:2455","1:1857","1:2449","1:1856","1:2462","1:1849","1:1859","1:1860","1:2450","1:2454","1:2458","1:2460")
+process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:3445-1:3455",
+                                                                    "1:1849-1:1861", "1:2449-1:2462",
+                                                                    "1:1862-1:1872", "1:2463-1:2472", "1:3639-1:3644", "1:3648",
+                                                                    "1:3433-1:3444", "1:3456", "1:3625:3638"
+                                                                    )
 
 process.options = cms.untracked.PSet(
 
@@ -119,7 +123,7 @@ process.L1TauAnalyzer = cms.EDAnalyzer('phase2L1TauAnalyzer',
 process.analyzer = cms.Path(process.L1TauAnalyzer)
 
 process.TFileService = cms.Service("TFileService", 
-   fileName = cms.string("analyzer.root"), 
+   fileName = cms.string("analyzer-dyll-4FEVT.root"), 
    closeFileFast = cms.untracked.bool(True)
 )
 

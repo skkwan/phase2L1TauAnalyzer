@@ -97,19 +97,19 @@
 using namespace l1t;
 
 class phase2L1TauAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResources>  {
-   public:
-      explicit phase2L1TauAnalyzer(const edm::ParameterSet&);
-      ~phase2L1TauAnalyzer();
+public:
+  explicit phase2L1TauAnalyzer(const edm::ParameterSet&);
+  ~phase2L1TauAnalyzer();
 
-      static void fillDescriptions(edm::ConfigurationDescriptions& descriptions);
+  static void fillDescriptions(edm::ConfigurationDescriptions& descriptions);
 
 
-   private:
-      virtual void beginJob() override;
-      virtual void analyze(const edm::Event&, const edm::EventSetup&) override;
-      virtual void endJob() override;
+private:
+  virtual void beginJob() override;
+  virtual void analyze(const edm::Event&, const edm::EventSetup&) override;
+  virtual void endJob() override;
 
-      // ----------member data ---------------------------
+  // ----------member data ---------------------------
   typedef std::vector<reco::GenParticle> GenParticleCollectionType;
 
   struct genVisTau{
@@ -237,7 +237,7 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   ecalTPGBToken_(   consumes<EcalEBTrigPrimDigiCollection>(cfg.getParameter<edm::InputTag>("ecalTPGsBarrel"))),
   genSrc_ ((        cfg.getParameter<edm::InputTag>( "genParticles")))
 {
-   //now do what ever initialization is needed
+  //now do what ever initialization is needed
   usesResource("TFileService");
   genToken_ =     consumes<std::vector<reco::GenParticle> >(genSrc_);
   
@@ -483,8 +483,8 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
 phase2L1TauAnalyzer::~phase2L1TauAnalyzer()
 {
  
-   // do anything here that needs to be done at desctruction time
-   // (e.g. close files, deallocate resources etc.)
+  // do anything here that needs to be done at desctruction time
+  // (e.g. close files, deallocate resources etc.)
 
 
 }
@@ -538,21 +538,21 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
     {
 
       if(tpg.encodedEt() > 0) 
-	{
+      {
 
-	  GlobalVector position;
+        GlobalVector position;
 	  auto cell = ebGeometry->getGeometry(tpg.id());
 
-	  float et = tpg.encodedEt()/8.;
+	    float et = tpg.encodedEt()/8.;
 
-	  if(et<0.001) continue;//
-	  //float energy = et / sin(position.theta());
-	  float eta = cell->getPosition().eta();
-	  float phi = cell->getPosition().phi();
-	  //l1EcalCrystals->Fill(eta,phi,et);
-	}
+	      if(et<0.001) continue;//
+	        //float energy = et / sin(position.theta());
+		  float eta = cell->getPosition().eta();
+		    float phi = cell->getPosition().phi();
+		      //l1EcalCrystals->Fill(eta,phi,et);
+		      }
     }
-*/
+  */
   // L1 tracks  
   std::vector<TTTrack< Ref_Phase2TrackerDigi_ > > l1Tracks;
   edm::Handle< std::vector< TTTrack< Ref_Phase2TrackerDigi_ > > > l1trackHandle;
@@ -689,325 +689,325 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
   }
 
 
-   // Get genParticles
-   edm::Handle<GenParticleCollectionType> genParticleHandle;
-   if(!iEvent.getByToken(genToken_,genParticleHandle))
-     std::cout<<"No gen Particles Found "<<std::endl;
-   else
-     std::cout<<"Gen Particles size "<<genParticleHandle->size()<<std::endl;
+  // Get genParticles
+  edm::Handle<GenParticleCollectionType> genParticleHandle;
+  if(!iEvent.getByToken(genToken_,genParticleHandle))
+    std::cout<<"No gen Particles Found "<<std::endl;
+  else
+    std::cout<<"Gen Particles size "<<genParticleHandle->size()<<std::endl;
 
-   std::vector<reco::GenParticle> genTaus;
-   std::vector<reco::GenParticle> genPiZeros;
-   std::vector<reco::GenParticle> genPiPluss;
-   std::vector<reco::GenParticle> genParticles;
+  std::vector<reco::GenParticle> genTaus;
+  std::vector<reco::GenParticle> genPiZeros;
+  std::vector<reco::GenParticle> genPiPluss;
+  std::vector<reco::GenParticle> genParticles;
 
-   //reco::GenParticle* genTau;
-   for(unsigned int i = 0; i< genParticleHandle->size(); i++){
-     edm::Ptr<reco::GenParticle> ptr(genParticleHandle, i);
-     genParticles.push_back(*ptr);
+  //reco::GenParticle* genTau;
+  for(unsigned int i = 0; i< genParticleHandle->size(); i++){
+    edm::Ptr<reco::GenParticle> ptr(genParticleHandle, i);
+    genParticles.push_back(*ptr);
 
-     if(abs(ptr->pdgId())==111 && abs(ptr->eta()<1.74)){
-       genPiZeros.push_back(*ptr);
-       //std::cout<<"Found PiZero PDGID 111 pt: "<<ptr->pt()<<" eta: "<<ptr->eta()<<" phi: "<<ptr->phi()<<std::endl;
-     }
-     if(abs(ptr->pdgId())==211 && abs(ptr->eta()<1.74)){
-       genPiPluss.push_back(*ptr);
-       //std::cout<<"Found PiPlus PDGID 111 pt: "<<ptr->pt()<<" eta: "<<ptr->eta()<<" phi: "<<ptr->phi()<<std::endl;
-     }
-     if(abs(ptr->pdgId())==15){
-       genTaus.push_back(*ptr);
-     }
-   }
+    if(abs(ptr->pdgId())==111 && abs(ptr->eta()<1.74)){
+      genPiZeros.push_back(*ptr);
+      //std::cout<<"Found PiZero PDGID 111 pt: "<<ptr->pt()<<" eta: "<<ptr->eta()<<" phi: "<<ptr->phi()<<std::endl;
+    }
+    if(abs(ptr->pdgId())==211 && abs(ptr->eta()<1.74)){
+      genPiPluss.push_back(*ptr);
+      //std::cout<<"Found PiPlus PDGID 111 pt: "<<ptr->pt()<<" eta: "<<ptr->eta()<<" phi: "<<ptr->phi()<<std::endl;
+    }
+    if(abs(ptr->pdgId())==15){
+      genTaus.push_back(*ptr);
+    }
+  }
 
-   std::vector<genVisTau> GenOneProngTaus;
-   std::vector<genVisTau> GenOneProngPi0Taus;
-   std::vector<genVisTau> GenThreeProngTaus;
-   //Find and Sort the 1 Prong, 1 Prong + pi0 and 3 Prong Taus
+  std::vector<genVisTau> GenOneProngTaus;
+  std::vector<genVisTau> GenOneProngPi0Taus;
+  std::vector<genVisTau> GenThreeProngTaus;
+  //Find and Sort the 1 Prong, 1 Prong + pi0 and 3 Prong Taus
 
-   //std::cout<<"starting gen taus"<<std::endl;
+  //std::cout<<"starting gen taus"<<std::endl;
 
-   for(auto genTau: genTaus){
+  for(auto genTau: genTaus){
 
-     reco::Candidate::LorentzVector visGenTau= getVisMomentum(&genTau, &genParticles);
-     genVisTau Temp;
-     genPt = visGenTau.pt();
-     genEta = visGenTau.eta();
-     genPhi = visGenTau.phi();
-     decayMode = GetDecayMode(&genTau);
-     Temp.p4 = visGenTau;
-     Temp.decayMode = decayMode;
+    reco::Candidate::LorentzVector visGenTau= getVisMomentum(&genTau, &genParticles);
+    genVisTau Temp;
+    genPt = visGenTau.pt();
+    genEta = visGenTau.eta();
+    genPhi = visGenTau.phi();
+    decayMode = GetDecayMode(&genTau);
+    Temp.p4 = visGenTau;
+    Temp.decayMode = decayMode;
 
-     //std::cout<<"Tau Decay Mode "<<decayMode<<std::endl;
-     //std::cout<<"tau vis pt: "<<genPt<<" genEta: "<<genEta<<" genPhi: "<<genPhi<<std::endl;
+    //std::cout<<"Tau Decay Mode "<<decayMode<<std::endl;
+    //std::cout<<"tau vis pt: "<<genPt<<" genEta: "<<genEta<<" genPhi: "<<genPhi<<std::endl;
 
-     if(decayMode >21 ){
-       std::cout<<"found 3 prong tau: "<<decayMode<<std::endl;
-       GenThreeProngTaus.push_back(Temp);
-     }
+    if(decayMode >21 ){
+      std::cout<<"found 3 prong tau: "<<decayMode<<std::endl;
+      GenThreeProngTaus.push_back(Temp);
+    }
 
-     if(decayMode == 10 ){
-       GenOneProngTaus.push_back(Temp);
-     }
+    if(decayMode == 10 ){
+      GenOneProngTaus.push_back(Temp);
+    }
 
-     if(decayMode > 10 && decayMode < 20 ){
-       GenOneProngPi0Taus.push_back(Temp);
-     }
-   }
+    if(decayMode > 10 && decayMode < 20 ){
+      GenOneProngPi0Taus.push_back(Temp);
+    }
+  }
 
-   for(unsigned int i = 0; i < miniTaus->size(); i++){
-     recoEta        = -99;
-     recoPhi        = -99;
-     recoPt         = -99;
-     recoChargedIso = -99;
-     recoNeutralIso = -99;
-     recoRawIso     = -99;
-     recoDecayMode  = -99;
+  for(unsigned int i = 0; i < miniTaus->size(); i++){
+    recoEta        = -99;
+    recoPhi        = -99;
+    recoPt         = -99;
+    recoChargedIso = -99;
+    recoNeutralIso = -99;
+    recoRawIso     = -99;
+    recoDecayMode  = -99;
      
-     if(miniTaus->at(i).tauID("decayModeFinding")>0){
-       recoEta        = miniTaus->at(i).p4().Eta();
-       recoPhi        = miniTaus->at(i).p4().Phi();
-       recoPt         = miniTaus->at(i).p4().Pt();
-       recoChargedIso = miniTaus->at(i).tauID("chargedIsoPtSum");
-       recoNeutralIso = miniTaus->at(i).tauID("neutralIsoPtSum");
-       recoRawIso     = miniTaus->at(i).tauID("byCombinedIsolationDeltaBetaCorrRaw3Hits");
-       recoDecayMode  = miniTaus->at(i).decayMode();
-       std::cout<<"=== Found recoTau: "<<recoPt<<" Eta: "<<recoEta<<" Phi: "<< recoPhi <<std::endl;
-     }
-     else{
-       continue;
-     }
+    if(miniTaus->at(i).tauID("decayModeFinding")>0){
+      recoEta        = miniTaus->at(i).p4().Eta();
+      recoPhi        = miniTaus->at(i).p4().Phi();
+      recoPt         = miniTaus->at(i).p4().Pt();
+      recoChargedIso = miniTaus->at(i).tauID("chargedIsoPtSum");
+      recoNeutralIso = miniTaus->at(i).tauID("neutralIsoPtSum");
+      recoRawIso     = miniTaus->at(i).tauID("byCombinedIsolationDeltaBetaCorrRaw3Hits");
+      recoDecayMode  = miniTaus->at(i).decayMode();
+      std::cout<<"=== Found recoTau: "<<recoPt<<" Eta: "<<recoEta<<" Phi: "<< recoPhi <<std::endl;
+    }
+    else{
+      continue;
+    }
         
      
-     l1Pt = 0;
-     l1Eta = -10;
-     l1Phi = -10;
-     l1DM = -10;
-     l1TauRawIso = 100;
-     l1TauNeutralIso = 100;
-     l1TauChargedIso = 100;
-     l1IsoVLoose = -10;
-     l1IsoLoose = -10;
-     l1IsoMedium = -10;
-     l1IsoTight = -10;
+    l1Pt = 0;
+    l1Eta = -10;
+    l1Phi = -10;
+    l1DM = -10;
+    l1TauRawIso = 100;
+    l1TauNeutralIso = 100;
+    l1TauChargedIso = 100;
+    l1IsoVLoose = -10;
+    l1IsoLoose = -10;
+    l1IsoMedium = -10;
+    l1IsoTight = -10;
 
-     zVTX = 0;
-     l1TauZ = 0;
-     l1PVDZ = 0;  // delta Z = tau's z minus zVTX
+    zVTX = 0;
+    l1TauZ = 0;
+    l1PVDZ = 0;  // delta Z = tau's z minus zVTX
      
-     l1RelIsoVLoose = -10;
-     l1RelIsoLoose = -10;
-     l1RelIsoMedium = -10;
-     l1RelIsoTight = -10;
+    l1RelIsoVLoose = -10;
+    l1RelIsoLoose = -10;
+    l1RelIsoMedium = -10;
+    l1RelIsoTight = -10;
 
-     std::cout << "l1PFTaus size: " << l1PFTaus->size() << std::endl;
+    std::cout << "l1PFTaus size: " << l1PFTaus->size() << std::endl;
 
-     // Set primary vertex z position
-     if (L1VertexHandle->size() > 0)
-       {
-	 zVTX = L1VertexHandle->at(0).getZvertex();
-       }
+    // Set primary vertex z position
+    if (L1VertexHandle->size() > 0)
+      {
+	zVTX = L1VertexHandle->at(0).getZvertex();
+      }
 
-     for(unsigned int i = 0; i < l1PFTaus->size(); i++){
-       /*       std::cout << "l1PFTaus->at(i).p4().Eta() = " << l1PFTaus->at(i).p4().Eta() << "   "
-		 << "l1PFTaus->at(i).p4().Phi() = " << l1PFTaus->at(i).p4().Phi() << "   " 
-	         << "recoEta = " << recoEta << "   " 
-	         << "recoPhi = " << recoPhi << "   "
-	         << "l1PFTaus->at(i).p4().pt() = " << l1PFTaus->at(i).p4().pt() << "   " 
-	         << "l1TauPt  " << l1TauPt << std::endl;*/
+    for(unsigned int i = 0; i < l1PFTaus->size(); i++){
+      /*       std::cout << "l1PFTaus->at(i).p4().Eta() = " << l1PFTaus->at(i).p4().Eta() << "   "
+	       << "l1PFTaus->at(i).p4().Phi() = " << l1PFTaus->at(i).p4().Phi() << "   " 
+	       << "recoEta = " << recoEta << "   " 
+	       << "recoPhi = " << recoPhi << "   "
+	       << "l1PFTaus->at(i).p4().pt() = " << l1PFTaus->at(i).p4().pt() << "   " 
+	       << "l1TauPt  " << l1TauPt << std::endl;*/
        
-       if(( reco::deltaR(l1PFTaus->at(i).eta(), l1PFTaus->at(i).phi(), 
-			 recoEta, recoPhi) < 0.5 )
-	  && (l1PFTaus->at(i).pt() > l1Pt))
-	 {
-	   l1Eta = l1PFTaus->at(i).eta();
-	   l1Phi = l1PFTaus->at(i).phi();
-	   l1Pt  = l1PFTaus->at(i).pt();
+      if(( reco::deltaR(l1PFTaus->at(i).eta(), l1PFTaus->at(i).phi(), 
+			recoEta, recoPhi) < 0.5 )
+	 && (l1PFTaus->at(i).pt() > l1Pt))
+	{
+	  l1Eta = l1PFTaus->at(i).eta();
+	  l1Phi = l1PFTaus->at(i).phi();
+	  l1Pt  = l1PFTaus->at(i).pt();
 
-	   l1TauZ = l1PFTaus->at(i).p4().z();   // adding in z position of tau
+	  l1TauZ = l1PFTaus->at(i).p4().z();   // adding in z position of tau
 
-	   l1StripPt  = l1PFTaus->at(i).strip_p4().pt();
-	   l1StripEta = l1PFTaus->at(i).strip_p4().eta();
-	   l1StripPhi = l1PFTaus->at(i).strip_p4().phi();
-	   l1StripDR  = reco::deltaR(l1PFTaus->at(i).eta(),
-				     l1PFTaus->at(i).phi(),
-				     l1PFTaus->at(i).strip_p4().eta(),
-				     l1PFTaus->at(i).strip_p4().phi());
-	   if (L1VertexHandle->size() > 0)
-             {
-               l1PVDZ = l1TauZ - zVTX;
-	       std::cout << "l1TauPVDZ (without reco/l1 matching): " << l1PVDZ << std::endl;
-             }
+	  l1StripPt  = l1PFTaus->at(i).strip_p4().pt();
+	  l1StripEta = l1PFTaus->at(i).strip_p4().eta();
+	  l1StripPhi = l1PFTaus->at(i).strip_p4().phi();
+	  l1StripDR  = reco::deltaR(l1PFTaus->at(i).eta(),
+				    l1PFTaus->at(i).phi(),
+				    l1PFTaus->at(i).strip_p4().eta(),
+				    l1PFTaus->at(i).strip_p4().phi());
+	  if (L1VertexHandle->size() > 0)
+	    {
+	      l1PVDZ = l1TauZ - zVTX;
+	      std::cout << "l1TauPVDZ (without reco/l1 matching): " << l1PVDZ << std::endl;
+	    }
 
 
-	   l1TauChargedIso = l1PFTaus->at(i).chargedIso();
-	   l1TauNeutralIso = l1PFTaus->at(i).neutralIso();
-	   l1TauRawIso = l1PFTaus->at(i).rawIso();
-	   l1DM        = l1PFTaus->at(i).tauType();
-	   l1IsoVLoose =  l1PFTaus->at(i).passVLooseIso();
-	   l1IsoLoose  =  l1PFTaus->at(i).passLooseIso();
-	   l1IsoMedium =  l1PFTaus->at(i).passMediumIso();
-	   l1IsoTight  =  l1PFTaus->at(i).passTightIso();
+	  l1TauChargedIso = l1PFTaus->at(i).chargedIso();
+	  l1TauNeutralIso = l1PFTaus->at(i).neutralIso();
+	  l1TauRawIso = l1PFTaus->at(i).rawIso();
+	  l1DM        = l1PFTaus->at(i).tauType();
+	  l1IsoVLoose =  l1PFTaus->at(i).passVLooseIso();
+	  l1IsoLoose  =  l1PFTaus->at(i).passLooseIso();
+	  l1IsoMedium =  l1PFTaus->at(i).passMediumIso();
+	  l1IsoTight  =  l1PFTaus->at(i).passTightIso();
 
-	   l1RelIsoVLoose =  l1PFTaus->at(i).passVLooseRelIso();
-	   l1RelIsoLoose  =  l1PFTaus->at(i).passLooseRelIso();
-	   l1RelIsoMedium =  l1PFTaus->at(i).passMediumRelIso();
-	   l1RelIsoTight  =  l1PFTaus->at(i).passTightRelIso();
+	  l1RelIsoVLoose =  l1PFTaus->at(i).passVLooseRelIso();
+	  l1RelIsoLoose  =  l1PFTaus->at(i).passLooseRelIso();
+	  l1RelIsoMedium =  l1PFTaus->at(i).passMediumRelIso();
+	  l1RelIsoTight  =  l1PFTaus->at(i).passTightRelIso();
 
-	   
-	   std::cout<<" Match found l1Pt: "<< l1Pt <<
-	     " Eta: "<< l1Eta  <<
-	     " Phi: "<< l1Phi  << 
-	     " Pass tight iso: " << l1PFTaus->at(i).passTightIso() <<
-	     " Pass VLoose Iso: " << l1PFTaus->at(i).passVLooseIso() <<
-	     std::endl;
-	 }
+	     
+	  std::cout<<" Match found l1Pt: "<< l1Pt <<
+	    " Eta: "<< l1Eta  <<
+	    " Phi: "<< l1Phi  << 
+	    " Pass tight iso: " << l1PFTaus->at(i).passTightIso() <<
+	    " Pass VLoose Iso: " << l1PFTaus->at(i).passVLooseIso() <<
+	    std::endl;
+	}
        
-     } // end of loop over L1 taus
+    } // end of loop over L1 taus
    
      
-     genPt = 0;
-     genEta = -100;
-     genPhi = -100;
+    genPt = 0;
+    genEta = -100;
+    genPhi = -100;
      
-     for(auto genTau: genTaus){
+    for(auto genTau: genTaus){
        
-       reco::Candidate::LorentzVector visGenTau= getVisMomentum(&genTau, &genParticles);
-       genVisTau Temp;
+      reco::Candidate::LorentzVector visGenTau= getVisMomentum(&genTau, &genParticles);
+      genVisTau Temp;
        
-       if( reco::deltaR(recoEta, 
-			recoPhi, 
-			visGenTau.eta(), visGenTau.phi()) < 0.5){
-	 genPt = visGenTau.pt();
-	 genEta = visGenTau.eta();
-	 genPhi = visGenTau.phi();
-	 decayMode = GetDecayMode(&genTau);
-	 std::cout<<"    tau vis pt: "<<genPt<<" genEta: "<<genEta<<" genPhi: "<<genPhi<<std::endl;
-       }
-     }
+      if( reco::deltaR(recoEta, 
+		       recoPhi, 
+		       visGenTau.eta(), visGenTau.phi()) < 0.5){
+	genPt = visGenTau.pt();
+	genEta = visGenTau.eta();
+	genPhi = visGenTau.phi();
+	decayMode = GetDecayMode(&genTau);
+	std::cout<<"    tau vis pt: "<<genPt<<" genEta: "<<genEta<<" genPhi: "<<genPhi<<std::endl;
+      }
+    }
        
-     efficiencyTree->Fill();
+    efficiencyTree->Fill();
 
-   } // end of loop over reco (miniTaus)
+  } // end of loop over reco (miniTaus)
    
-   for(auto genTau: GenThreeProngTaus){
-     genPt  = genTau.p4.pt();
-     genEta = genTau.p4.eta();
-     genPhi = genTau.p4.phi();
+  for(auto genTau: GenThreeProngTaus){
+    genPt  = genTau.p4.pt();
+    genEta = genTau.p4.eta();
+    genPhi = genTau.p4.phi();
      
-     for(unsigned int i = 0; i < miniTaus->size(); i++){
-       if( reco::deltaR(miniTaus->at(i).p4().Eta(), 
-			miniTaus->at(i).p4().Phi(), 
-			genEta, genPhi) < 0.5)
-	 if(miniTaus->at(i).tauID("decayModeFinding")>0 && miniTaus->at(i).decayMode()==10){
-	   recoEta        = miniTaus->at(i).p4().Eta();
-	   recoPhi        = miniTaus->at(i).p4().Phi();
-	   recoPt         = miniTaus->at(i).p4().Pt();
-	   recoDecayMode  = miniTaus->at(i).decayMode();
-	   //std::cout<<"accessing the signal tracks size"<<std::endl;
-	   //std::cout<<"size: "<<miniTaus->at(i).signalChargedHadrCands().size()<<std::endl;
-	   const reco::CandidatePtrVector chargedHadrons = miniTaus->at(i).signalChargedHadrCands();
-	   //std::cout<<"size CH: "<< (*chargedHadrons)->size()<<std::endl;
-	   //for (size_t j = 0; i < .size(); ++i) {
-	   //if(miniTaus->at(i).signalChargedHadrCands().size()>2){
-	   int j = 0;
+    for(unsigned int i = 0; i < miniTaus->size(); i++){
+      if( reco::deltaR(miniTaus->at(i).p4().Eta(), 
+		       miniTaus->at(i).p4().Phi(), 
+		       genEta, genPhi) < 0.5)
+	if(miniTaus->at(i).tauID("decayModeFinding")>0 && miniTaus->at(i).decayMode()==10){
+	  recoEta        = miniTaus->at(i).p4().Eta();
+	  recoPhi        = miniTaus->at(i).p4().Phi();
+	  recoPt         = miniTaus->at(i).p4().Pt();
+	  recoDecayMode  = miniTaus->at(i).decayMode();
+	  //std::cout<<"accessing the signal tracks size"<<std::endl;
+	  //std::cout<<"size: "<<miniTaus->at(i).signalChargedHadrCands().size()<<std::endl;
+	  const reco::CandidatePtrVector chargedHadrons = miniTaus->at(i).signalChargedHadrCands();
+	  //std::cout<<"size CH: "<< (*chargedHadrons)->size()<<std::endl;
+	  //for (size_t j = 0; i < .size(); ++i) {
+	  //if(miniTaus->at(i).signalChargedHadrCands().size()>2){
+	  int j = 0;
 
-	   pat::PackedCandidate const* pfCand_1 = 0;
-	   pat::PackedCandidate const* pfCand_2 = 0;
-	   pat::PackedCandidate const* pfCand_3 = 0;
+	  pat::PackedCandidate const* pfCand_1 = 0;
+	  pat::PackedCandidate const* pfCand_2 = 0;
+	  pat::PackedCandidate const* pfCand_3 = 0;
 
-	   math::PtEtaPhiMLorentzVector tempP4_track1;
-	   math::PtEtaPhiMLorentzVector tempP4_track2;
-	   math::PtEtaPhiMLorentzVector tempP4_track3;
-	   
-	   for(reco::CandidatePtrVector::const_iterator iter = chargedHadrons.begin(); iter != chargedHadrons.end(); iter++){
-	     //pat::PackedCandidate const* packedCand = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-	   
-	     if(j==0){
-	        pfCand_1 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-		std::cout<<"track 1 pt: "<<(pfCand_1)->pt()<<" eta: "<<(pfCand_1)->eta()<<" phi: "<<(pfCand_1)->phi()<<std::endl;
-		tempP4_track1.SetPt((pfCand_1)->pt()); 
-		tempP4_track1.SetEta((pfCand_1)->eta()); 
-		tempP4_track1.SetPhi((pfCand_1)->phi());
+	  math::PtEtaPhiMLorentzVector tempP4_track1;
+	  math::PtEtaPhiMLorentzVector tempP4_track2;
+	  math::PtEtaPhiMLorentzVector tempP4_track3;
+	     
+	  for(reco::CandidatePtrVector::const_iterator iter = chargedHadrons.begin(); iter != chargedHadrons.end(); iter++){
+	    //pat::PackedCandidate const* packedCand = dynamic_cast<pat::PackedCandidate const*>(iter->get());
+	       
+	    if(j==0){
+	      pfCand_1 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
+	      std::cout<<"track 1 pt: "<<(pfCand_1)->pt()<<" eta: "<<(pfCand_1)->eta()<<" phi: "<<(pfCand_1)->phi()<<std::endl;
+	      tempP4_track1.SetPt((pfCand_1)->pt()); 
+	      tempP4_track1.SetEta((pfCand_1)->eta()); 
+	      tempP4_track1.SetPhi((pfCand_1)->phi());
 
-		track1_pt      = (pfCand_1)->pt();
-		track1_eta     = (pfCand_1)->eta();
-		track1_phi     = (pfCand_1)->phi();
-	     }
+	      track1_pt      = (pfCand_1)->pt();
+	      track1_eta     = (pfCand_1)->eta();
+	      track1_phi     = (pfCand_1)->phi();
+	    }
 
-	     if(j==1){
-	        pfCand_2 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-		//std::cout<<"track 2 pt: "<<track2_pt<<" eta: "<<track2_eta<<" phi: "<<track2_phi<<std::endl;
-		std::cout<<"track 2 pt: "<<(pfCand_2)->pt()<<" eta: "<< (pfCand_2)->eta() <<" phi: "<< (pfCand_2)->phi() <<std::endl;
-		tempP4_track2.SetPt((pfCand_2)->pt()); 
-		tempP4_track2.SetEta((pfCand_2)->eta()); 
-		tempP4_track2.SetPhi((pfCand_2)->phi());
-		//tempP4_track2.SetPtEtaPhiM((pfCand_2)->pt(), (pfCand_2)->eta(), (pfCand_2)->phi(), 1.335);
+	    if(j==1){
+	      pfCand_2 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
+	      //std::cout<<"track 2 pt: "<<track2_pt<<" eta: "<<track2_eta<<" phi: "<<track2_phi<<std::endl;
+	      std::cout<<"track 2 pt: "<<(pfCand_2)->pt()<<" eta: "<< (pfCand_2)->eta() <<" phi: "<< (pfCand_2)->phi() <<std::endl;
+	      tempP4_track2.SetPt((pfCand_2)->pt()); 
+	      tempP4_track2.SetEta((pfCand_2)->eta()); 
+	      tempP4_track2.SetPhi((pfCand_2)->phi());
+	      //tempP4_track2.SetPtEtaPhiM((pfCand_2)->pt(), (pfCand_2)->eta(), (pfCand_2)->phi(), 1.335);
 
-		track2_pt      = (pfCand_2)->pt();
-		track2_eta     = (pfCand_2)->eta();
-		track2_phi     = (pfCand_2)->phi();
+	      track2_pt      = (pfCand_2)->pt();
+	      track2_eta     = (pfCand_2)->eta();
+	      track2_phi     = (pfCand_2)->phi();
 
-		track2_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track2);
-		track2_dz      = abs((pfCand_1)->pz() - (pfCand_2)->pz());
+	      track2_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track2);
+	      track2_dz      = abs((pfCand_1)->pz() - (pfCand_2)->pz());
 
-	     }
+	    }
 
-	     if(j==2){
-	        pfCand_3 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-		std::cout<<"track 3 pt: "<<(pfCand_3)->pt()<<" eta: "<< (pfCand_3)->eta() <<" phi: "<< (pfCand_3)->phi() <<std::endl;
-		tempP4_track3.SetPt((pfCand_3)->pt()); 
-		tempP4_track3.SetEta((pfCand_3)->eta()); 
-		tempP4_track3.SetPhi((pfCand_3)->phi());
+	    if(j==2){
+	      pfCand_3 = dynamic_cast<pat::PackedCandidate const*>(iter->get());
+	      std::cout<<"track 3 pt: "<<(pfCand_3)->pt()<<" eta: "<< (pfCand_3)->eta() <<" phi: "<< (pfCand_3)->phi() <<std::endl;
+	      tempP4_track3.SetPt((pfCand_3)->pt()); 
+	      tempP4_track3.SetEta((pfCand_3)->eta()); 
+	      tempP4_track3.SetPhi((pfCand_3)->phi());
 
-		//tempP4_track3.SetPtEtaPhiM((pfCand_3)->pt(), (pfCand_3)->eta(), (pfCand_3)->phi(), 1.335);
-		track3_pt      = (pfCand_3)->pt();
-		track3_eta     = (pfCand_3)->eta();
-		track3_phi     = (pfCand_3)->phi();
+	      //tempP4_track3.SetPtEtaPhiM((pfCand_3)->pt(), (pfCand_3)->eta(), (pfCand_3)->phi(), 1.335);
+	      track3_pt      = (pfCand_3)->pt();
+	      track3_eta     = (pfCand_3)->eta();
+	      track3_phi     = (pfCand_3)->phi();
 
-		track3_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track3);
-		track3_dz      = abs((pfCand_1)->pz() - (pfCand_3)->pz());
-		
-	     }
-	     j++;
-	   }
-	   
+	      track3_dR      = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,tempP4_track3);
+	      track3_dz      = abs((pfCand_1)->pz() - (pfCand_3)->pz());
+	      
+	    }
+	    j++;
+	  }
+	     
 
-	   float highestPt_other_track = 0;
-	   for(unsigned int i=0;i<packedcands->size();i++){
-	     bool isASignalCand = false;
-	     const pat::PackedCandidate & c = (*packedcands)[i];
+	  float highestPt_other_track = 0;
+	  for(unsigned int i=0;i<packedcands->size();i++){
+	    bool isASignalCand = false;
+	    const pat::PackedCandidate & c = (*packedcands)[i];
 
-	     //check if it is nearby
-	     if( reco::deltaR(track1_eta, track1_phi, c.eta(), c.phi()) < 0.3){
-	       for(reco::CandidatePtrVector::const_iterator iter = chargedHadrons.begin(); iter != chargedHadrons.end(); iter++){
-		 pat::PackedCandidate const* signalcand = dynamic_cast<pat::PackedCandidate const*>(iter->get());
-		 //std::cout<<"c.sourceCandidatePtr(0).key() "<<c.sourceCandidatePtr(0).key()<<" signalcand->sourceCandidatePtr(0).key() "<<signalcand->sourceCandidatePtr(0).key()<<std::endl;
-		 if(c.pt() == signalcand->pt()){
-		   //std::cout<<"MATCHED c.sourceCandidatePtr(0).key() "<<c.sourceCandidatePtr(0).key()<<" signalcand->sourceCandidatePtr(0).key() "<<signalcand->sourceCandidatePtr(0).key()<<std::endl;
-		   isASignalCand = true;
-		 }
-	       }
+	    //check if it is nearby
+	    if( reco::deltaR(track1_eta, track1_phi, c.eta(), c.phi()) < 0.3){
+	      for(reco::CandidatePtrVector::const_iterator iter = chargedHadrons.begin(); iter != chargedHadrons.end(); iter++){
+		pat::PackedCandidate const* signalcand = dynamic_cast<pat::PackedCandidate const*>(iter->get());
+		//std::cout<<"c.sourceCandidatePtr(0).key() "<<c.sourceCandidatePtr(0).key()<<" signalcand->sourceCandidatePtr(0).key() "<<signalcand->sourceCandidatePtr(0).key()<<std::endl;
+		if(c.pt() == signalcand->pt()){
+		  //std::cout<<"MATCHED c.sourceCandidatePtr(0).key() "<<c.sourceCandidatePtr(0).key()<<" signalcand->sourceCandidatePtr(0).key() "<<signalcand->sourceCandidatePtr(0).key()<<std::endl;
+		  isASignalCand = true;
+		}
+	      }
 
-	       //if(!isASignalCand)
-	       //l1OtherTracks->Fill(c.pt(),ROOT::Math::VectorUtil::DeltaR(tempP4_track1,c.p4()));
+	      //if(!isASignalCand)
+	      //l1OtherTracks->Fill(c.pt(),ROOT::Math::VectorUtil::DeltaR(tempP4_track1,c.p4()));
 
-	       if(!isASignalCand && c.pt() > highestPt_other_track){
-		 other_track_pt = c.pt();
-		 other_track_eta = c.eta();
-		 other_track_phi = c.phi();
-		 other_track_dR  = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,c.p4());
-		 other_track_dz  = abs((pfCand_1)->pz() - c.pz());
-	       }
-	     }
-	   }
-	   std::cout<<"Filling the tree"<<std::endl;
-	   threeProngTree->Fill();
-	 }
-     }
+	      if(!isASignalCand && c.pt() > highestPt_other_track){
+		other_track_pt = c.pt();
+		other_track_eta = c.eta();
+		other_track_phi = c.phi();
+		other_track_dR  = ROOT::Math::VectorUtil::DeltaR(tempP4_track1,c.p4());
+		other_track_dz  = abs((pfCand_1)->pz() - c.pz());
+	      }
+	    }
+	  }
+	  std::cout<<"Filling the tree"<<std::endl;
+	  threeProngTree->Fill();
+	}
+    }
      
-   }
+  }
    
-   std::cout<<"Finished Analyzing the Taus"<<std::endl;
+  std::cout<<"Finished Analyzing the Taus"<<std::endl;
 }
 
 
