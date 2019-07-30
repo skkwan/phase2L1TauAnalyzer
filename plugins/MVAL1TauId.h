@@ -3,8 +3,8 @@
 
 #include "TMVA/Tools.h"
 #include "TMVA/Reader.h"
-#include "TMVA/Tools.h"
-#include "TMVA/Reader.h"
+
+#include "CommonTools/MVAUtils/interface/TMVAZipReader.h"
 
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 
@@ -16,6 +16,7 @@
 #include "DataFormats/PatCandidates/interface/PackedCandidate.h"
 
 #include "DataFormats/L1TrackTrigger/interface/L1TkPrimaryVertex.h"
+
 
 
 class MVAL1TauId {

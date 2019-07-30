@@ -1,6 +1,9 @@
 #include "MVAL1TauId.h"
 #include "FWCore/Framework/interface/Frameworkfwd.h"
 
+
+#include "CommonTools/MVAUtils/interface/TMVAZipReader.h"
+
 MVAL1TauId::MVAL1TauId(const edm::ParameterSet &ps) {
 
   impactParTkThreshod_ = 1.;
@@ -31,7 +34,7 @@ MVAL1TauId::~MVAL1TauId() {
     delete reader_;
 }
 
-void MVAJetPuId::bookReader() {
+void MVAL1TauId::bookReader() {
   reader_ = new TMVA::Reader("!Color:Silent");
   assert(!tmvaMethod_.empty() && !tmvaWeights_.empty());
   for (std::vector<std::string>::iterator it = tmvaVariables_.begin(); it != tmvaVariables_.end(); ++it) {
@@ -49,13 +52,28 @@ void MVAJetPuId::bookReader() {
   reco::details::loadTMVAWeights(reader_, tmvaMethod_, tmvaWeights_);
 }
 
-void MVAJetPuId::runMva() {
+void MVAJetPuId::set(const PileupJetIdentifier &id) { internalId_ = id; }
+
+void MVAL1TauId::runMva() {
   if (!reader_) {
     bookReader();
   }
-  if (fabs(internalId_.jetEta_) < 5.0)
-    internalId_.mva_ = reader_->EvaluateMVA(tmvaMethod_.c_str());
-  if (fabs(internalId_.jetEta_) >= 5.0)
-    internalId_.mva_ = -2.;
-  internalId_.idFlag_ = computeIDflag(internalId_.mva_, internalId_.jetPt_, internalId_.jetEta_);
+  
+  internalId_.mva = reader_->EvaluateMVA(tmvaMethod_.c_str());
+  
 }
+
+#define INIT_VARIABLE(NAME, TMVANAME, VAL) \
+  internalId_.NAME##_ = VAL;               \
+  variables_[#NAME] = std::make_pair(&internalId_.NAME##_, VAL);
+
+
+void MVAL1TauId::initVariables() {
+  INIT_VARIABLE(mva, "", -100.);
+
+  INIT_VARIABLE(l1Pt, "l1Pt", 0);
+  INIT_VARIABLE(genPt, "genPt", 0);
+
+}
+
+#undef INIT_VARIABLE
