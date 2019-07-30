@@ -808,14 +808,13 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
       }
 
     for(unsigned int i = 0; i < l1PFTaus->size(); i++){
-      /*       std::cout << "l1PFTaus->at(i).p4().Eta() = " << l1PFTaus->at(i).p4().Eta() << "   "
-	       << "l1PFTaus->at(i).p4().Phi() = " << l1PFTaus->at(i).p4().Phi() << "   " 
-	       << "recoEta = " << recoEta << "   " 
-	       << "recoPhi = " << recoPhi << "   "
-	       << "l1PFTaus->at(i).p4().pt() = " << l1PFTaus->at(i).p4().pt() << "   " 
-	       << "l1TauPt  " << l1TauPt << std::endl;*/
-       
-      if(( reco::deltaR(l1PFTaus->at(i).eta(), l1PFTaus->at(i).phi(), 
+             std::cout << "l1PFTaus->at(i).eta() = " << l1PFTaus->at(i).eta() << "   "
+		       << "l1PFTaus->at(i).phi() = " << l1PFTaus->at(i).phi() << "   " 
+		       << "recoEta = " << recoEta << "   " 
+		       << "recoPhi = " << recoPhi << "   "
+		       << "l1PFTaus->at(i).pt() = " << l1PFTaus->at(i).pt() << std::endl;
+	     
+	     if(( reco::deltaR(l1PFTaus->at(i).eta(), l1PFTaus->at(i).phi(), 
 			recoEta, recoPhi) < 0.5 )
 	 && (l1PFTaus->at(i).pt() > l1Pt))
 	{
