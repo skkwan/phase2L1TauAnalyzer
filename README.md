@@ -21,7 +21,7 @@ git clone git@github.com:isobelojalvo/phase2L1TauAnalyzer.git
 
 cd ../
 
-scram b -j 8
+USER_CXXFLAGS="-lTMVA -Wno-delete-non-virtual-dtor -Wno-error=unused-but-set-variable -Wno-error=unused-variable" scram b -j 8
 
 cd L1Trigger/phase2L1TauAnalyzer/test
 
