@@ -13,7 +13,7 @@
 //
 // Original Author:  Isobel Ojalvo
 //         Created:  Fri, 26 May 2017 15:44:30 GMT
-//
+// Modified by:      Stephanie Kwan
 //
 
 
@@ -83,6 +83,12 @@
 #include "DataFormats/PatCandidates/interface/PackedCandidate.h"
 
 #include "DataFormats/L1TrackTrigger/interface/L1TkPrimaryVertex.h"
+
+// TMVA
+
+#include "TMVA/Tools.h"
+#include "TMVA/Reader.h"
+#include "TMVA/MethodCuts.h"
 
 //
 // class declaration
@@ -182,6 +188,8 @@ private:
   double objectPiPlusPt, objectPiPlusEta, objectPiPlusPhi;
   double objectPiPlusDeltaEta, objectPiPlusDeltaPhi;
   int objectPiPlusIsChargedHadron;
+
+  double bdtDiscriminant;
 
   TH1F* nEvents;
   TH1F* track_pt;
@@ -296,6 +304,7 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("l1RelIsoTight",  &l1RelIsoTight,  "l1RelIsoTight/I");
 
   efficiencyTree->Branch("l1DM", &l1DM,   "l1DM/D");
+  efficiencyTree->Branch("bdtDiscriminant", &bdtDiscriminant, "bdtDiscriminant/D");
 
   pi0Tree = fs->make<TTree>("pi0Tree", "Crystal cluster individual crystal pt values");
   pi0Tree->Branch("run",    &run,     "run/I");
@@ -777,7 +786,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
       continue;
     }
         
-     
+  
     l1Pt = 0;
     l1Eta = -10;
     l1Phi = -10;
@@ -799,6 +808,13 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
     l1RelIsoMedium = -10;
     l1RelIsoTight = -10;
 
+    l1StripPt = 0;
+    l1StripEta = -10;
+    l1StripPhi = -10;
+    l1StripDR = 0;
+    
+    bdtDiscriminant = -10;
+
     std::cout << "l1PFTaus size: " << l1PFTaus->size() << std::endl;
 
     // Set primary vertex z position
@@ -807,13 +823,41 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	zVTX = L1VertexHandle->at(0).getZvertex();
       }
 
+
+    // 
+    // TMVA
+    //
+
+    /* Load the library */
+    TMVA::Tools::Instance();
+
+    /* Create the Reader object. */
+    TMVA::Reader *reader = new TMVA::Reader("!Color:!Silent");
+
+    /* Add variables to the Reader (must be the same name and type as the variables in the weight file(s) used. */
+    Float_t l1Pt_f      = 0;
+    Float_t l1Eta_f     = -10;
+    Float_t l1StripPt_f = 0;
+    Float_t l1DM_f      = -10;
+    Float_t l1PVDZ_f    = 0;
+    reader->TMVA::Reader::AddVariable("l1Pt", &l1Pt_f);
+    reader->TMVA::Reader::AddVariable("l1Eta", &l1Eta_f);
+    reader->TMVA::Reader::AddVariable("l1StripPt", &l1StripPt_f);
+    reader->TMVA::Reader::AddVariable("l1DM", &l1DM_f);
+    reader->TMVA::Reader::AddVariable("l1PVDZ", &l1PVDZ_f);
+
+    /* Book the MVA methods. */
+    TString methodName = "BDT method";
+    TString weightfile = "/afs/cern.ch/work/s/skkwan/public/triggerDevel/jul2019_2/CMSSW_10_6_0_pre4/src/L1Trigger/phase2L1TauAnalyzer/test/weights/TMVAClassification_BDT.weights.xml";
+    reader->TMVA::Reader::BookMVA(methodName, weightfile);
+
     for(unsigned int i = 0; i < l1PFTaus->size(); i++){
-      std::cout << "l1PFTaus->at(i).eta() = " << l1PFTaus->at(i).eta() << "   "
+      /*      std::cout << "l1PFTaus->at(i).eta() = " << l1PFTaus->at(i).eta() << "   "
 		<< "l1PFTaus->at(i).phi() = " << l1PFTaus->at(i).phi() << "   " 
 		<< "recoEta = " << recoEta << "   " 
 		<< "recoPhi = " << recoPhi << "   "
 		<< "l1PFTaus->at(i).pt() = " << l1PFTaus->at(i).pt() << std::endl;
-      
+      */
       if(( reco::deltaR(l1PFTaus->at(i).eta(), l1PFTaus->at(i).phi(), 
 			recoEta, recoPhi) < 0.5 )
 	 && (l1PFTaus->at(i).pt() > l1Pt))
@@ -852,15 +896,30 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	  l1RelIsoMedium =  l1PFTaus->at(i).passMediumRelIso();
 	  l1RelIsoTight  =  l1PFTaus->at(i).passTightRelIso();
 
-	     
+	  // Calculate all float versions of the BDT variables
+	  Float_t l1Pt_f      = float(l1Pt);
+	  Float_t l1Eta_f     = float(l1Eta);
+	  Float_t l1StripPt_f = float(l1StripPt);
+	  Float_t l1DM_f      = float(l1DM);
+	  Float_t l1PVDZ_f    = float(l1PVDZ);
+	  std::vector<Float_t> event;
+	  event.push_back(l1Pt_f); event.push_back(l1Eta_f);
+	  event.push_back(l1StripPt_f); 
+	  event.push_back(l1DM_f);
+	  event.push_back(l1PVDZ_f);
+	  bdtDiscriminant = reader->EvaluateMVA(event, "BDT method");
+
 	  std::cout<<" Match found l1Pt: "<< l1Pt <<
 	    " Eta: "<< l1Eta  <<
 	    " Phi: "<< l1Phi  << 
 	    " Pass tight iso: " << l1PFTaus->at(i).passTightIso() <<
-	    " Pass VLoose Iso: " << l1PFTaus->at(i).passVLooseIso() <<
+	    " Pass VLoose Iso: " << l1PFTaus->at(i).passVLooseIso() << 
+	    " bdtDiscriminant: " << bdtDiscriminant <<
 	    std::endl;
-	}
-       
+	  
+	  
+	} // end of reco/L1 tau matching
+      
     } // end of loop over L1 taus
    
      
