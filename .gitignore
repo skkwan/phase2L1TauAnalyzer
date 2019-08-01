@@ -2,3 +2,4 @@
 *.root
 *.pyc
 *SUB-Analyzer*.py
+test/two-file-batch-example/submit-[0-9].py
