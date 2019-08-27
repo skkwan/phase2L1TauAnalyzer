@@ -160,7 +160,12 @@ private:
   double track2_dR, track2_dz;
   double track3_dR, track3_dz;
 
-  double l1StripPt, l1StripEta, l1StripPhi, l1StripDR;
+  double l1Track_pt, l1Track_eta, l1Track_phi;
+  double l1Track_dR, l1Track_dz, l1Track_dRmin;
+  double l1TrackRecoTauPtDiff;
+
+  double l1StripPt, l1StripEta, l1StripPhi;
+  double l1StripDR;
 
   double other_track_pt, other_track_eta, other_track_phi, other_track_dR, other_track_dz;
 
@@ -263,12 +268,13 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("recoRawIso", &recoRawIso,   "recoDBIso/D");
   efficiencyTree->Branch("recoDM",  &recoDecayMode,   "recoDM/I");
 
+  efficiencyTree->Branch("l1Track_pt",  &l1Track_pt, "l1Track_pt/D");
+  efficiencyTree->Branch("l1Track_eta", &l1Track_eta, "l1Track_eta/D");
+  efficiencyTree->Branch("l1Track_phi", &l1Track_phi, "l1Track_phi/D");
+  efficiencyTree->Branch("l1Track_dR", &l1Track_dR, "l1Track_dR/D");
+  efficiencyTree->Branch("l1Track_dz", &l1Track_dz, "l1Track_dz/D");
+  efficiencyTree->Branch("l1TrackRecoTauPtDiff", &l1TrackRecoTauPtDiff, "l1TrackRecoTauPtDiff/D");
 
-  /*
-  efficiencyTree->Branch("trackPt",  &trackPt,   "trackPt/D");
-  efficiencyTree->Branch("trackEta", &trackEta,   "trackEta/D");
-  efficiencyTree->Branch("trackPhi", &trackPhi,   "trackPhi/D");
-  */
   efficiencyTree->Branch("l1Pt",  &l1Pt,   "l1Pt/D");
   efficiencyTree->Branch("l1Eta", &l1Eta,   "l1Eta/D");
   efficiencyTree->Branch("l1Phi", &l1Phi,   "l1Phi/D");
@@ -296,6 +302,7 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("l1RelIsoTight",  &l1RelIsoTight,  "l1RelIsoTight/I");
 
   efficiencyTree->Branch("l1DM", &l1DM,   "l1DM/D");
+
 
   pi0Tree = fs->make<TTree>("pi0Tree", "Crystal cluster individual crystal pt values");
   pi0Tree->Branch("run",    &run,     "run/I");
@@ -390,7 +397,7 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   oneProngPi0Tree->Branch("stripEta", &oneProngPi0Tau.stripEta,   "stripEta/D");
   oneProngPi0Tree->Branch("stripPhi", &oneProngPi0Tau.stripPhi,   "stripPhi/D");
 
-  oneProngPi0Tree->Branch("HCALEnergy",  &oneProngPi0Tau.HCALEnergy,   "HCALEnergy/D");
+  oneProngPi0Tree->Branch("HCALEunergy",  &oneProngPi0Tau.HCALEnergy,   "HCALEnergy/D");
   oneProngPi0Tree->Branch("ECALEnergy",  &oneProngPi0Tau.ECALEnergy,   "ECALEnergy/D");
   
   oneProngPi0Tree->Branch("isoRaw",     &oneProngPi0Tau.iso,   "isoRaw/D");
@@ -777,6 +784,35 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
       continue;
     }
         
+    // Get the L1 track that is closest to the recoTau.
+    l1Track_pt = 0;
+    l1Track_eta = -10;
+    l1Track_phi = -10;
+    l1Track_dz = 0;
+    l1Track_dR = 99.99;
+    l1Track_dRmin = 99.99;
+    l1TrackRecoTauPtDiff = 99.99;
+
+    for(auto l1Track: l1Tracks){
+      // Calculate dR with respect to the recoTau.
+      l1Track_dR = reco::deltaR(l1Track.getMomentum().eta(), l1Track.getMomentum().phi(),
+				recoEta, recoPhi);
+
+      if ((l1Track_dR < l1Track_dRmin)
+	  && (l1Track_dR < 0.3))
+	{
+	  l1Track_pt = l1Track.getMomentum().perp();
+	  l1Track_eta = l1Track.getMomentum().eta();
+	  l1Track_phi = l1Track.getMomentum().phi();
+	  l1Track_dz = l1Track.getPOCA().z() - L1VertexHandle->at(0).getZvertex();
+	  l1Track_dRmin = l1Track_dR;
+	  l1TrackRecoTauPtDiff = recoPt - l1Track_pt;
+	}
+    }
+
+    printf("l1Track_dR is %f for the closest l1 Track to the recoTau.\n", l1Track_dR);
+    printf("l1TrackRecoTauPtDiff is %f for the closest l1 Track (l1Track_pt = %f) to the recoTau with recoPt %f\n",
+	   l1TrackRecoTauPtDiff, l1Track_pt, recoPt);
      
     l1Pt = 0;
     l1Eta = -10;
