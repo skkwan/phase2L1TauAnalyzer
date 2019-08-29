@@ -1,0 +1,2 @@
+/store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/AODSIM/NoPU_106X_upgrade2023_realistic_v3-v2/130000/D8C06A97-2962-2E4E-90E6-D23350EEAFAA.root
+/store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/AODSIM/NoPU_106X_upgrade2023_realistic_v3-v2/130000/D508FC6B-A754-5549-9CB3-C814614E46FC.root
