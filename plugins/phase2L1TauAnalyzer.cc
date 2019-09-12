@@ -84,6 +84,8 @@
 
 #include "DataFormats/L1TrackTrigger/interface/L1TkPrimaryVertex.h"
 
+#include "L1Trigger/Phase2L1Taus/interface/L1PFTauProducer.hh"
+
 //
 // class declaration
 //
@@ -121,7 +123,7 @@ private:
   edm::ESHandle<CaloGeometry> caloGeometry_;
 
   //edm::EDGetTokenT< L1CaloClusterCollection > L1ClustersToken_;
-  //  edm::EDGetTokenT< L1PFObjectCollection > L1PFToken_;
+  edm::EDGetTokenT< vector<l1t::PFCandidate> > L1PFToken_;
   edm::EDGetTokenT<L1TkPrimaryVertexCollection>    pvToken_;
   edm::EDGetTokenT< L1PFTauCollection > L1PFTauToken_;
   edm::EDGetTokenT<std::vector<reco::GenParticle> > genToken_;
@@ -234,7 +236,7 @@ private:
 //
 phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   //L1ClustersToken_( consumes< L1CaloClusterCollection >(cfg.getParameter<edm::InputTag>("L1Clusters"))),
-  //  L1PFToken_(       consumes< L1PFObjectCollection >(cfg.getParameter<edm::InputTag>("l1PFObjects"))),
+  L1PFToken_(       consumes< vector<l1t::PFCandidate> >(cfg.getParameter<edm::InputTag>("L1PFObjects"))),
   pvToken_(         consumes<L1TkPrimaryVertexCollection> (cfg.getParameter<edm::InputTag>("L1VertexInputTag"))),
   L1PFTauToken_(    consumes< L1PFTauCollection    >(cfg.getParameter<edm::InputTag>("l1TauObjects"))),
   MiniTausToken_(   consumes< vector<pat::Tau>     >(cfg.getParameter<edm::InputTag>("miniTaus"))),
@@ -517,7 +519,29 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
   //  edm::Handle< std::vector<L1PFObject> > l1PFChargedCandidates;
   //  iEvent.getByToken( L1PFToken_, l1PFChargedCandidates);
   
-  
+  // PF Candidates
+  edm::Handle<l1t::PFCandidateCollection> l1PFCandidates;
+  iEvent.getByToken(L1PFToken_, l1PFCandidates);
+  l1t::PFCandidateCollection pfChargedHadrons;
+  l1t::PFCandidateCollection l1PFCandidates_sort;
+
+  for(auto l1PFCand : *l1PFCandidates)
+    l1PFCandidates_sort.push_back(l1PFCand);
+
+  std::sort(l1PFCandidates_sort.begin(), l1PFCandidates_sort.end(), [](l1t::PFCandidate i,l1t::PFCandidate j){return(i.pt() > j.pt());});   
+
+  // get all PF Charged Hadrons
+  for(auto l1PFCand : l1PFCandidates_sort)
+    {
+      // this saves some low pt 3 prong taus, but should be optimized with respect to 1 prong pi0
+      if(l1PFCand.id() == l1t::PFCandidate::ChargedHadron || (l1PFCand.pt()<5 && l1PFCand.id() == l1t::PFCandidate::Electron)){
+	pfChargedHadrons.push_back(l1PFCand);
+	continue;
+      }
+      
+    }
+  // end of PF Candidates
+
   edm::Handle<L1TkPrimaryVertexCollection> L1VertexHandle;
   iEvent.getByToken(pvToken_, L1VertexHandle);
 
