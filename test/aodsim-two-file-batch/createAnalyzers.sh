@@ -1,7 +1,7 @@
-jobName="2019_Aug28-ggHtautau_noPU-MINI-try2"
+jobName="2019_Aug29-ggHtautau_noPU-try2"
 #
 j=0
-for i in {0..1}
+for i in {0..11}
 do
     cat test-Analyzer.py > SUB-Analyzer-${i}.py
     #echo "process.source.skipEvents = cms.untracked.uint32(${j})" >> SUB-Analyzer-${i}.py
