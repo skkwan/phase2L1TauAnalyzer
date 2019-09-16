@@ -123,6 +123,7 @@ private:
   edm::ESHandle<CaloGeometry> caloGeometry_;
 
   //edm::EDGetTokenT< L1CaloClusterCollection > L1ClustersToken_;
+  //  edm::EDGetTokenT<l1t::PFCandidateCollection> L1PFToken_;
   edm::EDGetTokenT< vector<l1t::PFCandidate> > L1PFToken_;
   edm::EDGetTokenT<L1TkPrimaryVertexCollection>    pvToken_;
   edm::EDGetTokenT< L1PFTauCollection > L1PFTauToken_;
@@ -165,6 +166,9 @@ private:
   double l1Track_pt, l1Track_eta, l1Track_phi;
   double l1Track_dR, l1Track_dz, l1Track_dRmin;
   double l1TrackRecoTauPtDiff;
+
+  double pfCand_pt, pfCand_eta, pfCand_phi;
+  double pfCand_dR, pfCand_dRmin, pfCand_dz;
 
   double l1StripPt, l1StripEta, l1StripPhi;
   double l1StripDR;
@@ -276,6 +280,12 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("l1Track_dR", &l1Track_dR, "l1Track_dR/D");
   efficiencyTree->Branch("l1Track_dz", &l1Track_dz, "l1Track_dz/D");
   efficiencyTree->Branch("l1TrackRecoTauPtDiff", &l1TrackRecoTauPtDiff, "l1TrackRecoTauPtDiff/D");
+
+  efficiencyTree->Branch("pfCand_pt",  &pfCand_pt, "pfCand_pt/D");
+  efficiencyTree->Branch("pfCand_eta", &pfCand_eta, "pfCand_eta/D");
+  efficiencyTree->Branch("pfCand_phi", &pfCand_phi, "pfCand_phi/D");
+  efficiencyTree->Branch("pfCand_dz",  &pfCand_dz, "pfCand_dz/D");
+  efficiencyTree->Branch("pfCand_dR",  &pfCand_dR, "pfCand_dR/D");
 
   efficiencyTree->Branch("l1Pt",  &l1Pt,   "l1Pt/D");
   efficiencyTree->Branch("l1Eta", &l1Eta,   "l1Eta/D");
@@ -837,6 +847,34 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
     printf("l1Track_dR is %f for the closest l1 Track to the recoTau.\n", l1Track_dR);
     printf("l1TrackRecoTauPtDiff is %f for the closest l1 Track (l1Track_pt = %f) to the recoTau with recoPt %f\n",
 	   l1TrackRecoTauPtDiff, l1Track_pt, recoPt);
+
+    // Get the PF Cand that is closest to the recoTau.
+    pfCand_pt = 0;
+    pfCand_eta = -10;
+    pfCand_phi = -10;
+    pfCand_dz = 0;
+    pfCand_dR = 99.99;
+    pfCand_dRmin = 99.99;
+    
+    for(auto l1PFCand : pfChargedHadrons)
+      {
+	// Calculate dR with respect to the recoTau.                                                                                             
+	pfCand_dR = reco::deltaR(l1PFCand.p4().eta(), l1PFCand.p4().phi(),
+				 recoEta, recoPhi);
+	if ((pfCand_dR < pfCand_dRmin)
+	    && (pfCand_dR < 0.3))
+	  {
+	    pfCand_pt = l1PFCand.pt();
+	    pfCand_eta = l1PFCand.p4().eta();
+	    pfCand_phi = l1PFCand.p4().phi();
+	    pfCand_dz = l1PFCand.vz() - L1VertexHandle->at(0).getZvertex();
+	    pfCand_dRmin = pfCand_dR;
+
+	  }
+      }
+    
+    printf("pfCand_dR is %f for the closest PF Cand to recoTau.\n", pfCand_dR);
+    printf("pfCand_pt is %f, recoPt is %f (difference is %f).\n", pfCand_pt, recoPt, pfCand_pt - recoPt);
      
     l1Pt = 0;
     l1Eta = -10;

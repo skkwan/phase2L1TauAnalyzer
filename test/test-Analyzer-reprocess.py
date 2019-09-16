@@ -109,17 +109,6 @@ process.L1PFTaus = cms.Path(process.L1PFTauProducer)
 # L1 Tau Analyzer
 process.load("L1Trigger.phase2L1TauAnalyzer.phase2L1TauAnalyzer_cfi")
 
-process.L1TauAnalyzer = cms.EDAnalyzer('phase2L1TauAnalyzer',
-                                       l1PFObjects = cms.InputTag("l1pfCandidates","PF"),
-                                       l1TauObjects = cms.InputTag("L1PFTauProducer","L1PFTaus"),
-                                       L1TrackInputTag = cms.InputTag("TTTracksFromTracklet", "Level1TTTracks"),
-                                       genParticles = cms.InputTag("genParticles", "", "HLT"),
-                                       packedCandidates = cms.InputTag("packedPFCandidates"),
-                                       ecalTPGsBarrel = cms.InputTag("simEcalEBTriggerPrimitiveDigis","","HLT"),
-                                       miniTaus = cms.InputTag("slimmedTaus"),
-                                       L1VertexInputTag = cms.InputTag("L1TkPrimaryVertex")
-                                       )
-
 process.analyzer = cms.Path(process.L1TauAnalyzer)
 
 process.TFileService = cms.Service("TFileService", 
@@ -127,10 +116,17 @@ process.TFileService = cms.Service("TFileService",
    closeFileFast = cms.untracked.bool(True)
 )
 
+#process.out = cms.OutputModule("PoolOutputModule",
+#    fileName = cms.untracked.string("dump.root"),
+#    outputCommands = cms.untracked.vstring('keep *') 
+#)
+
+#process.e = cms.EndPath(process.out)
+
 
 # Schedule definition
 #process.schedule = cms.Schedule(process.L1simulation_step,process.endjob_step,process.FEVTDEBUGHLToutput_step)
-process.schedule = cms.Schedule(process.L1simulation_step,process.L1PFTaus,process.analyzer,process.endjob_step)
+process.schedule = cms.Schedule(process.L1simulation_step,process.L1PFTaus,process.analyzer,process.endjob_step)#,process.e)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
@@ -144,3 +140,6 @@ process = L1TrackTriggerTracklet(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+#dump_file = open('dump.py','w')
+#dump_file.write(process.dumpPython())
