@@ -28,10 +28,11 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 # Input source
+# Input source                                                                                                                                                                                                                                                          
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring(
-# 106x
-        'root://cmsxrootd.fnal.gov///store/mc/PhaseIITDRSpring19MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/MINIAODSIM/NoPU_106X_upgrade2023_realistic_v3-v2/130000/F2F29840-3293-FF4E-9D11-F649A8F78848.root'
+                            fileNames = cms.untracked.vstring(
+                                # 106x                                                                                                                                                                                                                                                                  
+       'root://cmsxrootd.fnal.gov///store/mc/PhaseIITDRSpring19MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/MINIAODSIM/NoPU_106X_upgrade2023_realistic_v3-v2/130000/F2F29840-3293-FF4E-9D11-F649A8F78848.root'
 ),
 
    secondaryFileNames = cms.untracked.vstring(
@@ -40,11 +41,7 @@ process.source = cms.Source("PoolSource",
 )
 )
 
-process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:2", "1:13")
-
-process.options = cms.untracked.PSet(
-
-)
+process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:2", "1:13")                          
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
@@ -97,28 +94,24 @@ process.L1PFTaus = cms.Path(process.L1PFTauProducer)
 # L1 Tau Analyzer
 process.load("L1Trigger.phase2L1TauAnalyzer.phase2L1TauAnalyzer_cfi")
 
-process.L1TauAnalyzer = cms.EDAnalyzer('phase2L1TauAnalyzer',
-                                       l1PFObjects = cms.InputTag("l1pfCandidates","PF"),
-                                       l1TauObjects = cms.InputTag("L1PFTauProducer","L1PFTaus"),
-                                       L1TrackInputTag = cms.InputTag("TTTracksFromTracklet", "Level1TTTracks"),
-                                       genParticles = cms.InputTag("genParticles", "", "HLT"),
-                                       packedCandidates = cms.InputTag("packedPFCandidates"),
-                                       ecalTPGsBarrel = cms.InputTag("simEcalEBTriggerPrimitiveDigis","","HLT"),
-                                       miniTaus = cms.InputTag("slimmedTaus"),
-                                       L1VertexInputTag = cms.InputTag("L1TkPrimaryVertex")
-                                       )
-
 process.analyzer = cms.Path(process.L1TauAnalyzer)
 
 process.TFileService = cms.Service("TFileService", 
-   fileName = cms.string("analyzer.root"), 
+   fileName = cms.string("analyzer-dyll-4FEVT.root"), 
    closeFileFast = cms.untracked.bool(True)
 )
+
+#process.out = cms.OutputModule("PoolOutputModule",
+#    fileName = cms.untracked.string("dump.root"),
+#    outputCommands = cms.untracked.vstring('keep *') 
+#)
+
+#process.e = cms.EndPath(process.out)
 
 
 # Schedule definition
 #process.schedule = cms.Schedule(process.L1simulation_step,process.endjob_step,process.FEVTDEBUGHLToutput_step)
-process.schedule = cms.Schedule(process.L1simulation_step,process.L1PFTaus,process.analyzer,process.endjob_step)
+process.schedule = cms.Schedule(process.L1simulation_step,process.L1PFTaus,process.analyzer,process.endjob_step)#,process.e)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
@@ -132,3 +125,6 @@ process = L1TrackTriggerTracklet(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+#dump_file = open('dump.py','w')
+#dump_file.write(process.dumpPython())
