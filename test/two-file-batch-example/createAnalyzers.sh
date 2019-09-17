@@ -1,4 +1,4 @@
-jobName="2019_Sep16-DYToLL_NoPU_withL1Tracks_PFCand-MINI"
+jobName="2019_Sep17-DYToLL_NoPU_withL1Tracks_PFCand"
 #
 j=0
 for i in {0..1}
