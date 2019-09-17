@@ -3,3 +3,4 @@
 *.pyc
 *SUB-Analyzer*.py
 test/two-file-batch-example/submit-*.py
+test/aodsim-two-file-batch/submit-*.py
