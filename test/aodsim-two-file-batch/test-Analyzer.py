@@ -28,21 +28,22 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 # Input source
-# Input source                                                                                                                                                                                                                                                          
-process.source = cms.Source("PoolSource",
-                            fileNames = cms.untracked.vstring(
-                                # 106x                                                                                                                                                                                                                                                                  
-       'root://cmsxrootd.fnal.gov///store/mc/PhaseIITDRSpring19MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/MINIAODSIM/NoPU_106X_upgrade2023_realistic_v3-v2/130000/F2F29840-3293-FF4E-9D11-F649A8F78848.root'
-),
+process.source = cms.Source("PoolSource")
 
-   secondaryFileNames = cms.untracked.vstring(
-       'root://cmsxrootd.fnal.gov///store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/GEN-SIM-DIGI-RAW/NoPU_106X_upgrade2023_realistic_v3-v2/130000/AF367A04-0318-2E45-8037-38CB6B81BAB7.root',
-       'root://cmsxrootd.fnal.gov///store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/GEN-SIM-DIGI-RAW/NoPU_106X_upgrade2023_realistic_v3-v2/130000/077D21BE-88B6-024B-9C69-215374A3AA92.root'
+process.source.fileNames = cms.untracked.vstring( 
+ "root://cmsxrootd.fnal.gov//store/mc/PhaseIITDRSpring19MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/MINIAODSIM/NoPU_106X_upgrade2023_realistic_v3-v2/130000/66C6C21F-A481-0D4C-9205-0332759441F2.root")
+
+
+process.source.secondaryFileNames = cms.untracked.vstring( 
+ "root://cmsxrootd.fnal.gov//store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/GEN-SIM-DIGI-RAW/NoPU_106X_upgrade2023_realistic_v3-v2/130000/2B1379C8-2D5B-C044-85F6-AD3788F02B34.root","root://cmsxrootd.fnal.gov//store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/GEN-SIM-DIGI-RAW/NoPU_106X_upgrade2023_realistic_v3-v2/130000/EA19C627-D81C-8744-B1AE-7097DD56B1E7.root")
+
+
+process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:22","1:5")
+
+process.options = cms.untracked.PSet(
+
 )
-)
-
-process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:2", "1:13")                          
-
+ 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
     annotation = cms.untracked.string('repr nevts:2'),
@@ -97,7 +98,7 @@ process.load("L1Trigger.phase2L1TauAnalyzer.phase2L1TauAnalyzer_cfi")
 process.analyzer = cms.Path(process.L1TauAnalyzer)
 
 process.TFileService = cms.Service("TFileService", 
-   fileName = cms.string("analyzer-dyll-4FEVT.root"), 
+   fileName = cms.string("analyzer.root"), 
    closeFileFast = cms.untracked.bool(True)
 )
 

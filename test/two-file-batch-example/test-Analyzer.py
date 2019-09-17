@@ -112,7 +112,7 @@ process.load("L1Trigger.phase2L1TauAnalyzer.phase2L1TauAnalyzer_cfi")
 process.analyzer = cms.Path(process.L1TauAnalyzer)
 
 process.TFileService = cms.Service("TFileService", 
-   fileName = cms.string("analyzer-dyll-4FEVT.root"), 
+   fileName = cms.string("analyzer.root"), 
    closeFileFast = cms.untracked.bool(True)
 )
 
