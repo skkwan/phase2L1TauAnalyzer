@@ -544,10 +544,10 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
   for(auto l1PFCand : l1PFCandidates_sort)
     {
       // this saves some low pt 3 prong taus, but should be optimized with respect to 1 prong pi0
-      if(l1PFCand.id() == l1t::PFCandidate::ChargedHadron || (l1PFCand.pt()<5 && l1PFCand.id() == l1t::PFCandidate::Electron)){
-	pfChargedHadrons.push_back(l1PFCand);
-	continue;
-      }
+      // Commenting out this requirement for now:
+      //      if(l1PFCand.id() == l1t::PFCandidate::ChargedHadron || (l1PFCand.pt()<5 && l1PFCand.id() == l1t::PFCandidate::Electron)){
+      pfChargedHadrons.push_back(l1PFCand);
+      continue;
       
     }
   // end of PF Candidates
