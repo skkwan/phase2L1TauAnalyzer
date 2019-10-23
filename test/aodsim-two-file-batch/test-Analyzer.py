@@ -7,7 +7,8 @@ import FWCore.ParameterSet.Config as cms
 
 from Configuration.StandardSequences.Eras import eras
 
-process = cms.Process('REPR',eras.Phase2C4_trigger)
+process = cms.Process('REPR', eras.Phase2C8_trigger)
+#process = cms.Process('REPR',eras.Phase2C4_trigger)
 #process = cms.Process('REPR',eras.Phase2C4_timing_layer_bar)
 
 # import of standard configurations
@@ -30,12 +31,13 @@ process.maxEvents = cms.untracked.PSet(
 # Input source
 process.source = cms.Source("PoolSource")
 
-process.source.fileNames = cms.untracked.vstring( 
+process.source.fileNames = cms.untracked.vstring(
  "root://cmsxrootd.fnal.gov//store/mc/PhaseIITDRSpring19MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/MINIAODSIM/NoPU_106X_upgrade2023_realistic_v3-v2/130000/66C6C21F-A481-0D4C-9205-0332759441F2.root")
 
 
-process.source.secondaryFileNames = cms.untracked.vstring( 
- "root://cmsxrootd.fnal.gov//store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/GEN-SIM-DIGI-RAW/NoPU_106X_upgrade2023_realistic_v3-v2/130000/2B1379C8-2D5B-C044-85F6-AD3788F02B34.root","root://cmsxrootd.fnal.gov//store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/GEN-SIM-DIGI-RAW/NoPU_106X_upgrade2023_realistic_v3-v2/130000/EA19C627-D81C-8744-B1AE-7097DD56B1E7.root")
+process.source.secondaryFileNames = cms.untracked.vstring(
+ "root://cmsxrootd.fnal.gov//store/mc/PhaseIITDRSpring19DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/GEN-SIM-DIGI-RAW/NoPU_106X_upgrade2023_realistic_v3-v2/130000/2B1379C8-2D5B-C044-85F6-AD3788F02B34.root","root://cmsxrootd.fnal.gov//store/mc/PhaseIITDRSpring19D\
+R/GluGluHToTauTau_M125_14TeV_powheg_pythia8_TuneCP5/GEN-SIM-DIGI-RAW/NoPU_106X_upgrade2023_realistic_v3-v2/130000/EA19C627-D81C-8744-B1AE-7097DD56B1E7.root")
 
 
 process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:22","1:5")

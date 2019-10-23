@@ -1731,9 +1731,9 @@ phase2L1TauAnalyzerRates::analyze(const edm::Event& iEvent, const edm::EventSetu
      }
 
      l1Pt = 0;
-     l1Eta = -10;
-     l1Phi = -10;
-     l1DM = -10;
+     l1Eta = -99;
+     l1Phi = -99;
+     l1DM = -99;
 
      zVTX = 0;
      l1TauZ = 0;
@@ -1756,6 +1756,8 @@ phase2L1TauAnalyzerRates::analyze(const edm::Event& iEvent, const edm::EventSetu
        {
 	 zVTX = L1VertexHandle->at(0).getZvertex();
        }
+
+     printf("l1PFTaus->size() is %i\n", (int) l1PFTaus->size());
 
      for(unsigned int i = 0; i < l1PFTaus->size(); i++){
        if( reco::deltaR(l1PFTaus->at(i).p4().Eta(), 
