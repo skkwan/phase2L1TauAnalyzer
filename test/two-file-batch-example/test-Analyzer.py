@@ -31,13 +31,14 @@ process.maxEvents = cms.untracked.PSet(
 
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
-        'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18MiniAOD/DYToLL_M-50_14TeV_pythia8_pilot1/MINIAODSIM/PU200_pilot_103X_upgrade2023_realistic_v2-v1/80000/A40F504F-88AA-BA44-822B-2FF02ADFACF3.root'),
+        'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8/MINIAODSIM/PU200_103X_upgrade2023_realistic_v2-v1/80000/85B0E400-E6BC-4642-98BD-F565569C3910.root'),
     secondaryFileNames = cms.untracked.vstring(
-       'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/DYToLL_M-50_14TeV_pythia8_pilot1/FEVT/PU200_pilot_103X_upgrade2023_realistic_v2-v1/80000/257D1965-FB09-1148-9DA4-B7DAD07BB6D3.root'
-)
+    'root://cmsxrootd.fnal.gov//store/mc/PhaseIIMTDTDRAutumn18DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8/FEVT/PU200_103X_upgrade2023_realistic_v2-v1/80000/FF1F2905-A82D-3E45-B34E-E040C237018E.root')
 )
 
-process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:46")
+#process.source.secondaryFileNames = cms.untracked.vstring(
+# "/store/mc/PhaseIIMTDTDRAutumn18DR/GluGluHToTauTau_M125_14TeV_powheg_pythia8/FEVT/PU200_103X_upgrade2023_realistic_v2-v1/80000/FF1F2905-A82D-3E45-B34E-E040C237018E.root")
+process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange("1:312")
 
 process.options = cms.untracked.PSet(
 
@@ -97,7 +98,7 @@ process.load("L1Trigger.phase2L1TauAnalyzer.phase2L1TauAnalyzer_cfi")
 process.analyzer = cms.Path(process.L1TauAnalyzer)
 
 process.TFileService = cms.Service("TFileService", 
-   fileName = cms.string("analyzer-dyll-4FEVT.root"), 
+   fileName = cms.string("analyzer-GluGluHToTauTau_M125_14TeV_powheg_pythia8.root"), 
    closeFileFast = cms.untracked.bool(True)
 )
 

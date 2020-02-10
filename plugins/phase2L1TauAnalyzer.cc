@@ -152,6 +152,8 @@ private:
   double l1Pt, l1Eta, l1Phi, l1DM;
   double zVTX, l1TauZ, l1PVDZ;
   double l1TauChargedIso,l1TauNeutralIso,l1TauRawIso;
+  double l1Discriminant;
+  double l1HoE, l1EoH;
   double gen1ProngPt, gen1ProngEta, gen1ProngPhi;
   double gen3ProngPt, gen3ProngEta, gen3ProngPhi;
   double gen1ProngPi0Pt, gen1ProngPi0Eta, gen1ProngPi0Phi;
@@ -293,6 +295,8 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("l1TauZ", &l1TauZ, "l1TauZ/D");
   efficiencyTree->Branch("zVTX",   &zVTX,   "zVTX/D");
   efficiencyTree->Branch("l1PVDZ", &l1PVDZ, "l1PVDZ/D");
+  efficiencyTree->Branch("l1HoE", &l1HoE, "l1HoE/D");
+  efficiencyTree->Branch("l1EoH", &l1EoH, "l1EoH/D");
 
   efficiencyTree->Branch("l1StripPt",  &l1StripPt,  "l1StripPt/D");
   efficiencyTree->Branch("l1StripEta", &l1StripEta, "l1StripEta/D");
@@ -314,7 +318,8 @@ phase2L1TauAnalyzer::phase2L1TauAnalyzer(const edm::ParameterSet& cfg):
   efficiencyTree->Branch("l1RelIsoTight",  &l1RelIsoTight,  "l1RelIsoTight/I");
 
   efficiencyTree->Branch("l1DM", &l1DM,   "l1DM/D");
-
+  
+  efficiencyTree->Branch("l1Discriminant", &l1Discriminant, "l1Discriminant/D");
 
   pi0Tree = fs->make<TTree>("pi0Tree", "Crystal cluster individual crystal pt values");
   pi0Tree->Branch("run",    &run,     "run/I");
@@ -887,6 +892,7 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
     l1IsoLoose = -10;
     l1IsoMedium = -10;
     l1IsoTight = -10;
+    l1Discriminant = -10;
 
     zVTX = 0;
     l1TauZ = 0;
@@ -951,12 +957,17 @@ phase2L1TauAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
 	  l1RelIsoMedium =  l1PFTaus->at(i).passMediumRelIso();
 	  l1RelIsoTight  =  l1PFTaus->at(i).passTightRelIso();
 
+	  l1Discriminant = l1PFTaus->at(i).discriminant();
+	  l1EoH = l1PFTaus->at(i).EoH();
+	  l1HoE = l1PFTaus->at(i).HoE();
 	     
 	  std::cout<<" Match found l1Pt: "<< l1Pt <<
 	    " Eta: "<< l1Eta  <<
 	    " Phi: "<< l1Phi  << 
 	    " Pass tight iso: " << l1PFTaus->at(i).passTightIso() <<
 	    " Pass VLoose Iso: " << l1PFTaus->at(i).passVLooseIso() <<
+	    " Discriminant: " << l1Discriminant << 
+	    " l1EoH: " << l1EoH << " l1HoE: " << l1HoE <<
 	    std::endl;
 	}
        
